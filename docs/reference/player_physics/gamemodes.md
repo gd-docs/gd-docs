@@ -37,7 +37,7 @@ Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump veloc
 
 | Gamemode    | Click                                                     | Hold                                                         | Release                                     |
 | ----------- | --------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------- |
-| Cube        | Sets the y-velocity to 10.62G                             | continuously checks if the player is on the ground to process another jump* | N/A                                         |
+| Cube        | Sets the y-velocity to 10.62G                             | continuously checks if the player is on the ground to process another jump* | N/A                          |
 | Ship        | N/A                                                       | skipped for now                                              | skipped for now                             |
 | Ball        | Sets the y-velocity to 3.186G then toggles the gravity    | N/A                                                          | N/A                                         |
 | Ufo         | Sets the y-velocity to 7G                                 | N/A                                                          | N/A                                         |
@@ -50,7 +50,7 @@ Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump veloc
 
 | Gamemode    | Click                                                     | Hold                                                         | Release                                     |
 | ----------- | --------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------- |
-| Cube        | Sets the y-velocity to 11.18G                             | continuously checks if the player is on the ground to process another jump* | N/A                                         |
+| Cube        | Sets the y-velocity to 11.18G                             | continuously checks if the player is on the ground to process another jump* | N/A                          |
 | Ship        | N/A                                                       | skipped for now                                              | skipped for now                             |
 | Ball        | Sets the y-velocity to 3.354G then toggles the gravity    | N/A                                                          | N/A                                         |
 | Ufo         | Sets the y-velocity to 7G                                 | N/A                                                          | N/A                                         |
@@ -63,7 +63,7 @@ Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump veloc
 
 | Gamemode    | Click                                                     | Hold                                                         | Release                                     |
 | ----------- | --------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------- |
-| Cube        | Sets the y-velocity to 11.42G                             | continuously checks if the player is on the ground to process another jump* | N/A                                         |
+| Cube        | Sets the y-velocity to 11.42G                             | continuously checks if the player is on the ground to process another jump* | N/A                          |
 | Ship        | N/A                                                       | skipped for now                                              | skipped for now                             |
 | Ball        | Sets the y-velocity to 3.426G then toggles the gravity    | N/A                                                          | N/A                                         |
 | Ufo         | Sets the y-velocity to 7G                                 | N/A                                                          | N/A                                         |
@@ -76,7 +76,7 @@ Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump veloc
 
 | Gamemode    | Click                                                     | Hold                                                         | Release                                     |
 | ----------- | --------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------- |
-| Cube        | Sets the y-velocity to 11.23G                             | continuously checks if the player is on the ground to process another jump* | N/A                                         |
+| Cube        | Sets the y-velocity to 11.23G                             | continuously checks if the player is on the ground to process another jump* | N/A                          |
 | Ship        | N/A                                                       | skipped for now                                              | skipped for now                             |
 | Ball        | Sets the y-velocity to 3.369G then toggles the gravity    | N/A                                                          | N/A                                         |
 | Ufo         | Sets the y-velocity to 7G                                 | N/A                                                          | N/A                                         |
@@ -89,7 +89,7 @@ Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump veloc
 
 | Gamemode    | Click                                                     | Hold                                                         | Release                                     |
 | ----------- | --------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------- |
-| Cube        | Sets the y-velocity to 11.23G                             | continuously checks if the player is on the ground to process another jump* | N/A                                         |
+| Cube        | Sets the y-velocity to 11.23G                             | continuously checks if the player is on the ground to process another jump* | N/A                          |
 | Ship        | N/A                                                       | skipped for now                                              | skipped for now                             |
 | Ball        | Sets the y-velocity to 3.369G then toggles the gravity    | N/A                                                          | N/A                                         |
 | Ufo         | Sets the y-velocity to 7G                                 | N/A                                                          | N/A                                         |
