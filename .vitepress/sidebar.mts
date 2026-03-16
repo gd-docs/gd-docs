@@ -341,6 +341,28 @@ export default [
     "text": "Reference",
     "items": [
       {
+        "text": "Player physics",
+        "items": [
+          {
+            "text": "Hitboxes",
+            "link": "/reference/player_physics/hitboxes"
+          },
+          {
+            "text": "Gamemodes",
+            "link": "/reference/player_physics/gamemodes"
+          },
+          {
+            "text": "Force Blocks",
+            "link": "/reference/player_physics/force_blocks"
+          },
+          {
+            "text": "Orbs and Pads",
+            "link": "/reference/player_physics/orbs_and_pads"
+          }
+        ],
+        "collapsed": true
+      },
+      {
         "text": "Keys",
         "link": "/reference/keys"
       },
@@ -616,20 +638,5 @@ export default [
       }
     ],
     "collapsed": false
-  },
-
-
-  {
-    "text": "Player physics",
-    "items": [
-      {
-        "text": "Hitboxes",
-        "link": "/player physics/hitboxes"
-      },
-	  {
-        "text": "Gamemodes",
-        "link": "/player physics/gamemodes"
-      }
-    ]
   }
 ];
