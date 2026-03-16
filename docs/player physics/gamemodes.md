@@ -11,7 +11,9 @@ Max velocity is the highest velocity the player can reach by falling normally, w
 However the max velocity can be temporarily overridden by force blocks until it goes back down to the regular max velocity.
 
 Ticks held is how many ticks one needs to hold for before the click action triggers.
-1 would mean it triggers on that tick, 2 would mean it triggers on the next
+The action occurs on the tick immediately following the last required tick:
+  1 means the action triggers on the next tick.
+  2 means it triggers one tick later.
 (Both would have their actions occur on the following tick, but 2 would mean swift clicks don't trigger the click action).
 
 Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump velocity.
