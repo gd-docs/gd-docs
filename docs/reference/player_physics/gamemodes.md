@@ -42,7 +42,7 @@ Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump veloc
 | Ball        | Sets the y-velocity to 3.186G then toggles the gravity    | -                                                            | -                                           |
 | Ufo         | Sets the y-velocity to 7G                                 | -                                                            | -                                           |
 | Wave        | -                                                         | Sets the y-velocity to 4.186G                                | Sets the velocity to -4.186G                |
-| Robot       | -                                                         | Sets the y-velocity to 5.31G                                 | Decelerates according to the tps and speed* |
+| Robot       | -                                                         | Sets the y-velocity to 5.31G                                 | Starts decelerating according to the tps and speed* |
 | Spider      | See section "Spider" below                                | -                                                            | -                                           |
 | Swingcopter | Multiplies the y-velocity by 0.8 then toggles the gravity | -                                                            | -                                           |
 
@@ -55,7 +55,7 @@ Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump veloc
 | Ball        | Sets the y-velocity to 3.354G then toggles the gravity    | -                                                            | -                                           |
 | Ufo         | Sets the y-velocity to 7G                                 | -                                                            | -                                           |
 | Wave        | -                                                         | Sets the y-velocity to 5.193G                                | Sets the velocity to -5.193G                |
-| Robot       | -                                                         | Sets the y-velocity to 5.59G                                 | Decelerates according to the tps and speed* |
+| Robot       | -                                                         | Sets the y-velocity to 5.59G                                 | Starts decelerating according to the tps and speed* |
 | Spider      | See section "Spider" below                                | -                                                            | -                                           |
 | Swingcopter | Multiplies the y-velocity by 0.8 then toggles the gravity | -                                                            | -                                           |
 
@@ -68,7 +68,7 @@ Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump veloc
 | Ball        | Sets the y-velocity to 3.426G then toggles the gravity    | -                                                            | -                                           |
 | Ufo         | Sets the y-velocity to 7G                                 | -                                                            | -                                           |
 | Wave        | -                                                         | Sets the y-velocity to 6.457G                                | Sets the velocity to -6.457G                |
-| Robot       | -                                                         | Sets the y-velocity to 5.71G                                 | Decelerates according to the tps and speed* |
+| Robot       | -                                                         | Sets the y-velocity to 5.71G                                 | Starts decelerating according to the tps and speed* |
 | Spider      | See section "Spider" below                                | -                                                            | -                                           |
 | Swingcopter | Multiplies the y-velocity by 0.8 then toggles the gravity | -                                                            | -                                           |
 
@@ -81,7 +81,7 @@ Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump veloc
 | Ball        | Sets the y-velocity to 3.369G then toggles the gravity    | -                                                            | -                                           |
 | Ufo         | Sets the y-velocity to 7G                                 | -                                                            | -                                           |
 | Wave        | -                                                         | Sets the y-velocity to 7.8G                                  | Sets the velocity to -7.8G                  |
-| Robot       | -                                                         | Sets the y-velocity to 5.615G                                | Decelerates according to the tps and speed* |
+| Robot       | -                                                         | Sets the y-velocity to 5.615G                                | Starts decelerating according to the tps and speed* |
 | Spider      | See section "Spider" below                                | -                                                            | -                                           |
 | Swingcopter | Multiplies the y-velocity by 0.8 then toggles the gravity | -                                                            | -                                           |
 
