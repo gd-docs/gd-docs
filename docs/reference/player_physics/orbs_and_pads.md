@@ -15,11 +15,11 @@
 
 ### Spider Orbs
 
-Spider orbs are the same as spider click, but for any gamemode. Except the direction is not always -G, and it depends on the rotation of the orb. It will be downwards if \(91\le\theta\lt270\), then the gravity will be set to normal. It will be upwards if \(-90\le\theta\lt91\) and \(\theta\ge-90\) then the gravity will be set to inverse. Also, object rotation wraps around to \(-90\) when \(\theta\gt270\). This is true for any rotatable object.
+Spider orbs are the same as spider click, but for any gamemode. Except the direction is not always -G, and it depends on the rotation of the orb. It will be downwards if $91\le\theta\lt270$, then the gravity will be set to normal. It will be upwards if $-90\le\theta\lt91$ and $\theta\ge-90$ then the gravity will be set to inverse. Also, object rotation wraps around to $-90$ when $\theta\gt270$. This is true for any rotatable object.
 
 ### Dash Orbs
 
-Dash orbs can be somewhat compared to slopes. The y-velocity is always displayed as 0 but the player moves along an angle equal to the angle of the dash orb. With the release of 2.2, dash orbs were allowed to be rotated freely contrary to their previous limit of \(-70\le\theta\le70\). However, that change was purely visual, and the player's movement will still be limited to those constraints if the angle were outside of those bounds. In the situation where \(90\le\theta\le270\) then the player's rotation will be \(180-\theta\) and then limited to the constraints of \(-70\le\theta\le70\). All this happens after the second tick of holding, meaning swift clicks (on green dash orbs) would do nothing. Pink dash orbs are slightly different. Swift clicks multiply the current yvel by 0.5 before toggling the gravity. Otherwise, they function the same as green dash orbs, but they toggle the gravity as well.
+Dash orbs can be somewhat compared to slopes. The y-velocity is always displayed as 0 but the player moves along an angle equal to the angle of the dash orb. With the release of 2.2, dash orbs were allowed to be rotated freely contrary to their previous limit of $-70\le\theta\le70$. However, that change was purely visual, and the player's movement will still be limited to those constraints if the angle were outside of those bounds. In the situation where $90\le\theta\le270$ then the player's rotation will be $180-\theta$ and then limited to the constraints of $-70\le\theta\le70$. All this happens after the second tick of holding, meaning swift clicks (on green dash orbs) would do nothing. Pink dash orbs are slightly different. Swift clicks multiply the current yvel by 0.5 before toggling the gravity. Otherwise, they function the same as green dash orbs, but they toggle the gravity as well.
 
 ## Pads
 
