@@ -111,6 +111,10 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k120 | Inputs? (Best Points)          | **string**                                                       | The inputs on the attempt that had the most points? - seems to be unused |
 | k121 | Coins Collected (Best Time)    | **integer**                                                      | Amount of coins collected on the attempt that has the fastest time |
 | k122 | Coins Collected (Best Points)  | **integer**                                                      | Amount of coins collected on the attempt that has the most points |
+| k122 | Coins Collected (Best Points)  | **integer**                                                      | Amount of coins collected on the attempt that has the most points |
+| k123 | Time Saved                     | **bool**                                                         | Whether level completion was legitimate and time was successfully saved |
+| k124 | Points Saved                   | **bool**                                                         | Whether level completion was legitimate and points were successfully saved |
+| k125 | Click Between Steps override   | **integer**                                                      | The Click Between Steps override for the level (2.2082 only). 0 - none, 1 - enable, 2 - disable |
 
 The classic level seed is generated like this (please note you need to add another `1482` when submitting the level score):
 
@@ -162,6 +166,3 @@ The build tab page is 5, and the button settings are 6x2 (default), meaning the 
 | Key | Type        | Info                                                     |
 | --- | ----------- | -------------------------------------------------------- |
 | k92 | **integer** | |
-| k123 | **bool**   | |
-| k124 | **bool**   | |
-| k125 | **integer** | |
