@@ -3,7 +3,7 @@ aside: true
 ---
 # Achievements
 
-Geometry Dash has 581 achievements that you can acquire, 2 of them are exclusive to the Steam version of the game. You can find out how to get all the achievements [here](https://geometry-dash.fandom.com/wiki/Achievements).
+Geometry Dash has 570 achievements that you can acquire, 2 of them are exclusive to the Steam version of the game. You can find out how to get all the achievements [here](https://geometry-dash.fandom.com/wiki/Achievements).
 
 Keep in mind that adding the achievements into your save data manually will only show them as completed in game, but won't give you the reward for the completion.
 
@@ -197,6 +197,16 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.demon26 | Beat 350 Demons|
 | geometry.ach.demon27 | Beat 400 Demons|
 | geometry.ach.demon28 | Beat 500 Demons|
+| geometry.ach.insane01 | Beat 5 Insane-rated levels |
+| geometry.ach.insane02 | Beat 10 Insane-rated levels |
+| geometry.ach.insane03 | Beat 25 Insane-rated levels |
+| geometry.ach.insane04 | Beat 50 Insane-rated levels |
+| geometry.ach.insane05 | Beat 75 Insane-rated levels |
+| geometry.ach.insane06 | Beat 100 Insane-rated levels |
+| geometry.ach.insane07 | Beat 200 Insane-rated levels |
+| geometry.ach.insane08 | Beat 300 Insane-rated levels |
+| geometry.ach.insane09 | Beat 400 Insane-rated levels |
+| geometry.ach.insane10 | Beat 500 Insane-rated levels |
 | geometry.ach.coins01 | Collect 5 Secret Coins|
 | geometry.ach.coins02 | Collect 10 Secret Coins|
 | geometry.ach.coins03 | Collect 15 Secret Coins|
@@ -350,15 +360,15 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.shardBonusB04 | Collect 65 of each Tier 2 Shard|
 | geometry.ach.shardBonusB05 | Collect 100 of each Tier 2 Shard|
 | geometry.ach.followCreator | Follow 1 Creator|
-| geometry.ach.followCreator2 | Follow 10 Creators|
-| geometry.ach.followCreator3 | Follow 25 Creators|
-| geometry.ach.followCreator4 | Follow 50 Creators|
+| geometry.ach.followCreator02 | Follow 10 Creators|
+| geometry.ach.followCreator03 | Follow 25 Creators|
+| geometry.ach.followCreator04 | Follow 50 Creators|
 | geometry.ach.friends01 | Befriend 1 user|
 | geometry.ach.friends02 | Befriend 10 users|
 | geometry.ach.friends03 | Befriend 25 users|
 | geometry.ach.friends04 | Befriend 50 users|
-| geometry.ach.youtube | subscribe to [RobTop](https://www.youtube.com/user/RobTopGames) on YouTube|
-| geometry.ach.twitter | Follow  [RobTop](https://twitter.com/robtopgames) on Twitter|
+| geometry.ach.youtube | Subscribe to [RobTop](https://www.youtube.com/user/RobTopGames) on YouTube|
+| geometry.ach.twitter | Follow [RobTop](https://twitter.com/robtopgames) on Twitter|
 | geometry.ach.facebook | Like [RobTop](https://www.facebook.com/geometrydash) on Facebook|
 | geometry.ach.attempt01 | Do 100 Attempts |
 | geometry.ach.attempt02 | Do 500 Attempts |
