@@ -6,13 +6,13 @@ Searches for a user and returns their info
 
 | Parameter       | Explanation                                                     | Required |
 | --------------- | --------------------------------------------------------------- | -------- |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`              | Yes      |
-| `gameVersion`   | 21                                                              | Yes      |
-| `binaryVersion` | 35                                                              | Yes      |
-| `gdw`           | 0                                                               |          |
-| `str`           | The name of the user you want to search for                     |          |
-| `page`          | The page of users you want. Redundant as it only returns 1 user |          |
-| `total`         | Current use is unknown, defaults to 0.                          |          |
+| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`           | Yes      |
+| `gameVersion`   | 22                                                              | No       |
+| `binaryVersion` | 42                                                              | No       |
+| `gdw`           | 0                                                               | No       |
+| `str`           | The name of the user you want to search for                     | No       |
+| `page`          | The page of users you want. Redundant as it only returns 1 user | No       |
+| `total`         | Current use is unknown, defaults to 0.                          | No       |
 
 ## Response
 
