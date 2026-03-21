@@ -9,11 +9,11 @@ This endpoint is used to log into a players Geometry Dash account.
 
 | Parameter  | Explanation                                                                                           | Required |
 | ---------- | ----------------------------------------------------------------------------------------------------- | -------- |
-| `udid`     | [The user's Universal Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier) | Yes      |
+| `udid`     | [The user's Universal Device Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier) | Yes      |
 | `userName` | The username for the account the player is trying to log into                                         | Yes      |
 | `password` | The plaintext password for the account the player is trying to log into                               | Yes      |
-| `secret`   | [Account Secret](/reference/secrets.md): `Wmfv3899gc9`                                                   | Yes      |
-| `sID`      | The player's Steam ID                                                                                 |          |
+| `secret`   | [Account Secret](/reference/secrets.md): `Wmfv3899gc9`                                                | Yes      |
+| `sID`      | The player's Steam ID                                                                                 | No       |
 
 **Note** 
 the `sID` parameter is only sent to the servers if the player is logging into their account from the steam release of Geometry Dash. From what has been observed, it has not been utilised.
