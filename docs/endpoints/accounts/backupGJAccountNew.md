@@ -12,8 +12,8 @@ Saves account data
 
 | Parameter       | Explanation                                                                                                                                  | Required |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| `accountID`      | The username of the account to be added                                                                                                      | Yes      |
-| `gjp2`      | The password of the account to be added                                                                                                      | Yes      |
+| `accountID`      | Account ID of the account to be added                                                                                                      | Yes      |
+| `gjp2`      | The [GJP2](/topics/gjp#generating-gjp2) of the account to be added                                                                                                      | Yes      |
 | `gameVersion`   | 22                                                                                                                                           | Yes      |
 | `binaryVersion` | 42                                                                                                                                           | Yes      |
 | `saveData`      | The save data for CCGameManager.dat compressed with gzip, then a semicolon `;` and the save data for CCLocalLevels.dat compressed with gzip. | Yes      |
