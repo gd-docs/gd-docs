@@ -1,6 +1,6 @@
 # deleteGJAccComment20.php
 
-
+Deletes an account comment.
 
 ## Parameters
 
@@ -9,10 +9,10 @@
 | `accountID`     | Account ID of the user deleting the comment                                                                           | Yes      |
 | `gjp2`          | The [GJP2](/topics/gjp#generating-gjp2) of the user deleting the comment                                                            | Yes      |
 | `commentID`     | The ID of the comment being deleted (Returned by [uploadGJAccComment20](/endpoints/comments/uploadGJAccComment20.md)) | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                                                    | Yes      |
-| `gameVersion`   | 21                                                                                                                    |          |
-| `binaryVersion` | 35                                                                                                                    |          |
-| `gdw`           | 0                                                                                                                     |          |
+| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                                                 | Yes      |
+| `gameVersion`   | 21                                                                                                                    | No       |
+| `binaryVersion` | 35                                                                                                                    | No       |
+| `gdw`           | 0                                                                                                                     | No       |
 
 ## Response
 
