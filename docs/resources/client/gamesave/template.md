@@ -13,44 +13,69 @@ Smart Templates are user-made templates used for the Auto Build feature. They ar
 | 1   | Smart Template ID   | integer |
 | 2   | Name                | string  |
 | 3   | Template Variations | dict    |
-| 4   | Unknown             | integer |
-| 5   | Unknown             | integer |
-| 6   | Unknown             | integer |
-| 7   | Unknown             | integer |
+| 4   | Allow Rotation      | integer |
+| 5   | Allow Flip X        | integer |
+| 6   | Allow Flip Y        | integer |
+| 7   | Ignore Corners      | integer |
+
+Keys 4 to 7 are set to value 1 when the template is first selected in-game. Once saved, these keys cannot be removed. The keys are functionally useless as the template does not remember the last selected options when loaded.
+
+Key 3 stores a dictionary that maps a 9-character long string key (representing the template's 3x3 layout) to a list of kCEK 11 dictionaries.
+
+The character's index represents its position inside the layout:
+
+| Char | Position      |
+| ---- | ------------- |
+| 1    | Center        |
+| 2    | Top           |
+| 3    | Bottom        |
+| 4    | Left          |
+| 5    | Right         |
+| 6    | Top Left      |
+| 7    | Top Right     |
+| 8    | Bottom Left   |
+| 9    | Bottom Right  |
+
+The character's value represents the type of template that will be matched at that position:
+
+| Value | Template                     |
+| ----- | ---------------------------- |
+| 0     | None                         |
+| 1     | Square                       |
+| 2     | 1x Slope Bottom-Right        |
+| 3     | 1x Slope Bottom-Left         |
+| 4     | 1x Slope Top-Right           |
+| 5     | 1x Slope Top-Left            |
+| 6     | 2x Slope Center Bottom-Right |
+| 7     | 2x Slope Side Bottom-Right   |
+| 8     | 2x Slope Center Bottom-Left  |
+| 9     | 2x Slope Side Bottom-Left    |
+| A     | 2x Slope Center Top-Right    |
+| B     | 2x Slope Side Top-Right      |
+| C     | 2x Slope Center Top-Left     |
+| D     | 2x Slope Side Top-Left       |
+| E     | 2x Slope Center Right-Top    |
+| F     | 2x Slope Side Right-Top      |
+| G     | 2x Slope Center Right-Bottom |
+| H     | 2x Slope Side Right-Bottom   |
+| I     | 2x Slope Center Left-Bottom  |
+| J     | 2x Slope Side Left-Bottom    |
+| K     | 2x Slope Center Left-Top     |
+| L     | 2x Slope Side Left-Top       |
+	    
+The directions represent what side the legs of the slope point towards. 1x Slopes have equal legs, so they are interchangeable, while for 2x slopes the first direction is the one the longer leg sits on and the second direction is for the shorter leg.
+
+2x slopes cover 2 blocks, so they are represented by 2 different templates, where center is the smaller half of the slope, while side is the larger half.
 
 ## kCEK 11
 
-kCEK 11's are stored in key 3 of kCEK 10 in the following format:
+| Key | Value         | Type   |
+| --- | ------------- | ------ |
+| 1   | Object String | string |
+| 2   | Weight        | int    |
 
-```
-<k>100010000</k>
-<d>
-  <k>_isArr</k>
-  <t />
-  <k>k_0</k>
-  <d>
-    <k>kCEK</k><i>11</i>
-    <k>1</k><s>1,1,2,0,3,-90;1,2895,2,0,3,-90,34,1;</s>
-  </d>
-  <k>k_1</k>
-  <d>
-    <k>kCEK</k><i>11</i>
-    <k>1</k><s>...</s>
-  </d>
-</d>
-```
+Key 1 is the [object string](/resources/client/level-components/level-string.md) of the template variation. The object string is **unencoded** and stored raw. The center point is at X: 0, Y: -90. 
 
-kCEK 11 key 1 is the [object string](/resources/client/level-components/level-string.md) of the template variation. The object string is **unencoded** and stored raw. The center point is at X: 0, Y: -90.
+The center smart template object is also encoded alongside the rest of the template variation's objects and is given property 34 (group parent) when serialized.
 
-The keys of the dictionary are 9-bit bitfields (binary numbers) representing the exact type of template variation. The first bit is reserved and is always set to `1`. Other bits represent:
-
-| Bit | Position      |
-| --- | ------------- |
-| 2   | Top Middle    |
-| 3   | Bottom Middle |
-| 4   | Center Left   |
-| 5   | Center Right  |
-| 6   | Top Left      |
-| 7   | Top Right     |
-| 8   | Bottom Left   |
-| 9   | Bottom Right  |
+Key 2 is the variation's weight used to calculate the template's random chance to be picked.
