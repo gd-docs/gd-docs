@@ -18,7 +18,7 @@ Smart Templates are user-made templates used for the Auto Build feature. They ar
 | 6   | Allow Flip Y        | integer |
 | 7   | Ignore Corners      | integer |
 
-Keys 4 to 7 are set upon first selection to value 1 while the template is selected in-game, once saved these keys cannot be removed. The keys are functionally useless as the template does not remember the last selected options when loaded.
+Keys 4 to 7 are set to value 1 when the template is first selected in-game. Once saved, these keys cannot be removed. The keys are functionally useless as the template does not remember the last selected options when loaded.
 
 Key 3 stores a dictionary that maps a 9-character long string key (representing the template's 3x3 layout) to a list of kCEK 11 dictionaries.
 
@@ -39,7 +39,7 @@ The character's index represents its position inside the layout:
 The character's value represents the type of template that will be matched at that position:
 
 | Value | Template                     |
-| ----  | ---------------------------- |
+| ----- | ---------------------------- |
 | 0     | None                         |
 | 1     | Square                       |
 | 2     | 1x Slope Bottom-Right        |
@@ -63,9 +63,9 @@ The character's value represents the type of template that will be matched at th
 | K     | 2x Slope Center Left-Top     |
 | L     | 2x Slope Side Left-Top       |
 	    
-The directions represent what side the legs of the slope point towards. 1x Slopes have equal legs so they are interchangeable while for 2x slopes the first direction is the one the longer leg sits on while the second direction is for the shorter leg.
+The directions represent what side the legs of the slope point towards. 1x Slopes have equal legs, so they are interchangeable, while for 2x slopes the first direction is the one the longer leg sits on and the second direction is for the shorter leg.
 
-2x slopes cover 2 blocks so they are represented by 2 different templates where center is the smaller half of the slope while side is the larger half.
+2x slopes cover 2 blocks, so they are represented by 2 different templates, where center is the smaller half of the slope, while side is the larger half.
 
 ## kCEK 11
 
