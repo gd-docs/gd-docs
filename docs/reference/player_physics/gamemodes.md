@@ -9,7 +9,7 @@ The variable G is simply 1 when the player falls downwards, or -1 when the playe
 
 All the velocities are in Vels (1 Vel = 60 units/sec, as reference 1 block is 30 units).
 
-Max velocity is the highest velocity the player can reach by falling normally, with the exception of ship which also has an upwards max velocity in addition to the downwards one.
+Max velocity is the highest velocity the player can reach by falling normally, with the exception of ship, which also has an upwards max velocity in addition to the downwards one.
 However, max velocity can be temporarily overridden by force blocks until it goes back down to the regular max velocity.
 
 Ticks held is how many ticks one needs to hold for before the click action triggers.
@@ -95,7 +95,7 @@ Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump veloc
 | Spider      | See section "Spider" below                                | -                                                            | -                                           |
 | Swingcopter | Multiplies the y-velocity by 0.8 then toggles the gravity | -                                                            | -                                           |
 
-*Every gamemode is constantly affected by an acceleration similar to the mechanism of real life gravity which is dependent on the speed portal and tps. Robot hold disables that gravity while holding and sets the yvel to 5.31G until release. This "gravity" affects the velocity on a tick by tick basis so that is part of one of the many game loops. For cube click, it first sets the velocity then later on processes gravity in that same tick, so it would not be exactly 11.18G on the first tick for 1x speed, but rather it would be 11.18G - acceleration (in the case of 240tps that would be 11.18 - 0.216 or 10.964). However, on the second jump of a hold or a buffer click, the gravity is processed before the buffered jump meaning the player would experience the full jump force on the first tick which is what causes the common effect of the player jumping slightly higher on the second jump. More info on gravity acceleration can be seen on [this desmos graph](https://www.desmos.com/calculator/chaw9hqeew) (keep in mind that ship is still not fully understood so don't rely on it for ship).
+*Every gamemode is constantly affected by an acceleration, similar to the mechanism of real life gravity, which is dependent on the speed portal and TPS. Robot hold disables that gravity while holding and sets the yvel to 5.31G until release. This "gravity" affects the velocity on a tick-by-tick basis, so that is part of one of the many game loops. For cube click, it first sets the velocity, then later on processes gravity in that same tick, so it would not be exactly 11.18G on the first tick for 1x speed, but rather it would be `11.18G - acceleration` (in the case of 240tps, that would be `11.18 - 0.216`, or 10.964). However, on the second jump of a hold or a buffer click, the gravity is processed before the buffered jump, meaning the player would experience the full jump force on the first tick, which is what causes the common effect of the player jumping slightly higher on the second jump. More info on gravity acceleration can be seen on [this Desmos graph](https://www.desmos.com/calculator/chaw9hqeew) (keep in mind that ship is still not fully understood, so don't rely on it for ship).
 
 ## Spider
 
