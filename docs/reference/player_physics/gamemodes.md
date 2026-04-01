@@ -34,12 +34,12 @@ Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump veloc
 
 | Gamemode    | Click                                                     | Hold                                                         | Release                                     |
 | ----------- | --------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------- |
-| Cube        | Sets the y-velocity to 10.62G                             | Continuously checks if the player is on the ground to process another jump* | -                            |
+| Cube        | Sets `yvel` to 10.62G                             | Continuously checks if the player is on the ground to process another jump* | -                            |
 | Ship        | -                                                         | Skipped for now                                              | Skipped for now                             |
-| Ball        | Sets the y-velocity to 3.186G then toggles the gravity    | -                                                            | -                                           |
-| Ufo         | Sets the y-velocity to 7G                                 | -                                                            | -                                           |
-| Wave        | -                                                         | Sets the y-velocity to 4.186G                                | Sets the velocity to -4.186G                |
-| Robot       | -                                                         | Sets the y-velocity to 5.31G                                 | Starts decelerating according to the tps and speed[*](#:~:text=Every%20gamemode%20is,it%20for%20ship%29.) |
+| Ball        | Sets `yvel` to 3.186G then toggles the gravity    | -                                                            | -                                           |
+| Ufo         | Sets `yvel` to 7G                                 | -                                                            | -                                           |
+| Wave        | -                                                         | Sets `yvel` to 4.186G                                | Sets the velocity to -4.186G                |
+| Robot       | -                                                         | Sets `yvel` to 5.31G                                 | Starts decelerating according to the tps and speed[*](#:~:text=Every%20gamemode%20is,it%20for%20ship%29.) |
 | Spider      | See [Spider](#spider)                                     | -                                                            | -                                           |
 | Swingcopter | Multiplies the y-velocity by 0.8 then toggles the gravity | -                                                            | -                                           |
 
@@ -47,12 +47,12 @@ Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump veloc
 
 | Gamemode    | Click                                                     | Hold                                                         | Release                                     |
 | ----------- | --------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------- |
-| Cube        | Sets the y-velocity to 11.18G                             | Continuously checks if the player is on the ground to process another jump* | -                            |
+| Cube        | Sets `yvel` to 11.18G                             | Continuously checks if the player is on the ground to process another jump* | -                            |
 | Ship        | -                                                         | Skipped for now                                              | Skipped for now                             |
-| Ball        | Sets the y-velocity to 3.354G then toggles the gravity    | -                                                            | -                                           |
-| Ufo         | Sets the y-velocity to 7G                                 | -                                                            | -                                           |
-| Wave        | -                                                         | Sets the y-velocity to 5.193G                                | Sets the velocity to -5.193G                |
-| Robot       | -                                                         | Sets the y-velocity to 5.59G                                 | Starts decelerating according to the tps and speed[*](#:~:text=Every%20gamemode%20is,it%20for%20ship%29.) |
+| Ball        | Sets `yvel` to 3.354G then toggles the gravity    | -                                                            | -                                           |
+| Ufo         | Sets `yvel` to 7G                                 | -                                                            | -                                           |
+| Wave        | -                                                         | Sets `yvel` to 5.193G                                | Sets the velocity to -5.193G                |
+| Robot       | -                                                         | Sets `yvel` to 5.59G                                 | Starts decelerating according to the tps and speed[*](#:~:text=Every%20gamemode%20is,it%20for%20ship%29.) |
 | Spider      | See [Spider](#spider)                                     | -                                                            | -                                           |
 | Swingcopter | Multiplies the y-velocity by 0.8 then toggles the gravity | -                                                            | -                                           |
 
@@ -60,12 +60,12 @@ Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump veloc
 
 | Gamemode    | Click                                                     | Hold                                                         | Release                                     |
 | ----------- | --------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------- |
-| Cube        | Sets the y-velocity to 11.42G                             | Continuously checks if the player is on the ground to process another jump* | -                            |
+| Cube        | Sets `yvel` to 11.42G                             | Continuously checks if the player is on the ground to process another jump* | -                            |
 | Ship        | -                                                         | Skipped for now                                              | Skipped for now                             |
-| Ball        | Sets the y-velocity to 3.426G then toggles the gravity    | -                                                            | -                                           |
-| Ufo         | Sets the y-velocity to 7G                                 | -                                                            | -                                           |
-| Wave        | -                                                         | Sets the y-velocity to 6.457G                                | Sets the velocity to -6.457G                |
-| Robot       | -                                                         | Sets the y-velocity to 5.71G                                 | Starts decelerating according to the tps and speed[*](#:~:text=Every%20gamemode%20is,it%20for%20ship%29.) |
+| Ball        | Sets `yvel` to 3.426G then toggles the gravity    | -                                                            | -                                           |
+| Ufo         | Sets `yvel` to 7G                                 | -                                                            | -                                           |
+| Wave        | -                                                         | Sets `yvel` to 6.457G                                | Sets the velocity to -6.457G                |
+| Robot       | -                                                         | Sets `yvel` to 5.71G                                 | Starts decelerating according to the tps and speed[*](#:~:text=Every%20gamemode%20is,it%20for%20ship%29.) |
 | Spider      | See [Spider](#spider)                                     | -                                                            | -                                           |
 | Swingcopter | Multiplies the y-velocity by 0.8 then toggles the gravity | -                                                            | -                                           |
 
@@ -73,12 +73,12 @@ Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump veloc
 
 | Gamemode    | Click                                                     | Hold                                                         | Release                                     |
 | ----------- | --------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------- |
-| Cube        | Sets the y-velocity to 11.23G                             | Continuously checks if the player is on the ground to process another jump* | -                            |
+| Cube        | Sets `yvel` to 11.23G                             | Continuously checks if the player is on the ground to process another jump* | -                            |
 | Ship        | -                                                         | Skipped for now                                              | Skipped for now                             |
-| Ball        | Sets the y-velocity to 3.369G then toggles the gravity    | -                                                            | -                                           |
-| Ufo         | Sets the y-velocity to 7G                                 | -                                                            | -                                           |
-| Wave        | -                                                         | Sets the y-velocity to 7.8G                                  | Sets the velocity to -7.8G                  |
-| Robot       | -                                                         | Sets the y-velocity to 5.615G                                | Starts decelerating according to the tps and speed[*](#:~:text=Every%20gamemode%20is,it%20for%20ship%29.) |
+| Ball        | Sets `yvel` to 3.369G then toggles the gravity    | -                                                            | -                                           |
+| Ufo         | Sets `yvel` to 7G                                 | -                                                            | -                                           |
+| Wave        | -                                                         | Sets `yvel` to 7.8G                                  | Sets the velocity to -7.8G                  |
+| Robot       | -                                                         | Sets `yvel` to 5.615G                                | Starts decelerating according to the tps and speed[*](#:~:text=Every%20gamemode%20is,it%20for%20ship%29.) |
 | Spider      | See [Spider](#spider)                                     | -                                                            | -                                           |
 | Swingcopter | Multiplies the y-velocity by 0.8 then toggles the gravity | -                                                            | -                                           |
 
@@ -86,12 +86,12 @@ Robot is also just 1/2 of cube jump velocity and ball is 3/10 of cube jump veloc
 
 | Gamemode    | Click                                                     | Hold                                                         | Release                                     |
 | ----------- | --------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------- |
-| Cube        | Sets the y-velocity to 11.23G                             | Continuously checks if the player is on the ground to process another jump* | -                            |
+| Cube        | Sets `yvel` to 11.23G                             | Continuously checks if the player is on the ground to process another jump* | -                            |
 | Ship        | -                                                         | Skipped for now                                              | Skipped for now                             |
-| Ball        | Sets the y-velocity to 3.369G then toggles the gravity    | -                                                            | -                                           |
-| Ufo         | Sets the y-velocity to 7G                                 | -                                                            | -                                           |
-| Wave        | -                                                         | Sets the y-velocity to 9.6G                                  | Sets the velocity to -9.6G                  |
-| Robot       | -                                                         | Sets the y-velocity to 5.615G                                | Starts decelerating according to the tps and speed[*](#:~:text=Every%20gamemode%20is,it%20for%20ship%29.) |
+| Ball        | Sets `yvel` to 3.369G then toggles the gravity    | -                                                            | -                                           |
+| Ufo         | Sets `yvel` to 7G                                 | -                                                            | -                                           |
+| Wave        | -                                                         | Sets `yvel` to 9.6G                                  | Sets the velocity to -9.6G                  |
+| Robot       | -                                                         | Sets `yvel` to 5.615G                                | Starts decelerating according to the tps and speed[*](#:~:text=Every%20gamemode%20is,it%20for%20ship%29.) |
 | Spider      | See [Spider](#spider)                                     | -                                                            | -                                           |
 | Swingcopter | Multiplies the y-velocity by 0.8 then toggles the gravity | -                                                            | -                                           |
 
