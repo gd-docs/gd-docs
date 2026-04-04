@@ -6,9 +6,9 @@ Searches for a user and returns their info
 
 | Parameter       | Explanation                                                     | Required |
 | --------------- | --------------------------------------------------------------- | -------- |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`              | Yes      |
-| `gameVersion`   | 21                                                              | Yes      |
-| `binaryVersion` | 35                                                              | Yes      |
+| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`           | Yes      |
+| `gameVersion`   | 22                                                              |          |
+| `binaryVersion` | 47                                                              |          |
 | `gdw`           | 0                                                               |          |
 | `str`           | The name of the user you want to search for                     |          |
 | `page`          | The page of users you want. Redundant as it only returns 1 user |          |
