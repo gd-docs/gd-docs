@@ -174,6 +174,10 @@ export default [
             "link": "/endpoints/misc/getTop1000"
           },
           {
+            "text": "icon-extras.json",
+            "link": "/endpoints/misc/icon-extras"
+          },
+          {
             "text": "likeGJItem211.php",
             "link": "/endpoints/misc/likeGJItem211"
           },
@@ -184,7 +188,27 @@ export default [
           {
             "text": "restoreGJItems.php",
             "link": "/endpoints/misc/restoreGJItems"
-          }
+          },
+          {
+            "text": "top-creators.json",
+            "link": "/endpoints/misc/top-creators"
+          },
+          {
+            "text": "top-demons.json",
+            "link": "/endpoints/misc/top-demons"
+          },
+          {
+            "text": "top-moons.json",
+            "link": "/endpoints/misc/top-moons"
+          },
+          {
+            "text": "top-stars.json",
+            "link": "/endpoints/misc/top-stars"
+          },
+          {
+            "text": "top-usercoins.json",
+            "link": "/endpoints/misc/top-usercoins"
+          },
         ],
         "collapsed": true
       },
