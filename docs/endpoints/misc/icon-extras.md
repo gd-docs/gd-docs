@@ -6,11 +6,11 @@ You can fetch the list of special icons by sending a GET request to `https://geo
 
 ## Response
 
-Returns a list of JSON data in the format
+Returns a JSON object with properties following the pattern:
 ```
-"spritename_num":1
+"{spritename}_{num}":1
 ```
-The second half will always be 1 since non-special icons are not returned.
+The value will always be 1 since non-special icons are not returned.
 
 ## Example
 
