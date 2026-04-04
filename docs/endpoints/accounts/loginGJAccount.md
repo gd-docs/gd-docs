@@ -9,10 +9,10 @@ This endpoint is used to log into a players Geometry Dash account.
 
 | Parameter  | Explanation                                                                                           | Required |
 | ---------- | ----------------------------------------------------------------------------------------------------- | -------- |
-| `udid`     | [The user's Universal Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier) | Yes      |
+| `udid`     | The user's [UDID](/topics/encryption/id.md#udid)                                                      | Yes      |
 | `userName` | The username for the account the player is trying to log into                                         | Yes      |
 | `password` | The plaintext password for the account the player is trying to log into                               | Yes      |
-| `secret`   | [Account Secret](/reference/secrets.md): `Wmfv3899gc9`                                                   | Yes      |
+| `secret`   | [Account Secret](/reference/secrets.md): `Wmfv3899gc9`                                                | Yes      |
 | `sID`      | The player's Steam ID                                                                                 |          |
 
 **Note** 
