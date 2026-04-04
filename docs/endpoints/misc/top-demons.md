@@ -15,7 +15,6 @@ import requests
 
 req = requests.get("https://geometrydash.com/data/top-demons.json")
 print(req.text)
-
 ```
 
 **Response**

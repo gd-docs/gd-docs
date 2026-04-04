@@ -15,7 +15,6 @@ import requests
 
 req = requests.get("https://geometrydash.com/data/top-stars.json")
 print(req.text)
-
 ```
 
 **Response**

@@ -19,7 +19,6 @@ import requests
 
 req = requests.get("https://geometrydash.com/data/icon-extras.json")
 print(req.text)
-
 ```
 
 **Response**
