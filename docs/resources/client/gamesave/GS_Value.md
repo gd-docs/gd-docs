@@ -257,19 +257,19 @@ GS_22 Contains reward data for all of the ad chests from Geometry Dash world
 
 ## GS_23
 
-GS_23 contains the High Scores for daily and weekly demons
-
-| Structure |
-|-----------|
-|`<k>{TimelyID}</k><s>{percentage}</s>`|
-
-## GS_24
-
-GS_24 contains the High Scores for Gauntlet Levels
+GS_23 contains the High Scores for Gauntlet Levels
 
 | Structure |
 |-----------|
 |`<k>{levelID}</k><s>{percentage}</s>`|
+
+## GS_24
+
+GS_24 contains the High Scores for daily and weekly demons
+
+| Structure |
+|-----------|
+|`<k>{TimelyID}</k><s>{percentage}</s>`|
 
 ## GS_25
 
