@@ -159,6 +159,13 @@ You can access the old table of object properties (with all 2.1 properties and a
 | 128 | Scale X                              | **float**                                       | The X Scale of the object                                                          |
 | 131 | Warp Y angle                         | **float**                                       | The Y angle warp value of the object                                               |
 | 132 | Warp X angle                         | **float**                                       | The X angle warp value of the object                                               |
+| 138 | Player 1                             | **integer**                                     | The P1 checkbox value of a trigger that supports it                                |
+| 148 | Gravity                              | **float**                                       | The Gravity value of the Gravity trigger                                           |
+| 200 | Player 2                             | **integer**                                     | The P2 checkbox value of a trigger that supports it                                |
+| 201 | Player Touched                       | **integer**                                     | The PT checkbox value of a trigger that supports it                                |
+| 430 | Event Type                           | **integer array**                               | The selected events of the Event trigger                                           |
+| 447 | Extra ID                             | **integer**                                     | The Extra ID in an Event trigger                                                   |
+| 447 | Extra ID 2                           | **integer**                                     | The Extra ID 2 in an Event trigger                                                 |
 
 
 ***Undiscovered Existing Features***
