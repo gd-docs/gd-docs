@@ -165,7 +165,7 @@ You can access the old table of object properties (with all 2.1 properties and a
 | 201 | Player Touched                       | **integer**                                     | The PT checkbox value of a trigger that supports it                                |
 | 430 | Event Type                           | **integer array**                               | The selected events of the Event trigger                                           |
 | 447 | Extra ID                             | **integer**                                     | The Extra ID in an Event trigger                                                   |
-| 447 | Extra ID 2                           | **integer**                                     | The Extra ID 2 in an Event trigger                                                 |
+| 525 | Extra ID 2                           | **integer**                                     | The Extra ID 2 in an Event trigger                                                 |
 
 
 ***Undiscovered Existing Features***
