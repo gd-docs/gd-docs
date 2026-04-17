@@ -33,3 +33,7 @@ if the request fails then the server will return
 ```py
 -1
 ```
+if there are no friend requests sent/received, then the serer will return
+```py
+-2
+```
