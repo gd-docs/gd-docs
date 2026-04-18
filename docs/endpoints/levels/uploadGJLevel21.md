@@ -34,8 +34,10 @@ Uploads a created level to the servers.
 | `seed`           | A random string                                                                                                               |          |
 | `extraString`    | A list of underscore seperated numbers. apparently used for rendering levels                                                  |          |
 | `levelInfo`      | A random gzip compressed string                                                                                               |          |
-| `binaryVersion`  | 42                                                                                                                            |          |
+| `binaryVersion`  | 47                                                                                                                            |          |
 | `gdw`            | 0                                                                                                                             |          |
+| `ts`             | The amount of 240 TPS steps the verification attempt took                                                                     |          |
+| `lrs`            | The replay string of the verification attempt, for leaderboard mods. TODO: document format                                    |          |
 
 ## Response
 
