@@ -4,17 +4,19 @@ This endpoint is to fetch friend requests recieved by other users
 
 ## Parameters
 
-| Parameter       | Explanation                                            | Required |
-| --------------- | ------------------------------------------------------ | -------- |
-| `accountID`     | The player's account ID                                | Yes      |
-| `gjp2`          | The player's [GJP2](/topics/gjp.md)                    | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`   | Yes      |
-| `gameVersion`   | The Game Version the player is playing on. 22 for 2.2  |          |
-| `binaryVersion` | The current build the player playing on. 42 for 2.206  |          |
-| `gdw`           | If the player is using Geometry Dash World             |          |
-| `page`          | The page currently being viewed                        |          |
-| `total`         | The total friend requests recieved                     |          |
-| `getSent`       | If the server should fetch requests sent by the player |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `accountID`     | The player's account ID | Yes | <!--a-->
+| `gjp2`          | The player's [GJP2](/topics/gjp) | Yes | <!--a-->
+| `secret`        | [Common Secret](/reference/secrets): `Wmfd2893gb7` | Yes | <!--a-->
+| `gameVersion`   | `22` |  | <!--a-->
+| `binaryVersion` | `47` |  | <!--a-->
+| `udid`          | The player's [UDID](/topics/encryption/id#udid) |  | <!--a-->
+| `uuid`          | The player's [UUID](/topics/encryption/id#uuid) |  | <!--a-->
+| `dvs`           | `3` |  | <!--a-->
+| `page`          | Which page of requests you want |  | <!--a-->
+| `total`         | Probably the cached total number of friend requests recieved, default is `0` |  | <!--a-->
+| `getSent`       | `1` if the server should fetch requests sent by the player |  | <!--optional-->
 
 ## Response
 
