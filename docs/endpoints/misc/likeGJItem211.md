@@ -19,7 +19,7 @@ Likes a level, comment, etc.
 | `like`          | 0 is dislike, 1 is like. Not sure what it defaults to if left out, but it can be left out. |          |
 | `chk`           | [See here](/topics/encryption/chk.md#like)                                                 |          |
 | `rs`            | 10 randomly generated characters                                                           |          |
-| `special`       | Unknown, leaving it as 0 works                                                             |          |
+| `special`       | 0 if liking level/list, the level/list ID for comment (list ID should be negative), the account ID for profile post     |          |
 
 ## Response
 
