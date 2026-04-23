@@ -18,6 +18,8 @@ Likes a level, comment, etc.
 | `uuid`          | The liking/disliking person's [uuid](/topics/encryption/id#uuid)                           |          |
 | `like`          | 0 is dislike, 1 is like. Not sure what it defaults to if left out, but it can be left out. |          |
 | `chk`           | [See here](/topics/encryption/chk.md#like)                                                 |          |
+| `rs`            | 10 randomly generated characters                                                           |          |
+| `special`       | Unknown, leaving it as 0 works                                                             |          |
 
 ## Response
 
