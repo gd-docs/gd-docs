@@ -44,11 +44,11 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Rifct/gd-docs' }
+      { icon: 'github', link: 'https://github.com/gd-docs/gd-docs' }
     ],
 
     editLink: {
-      pattern: 'https://github.com/Rifct/gd-docs/edit/main/docs/:path',
+      pattern: 'https://github.com/gd-docs/gd-docs/edit/main/docs/:path',
       text: 'Edit this page on GitHub'
     },
 
