@@ -1,6 +1,6 @@
 # Credits
 
-The GD Docs Project is maintained by [Rifct](https://github.com/Rifct), [zmx](https://github.com/qimiko), [230V](https://github.com/xparadoxical), [Antimatter](https://github.com/A-Zalt), and [Kiba](https://github.com/itzkiba)
+The GD Docs Project is maintained by [zmx](https://github.com/qimiko), [230V](https://github.com/xparadoxical), [Antimatter](https://github.com/A-Zalt), and [Kiba](https://github.com/itzkiba)
 
 ## Special Thanks
 
