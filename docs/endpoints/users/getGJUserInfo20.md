@@ -6,13 +6,15 @@ Gets info about a user
 
 | Parameter         | Explanation                                        | Required |
 | ----------------- | -------------------------------------------------- | -------- |
-| `targetAccountID` | The account ID of the person you want the info of  | Yes      |
-| `secret`          | [Common Secret](/reference/secrets.md): `Wmfd2893gb7` | Yes      |
-| `gameVersion`     | 22                                                 |          |
-| `binaryVersion`   | 35                                                 |          |
-| `gdw`             | 0                                                  |          |
-| `accountID`       | Your accountID                                     |          |
-| `gjp2`            | Your [GJP2](/topics/gjp#generating-gjp2)                         |          |
+| `targetAccountID` | The account ID of the person you want the info of  | Yes      | <!--a-->
+| `secret`          | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `gameVersion`     | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion`   | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `accountID`       | <ParamDesc name="accountID"/> |          | <!--a-->
+| `gjp2`            | <ParamDesc name="gjp2"/> |          | <!--a-->
+| `udid`            | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`            | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`             | <ParamDesc name="dvs"/> |          | <!--a-->
 
 ## Response
 

@@ -4,16 +4,21 @@ Gets a user's comment history.
 
 ## Parameters
 
-| Parameter       | Explanation                                                                                         | Required |
-| --------------- | --------------------------------------------------------------------------------------------------- | -------- |
-| `userID`        | The user ID of the user. **This is different from the account ID.**                                 | Yes      |
-| `page`          | Which page of comments you want to see                                                              | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                               | Yes      |
-| `gameVersion`   | 21                                                                                                  |          |
-| `binaryVersion` | 35                                                                                                  |          |
-| `gdw`           | 0                                                                                                   |          |
-| `mode`          | Set to 0 for most recent, and 1 for most liked                                                      |          |
-| `total`         | Current use is unknown, defaults to the amount of comments the user has, but leaving it as 0 works. |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `userID`        | The user ID of the target user. **This is different from the account ID.** | Yes      | <!--a-->
+| `page`          | Which page of comments you want to see | Yes      | <!--a-->
+| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7` | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
+| `mode`          | `0` for most recent, and `1` for most liked |          | <!--a-->
+| `total`         | Probably the cached total number of comments, default is `0` |          | <!--a-->
+| `count`         | The number of comments you want to get. `20` in normal view, `40` in compact view. Capped at `100` |          | <!--a-->
 
 ## Response
 

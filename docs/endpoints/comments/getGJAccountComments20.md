@@ -4,17 +4,19 @@ Gets a user's account comments.
 
 ## Parameters
 
-| Parameter       | Explanation                                                                                         | Required |
-| --------------- | --------------------------------------------------------------------------------------------------- | -------- |
-| `accountID`     | The account ID of the player whose comments you're getting                                          | Yes      |
-| `page`          | Which page of comments you want to see                                                              | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                               | Yes      |
-| `gameVersion`   | 22                                                                                                  |          |
-| `binaryVersion` | 47                                                                                                  |          |
-| `gdw`           | 0                                                                                                   |          |
-| `dvs`           | 3                                                                                                   |          |
-| `total`         | Current use is unknown, defaults to the amount of comments the user has, but leaving it as 0 works. |          |
-| `count`         | Amount of account comments that will be returned. Max 20, default 10                                |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `accountID`     | The account ID of the player whose comments you're getting | Yes      | <!--a-->
+| `page`          | Which page of comments you want to see | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
+| `total`         | Probably the cached total number of account comments, default is `0` |          | <!--a-->
+| `count`         | Amount of account comments that will be returned. Max 20, default 10 |          | <!--old?-->
 
 ## Response
 

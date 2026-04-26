@@ -4,19 +4,19 @@ Sends a message to a user
 
 ## Parameters
 
-| Parameter       | Explanation                                                                           | Required |
-| --------------- | ------------------------------------------------------------------------------------- | -------- |
-| `accountID`     | Account ID of the user sending the message                                            | Yes      | <!--v-->
-| `gjp2`          | The [GJP2](/topics/gjp.md) of the user sending the message                            | Yes      | <!--v-->
-| `toAccountID`   | Account ID of the user retrieving the message                                         | Yes      | <!--v-->
-| `subject`       | The subject of the message, converted to [URL-safe base64](/topics/encryption/base64) | Yes      | <!--v-->
-| `body`          | The body of the message, [Xor'd](/topics/encryption/xor) with a key of `14251` and then encoded in [URL-safe base64](/topics/encryption/base64)    | Yes      | <!--v-->
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                 | Yes      | <!--v-->
-| `gameVersion`   | `22`                                                                                  |          | <!--v-->
-| `binaryVersion` | `47`                                                                                  |          | <!--v-->
-| `udid`          | The sender's [UDID](/topics/encryption/id#udid) |  | <!--v-->
-| `uuid`          | The sender's [UUID](/topics/encryption/id#uuid) |  | <!--v-->
-| `dvs`           | `3`                                                                                   |          | <!--v-->
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `toAccountID`   | Account ID of the user retrieving the message | Yes      | <!--a-->
+| `subject`       | The subject of the message, converted to [URL-safe base64](/topics/encryption/base64) | Yes      | <!--a-->
+| `body`          | The body of the message, [Xor'd](/topics/encryption/xor) with a key of `14251` and then encoded in [URL-safe base64](/topics/encryption/base64) | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |  | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |  | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
 
 ## Response
 

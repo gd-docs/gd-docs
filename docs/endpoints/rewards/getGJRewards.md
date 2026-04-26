@@ -4,20 +4,21 @@ Gets the rewards from the chests.
 
 ## Parameters
 
-| Parameter       | Explanation                                                                                                   | Required |
-| --------------- | ------------------------------------------------------------------------------------------------------------- | -------- |
-| `udid`          | A unique identifier for the user's device. You can put anything here                                          | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                                            | Yes      |
-| `chk`           | [Rewards CHK](/topics/encryption/rewards_chk) using the [chest rewards](/topics/encryption/xor.html#keys) key | Yes      |
-| `gameVersion`   | 22                                                                                                            |          |
-| `binaryVersion` | 42                                                                                                            |          |
-| `gdw`           | 0                                                                                                             |          |
-| `accountID`     | Account ID of the user                                                                                        |          |
-| `gjp2`          | The user's [GJP2](/topics/gjp.md)                                                                             |          |
-| `uuid`          | Seemingly a random number also used for identifying someone                                                   |          |
-| `rewardType`    | 0 for getting info about the chests, 1 for small chest, 2 for large chest. Defaults to 0 if left out          | Yes      |
-| `r1`            | A random 3-5 digit number                                                                                     |          |
-| `r2`            | A random 3-5 digit number                                                                                     |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `udid`          | <ParamDesc name="udid"/> | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `chk`           | [Rewards CHK](/topics/encryption/rewards_chk) using the [chest rewards](/topics/encryption/xor.html#keys) key | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `gdw`           | <ParamDesc name="gdw"/> |          | <!--a-->
+| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |  | <!--a-->
+| `rewardType`    | 0 for getting info about the chests, 1 for small chest, 2 for large chest. Defaults to 0 if left out | Yes      | <!--a-->
+| `r1`            | A random 3-5 digit number |          | <!--a-->
+| `r2`            | A random 3-5 digit number |          | <!--a-->
 
 ## Response
 
