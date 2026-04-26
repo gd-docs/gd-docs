@@ -4,15 +4,16 @@ Gets a level or list's comments.
 
 ## Parameters
 
-| Parameter       | Explanation                                                                                         | Required |
-| --------------- | --------------------------------------------------------------------------------------------------- | -------- |
-| `levelID`       | The ID of the level or list. Negative if it's a list ID                                             | Yes      |
-| `page`          | Which page of comments you want to see                                                              | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                               | Yes      |
-| `binaryVersion` | 35                                                                                                  |          |
-| `gdw`           | 0                                                                                                   |          |
-| `mode`          | Set to 0 for most recent, and 1 for most liked                                                      |          |
-| `total`         | Current use is unknown, defaults to the amount of comments the user has, but leaving it as 0 works. |          |
+| Parameter       | Explanation                                                                                                                | Required |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------- | -------- |
+| `levelID`       | The ID of the level or list. Negative if it's a list ID                                                                    | Yes      |
+| `page`          | Which page of comments you want to see                                                                                     | Yes      |
+| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                                                      | Yes      |
+| `binaryVersion` | 35                                                                                                                         |          |
+| `gdw`           | 0                                                                                                                          |          |
+| `mode`          | Set to 0 for most recent, and 1 for most liked                                                                             |          |
+| `total`         | Current use is unknown, defaults to the amount of comments the user has, but leaving it as 0 works.                        |          |
+| `count`         | Number of comments to fetch. Defaults to 10, but doubles if "More Comments" is enabled or in compact view (stacking)       |          |
 
 ## Response
 
