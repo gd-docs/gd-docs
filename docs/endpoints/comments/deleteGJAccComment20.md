@@ -16,7 +16,7 @@ Deletes an account comment.
 | `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
 | `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
 | `cType`         | The comment type. `0` for level (unused), `1` for account |  | <!--a-->
-| `targetAccountID` | ID of the comment author |          | <!--a-->
+| `targetAccountID` | ID of the comment author (usually own accountID | Yes         | <!--a-->
 
 ## Response
 
@@ -37,6 +37,7 @@ data = {
     "accountID": 173831, # DevExit's account ID
     "gjp2": "********", # This would be DevExit's password encoded with GJP2 encryption
     "commentID": 1772717,
+    "targetAccountID": 173831, # DevExit's account ID
     "secret": "Wmfd2893gb7"
 }
 
