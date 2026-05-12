@@ -16,7 +16,7 @@ Deletes an account comment.
 | `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
 | `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
 | `cType`         | The comment type. `0` for level (unused), `1` for account |  | <!--a-->
-| `targetAccountID` | ID of the comment author (usually own accountID | Yes         | <!--a-->
+| `targetAccountID` | Account ID of the comment author | Yes         | <!--a-->
 
 ## Response
 
