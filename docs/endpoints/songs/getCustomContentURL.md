@@ -38,7 +38,7 @@ print(req.text)
 ```
 
 **Response**
-```py
+```plain
 https://geometrydashfiles.b-cdn.net
 ```
 

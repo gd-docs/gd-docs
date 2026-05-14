@@ -26,7 +26,7 @@ The metadata is split up into 3 segments: `total requests : page number : total 
 
 **Below is a raw response for a single friend request**
 
-```
+```plain
 1:TheWylieMaster:2:84696119:9:31:10:4:11:16:14:0:15:2:16:9276649:32:45404710:35:aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQ==:41::37:2024 years#1:0:1
 ```
 

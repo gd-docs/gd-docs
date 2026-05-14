@@ -43,7 +43,7 @@ print(req.text)
 ```
 
 **Response**
-```py
+```plain
 6:DevExit:3:3935672:2:173831:1:54109536:4:WW91J3JlIGR1bWIgbG9s:8:1:9:0:5:TWhtIHllcCB5b3UncmUgcCBkdW1iIGxtYW8=:7:19 minutes
 ```
 

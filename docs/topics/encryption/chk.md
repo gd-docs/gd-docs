@@ -25,7 +25,7 @@ import base64
 import hashlib  # sha1() lives there
 
 
-def generate_chk(values: [int, str] = [], key: str = "", salt: str = "") -> str:
+def generate_chk(values: list[int | str] = [], key: str = "", salt: str = "") -> str:
     values.append(salt)
 
     string = ("").join(map(str, values))  # assure "str" type and connect values

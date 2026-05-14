@@ -54,7 +54,7 @@ curl -X POST https://www.boomlings.com/database/getGJDailyLevel.php -d "secret=W
 <!-- tabs:end -->
 
 **Response**
-```py
+```plain
 2959|19186
 ```
 

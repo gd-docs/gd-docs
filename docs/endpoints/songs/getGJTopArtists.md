@@ -40,7 +40,7 @@ print(req.text)
 ```
 
 **Response**
-```py
+```plain
 4:Dimrain47|4:MadhouseDUDE|4:paperskies|4:CloudierMusic|4:Stratales|4:Lockyn|4:DanJohansen|4:BurgeraX|4:ParagonX9|4:Kolkian|4:LemKuuja|4:meganeko:7:UCP3M2myndqXuAEKKnqm_7SQ|4:teminiteofficial:7:UCc_bv_5nmxy2xnPNg9kP3Rg|4:Sharks:7:UCQJuQY3hF4YCHlAR42A5trg|4:F-777|4:DrayxMusic:7:UCSn0s6RSeePeJOiUi6Vdj6g|4:ForeverBound|4:DJ-Zyzyx|4:canonblade|4:Xtrullor:7:UCejLri1RVC7kj8ZVNX2a53g#73:20:20
 ```
 
