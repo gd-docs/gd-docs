@@ -15,12 +15,12 @@ Uploads a created level to the servers.
 | `levelDesc`      | The description of the level, in [URL-safe base64](/topics/encryption/base64.md) | Yes      | <!--a-->
 | `levelVersion`   | The version number of the level | Yes      | <!--a-->
 | `levelLength`    | The length of the level as a number, where `0` is Tiny, `4` is XL and `5` is Platformer | Yes      | <!--a-->
-| `audioTrack`     | The [official song number](/reference/songs#table-of-official-songs) used in the level. Set to `0` if a newgrounds song is used | Yes      | <!--a-->
+| `audioTrack`     | The [official song number](/reference/songs#table-of-official-songs) used in the level (Stereo Madness = 0). Set to `0` if a newgrounds song is used | Yes      | <!--a-->
 | `auto`           | Whether the player has jumped during verification | Yes      | <!--a-->
 | `password`       | The level's copy password. Set to `0` for no copy or `1` for free copy. Other valid values consist of `1` followed by the password - either 4 or 6 digits. Ignored since `binaryVersion=39` | Yes      | <!--a-->
 | `original`       | The ID of the original level if the level was copied, otherwise `0` | Yes      | <!--a-->
 | `twoPlayer`      | Set to `1` if the level utilizes two player mode | Yes      | <!--a-->
-| `songID`         | The ID of the custom song used in the level. Set to 0 if an official song is used | Yes      | <!--a-->
+| `songID`         | The ID of the custom song used in the level. Set to `0` if an official song is used | Yes      | <!--a-->
 | `objects`        | The number of objects in the level | Yes      | <!--a-->
 | `coins`          | The number of user coins in the level | Yes      | <!--a-->
 | `requestedStars` | The requested star rating for the level. The number is not limited to 10 | Yes      | <!--a-->
