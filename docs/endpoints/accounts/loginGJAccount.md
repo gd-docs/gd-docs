@@ -7,13 +7,13 @@ This endpoint is used to log in to a player's Geometry Dash account.
 
 ## Parameters
 
-| Parameter  | Explanation                                                                                           | Required |
-| ---------- | ----------------------------------------------------------------------------------------------------- | -------- |
-| `udid`     | The user's [UDID](/topics/encryption/id.md#udid)                                                      | Yes      |
-| `userName` | The username for the account the player is trying to log into                                         | Yes      |
-| `gjp2`     | The password of the account the player is trying to log into, encoded with [GJP2](/topics/gjp.md)     | Yes      |
-| `secret`   | [Account Secret](/reference/secrets.md): `Wmfv3899gc9`                                                | Yes      |
-| `sID`      | The player's Steam ID                                                                                 |          |
+| Parameter  | Explanation | Required |
+| ---------- | ----------- | -------- |
+| `udid`     | <ParamDesc name="udid"/> | No?     | <!--o: sent on android, not on windows-->
+| `userName` | The username of the account the player is trying to log into | Yes      | <!--a-->
+| `gjp2`     | The password of the account the player is trying to log into, encoded with [GJP2](/topics/gjp.md) | Yes      | <!--a-->
+| `secret`   | <ParamDesc name="secret" type="account"/> | Yes      | <!--a-->
+| `sID`      | The player's Steam ID |          | <!--o: sent on windows, not on android-->
 
 **Note** 
 the `sID` parameter is only sent to the servers if the player is logging into their account from the steam release of Geometry Dash. From what has been observed, it has not been utilised.

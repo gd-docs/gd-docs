@@ -4,15 +4,16 @@ Searches for a user and returns their info
 
 ## Parameters
 
-| Parameter       | Explanation                                                     | Required |
-| --------------- | --------------------------------------------------------------- | -------- |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`           | Yes      |
-| `gameVersion`   | 22                                                              |          |
-| `binaryVersion` | 47                                                              |          |
-| `gdw`           | 0                                                               |          |
-| `str`           | The name of the user you want to search for                     |          |
-| `page`          | The page of users you want. Redundant as it only returns 1 user |          |
-| `total`         | Current use is unknown, defaults to 0.                          |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
+| `gjp2`          | <ParamDesc name="accountID"/> |          | <!--a-->
+| `str`           | The name or user ID of the user you want to search for |          | <!--a-->
+| `page`          | The page of users you want. Redundant as it only returns 1 user |          | <!--a-->
+| `total`         | Probably the cached total number of users, default is `0` |          | <!--a-->
 
 ## Response
 
