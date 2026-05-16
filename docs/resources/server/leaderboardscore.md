@@ -76,6 +76,7 @@ A list of all known keys can be found in the table below
 | 16  | accountID | **Integer** | The user's account ID. **This is different than the player ID**
 | 17  | userCoins | **Integer** | The amount of user coins the player has
 | 46  | diamonds | **Integer** | The amount of diamonds the player has
+| 51  | color3 | **Integer** | The player's glow color |
 | 52  | moons | **Integer** | The amount of moons the player has
 
 ### Trivia
