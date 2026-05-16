@@ -15,6 +15,7 @@ Download a message.
 | `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
 | `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
 | `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+| `isSender`      | `0` for the messages the user has received, `1` for the messages they sent. If left out defaults to `0` |          | <!--o-->
 
 ## Response
 
