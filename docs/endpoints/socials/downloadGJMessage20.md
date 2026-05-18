@@ -8,14 +8,14 @@ Download a message.
 | --------------- | ----------- | -------- |
 | `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
 | `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `messageID`     | The ID of the message to read                      | Yes      | <!--a-->
+| `messageID`     | The ID of the message to read | Yes      | <!--a-->
 | `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `isSender`      | Whether you're the message author. If not, this isn't sent |          | <!--*/o: required when 1-->
 | `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
 | `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
 | `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
 | `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
 | `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
-| `isSender`      | `0` for the messages the user has received, `1` for the messages they sent. If left out defaults to `0` |          | <!--o-->
 
 ## Response
 
