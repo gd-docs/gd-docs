@@ -10,14 +10,16 @@ Loads account data
 
 ## Parameters
 
-| Parameter       | Explanation                                                                    | Required |
-| --------------- | ------------------------------------------------------------------------------ | -------- |
-| `accountID`     | The account ID of the account to be added                                      | Yes      |
-| `gjp2`          | The password of the account to be added with [GJP2](/topics/gjp.md) encryption | Yes      |
-| `secret`        | [Account Secret](/reference/secrets.md): `Wmfv3899gc9`                            | Yes      |
-| `gameVersion`   | 22                                                                             |          |
-| `binaryVersion` | 42                                                                             |          |
-| `gdw`           | 0                                                                              |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="account"/> | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--o: sent on android, not on windows-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--o: sent on android, not on windows-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--o: sent on android, not on windows-->
 
 ## Response
 

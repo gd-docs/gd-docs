@@ -8,8 +8,9 @@ Download a message.
 | --------------- | ----------- | -------- |
 | `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
 | `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `messageID`     | The ID of the message to read                      | Yes      | <!--a-->
+| `messageID`     | The ID of the message to read | Yes      | <!--a-->
 | `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `isSender`      | Whether you're the message author. If not, this isn't sent |          | <!--*/o: required when 1-->
 | `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
 | `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
 | `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
