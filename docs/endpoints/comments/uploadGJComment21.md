@@ -12,8 +12,8 @@ Uploads a comment to a user level.
 | `comment`       | The comment, converted to [URL-safe base64](/topics/encryption/base64) | Yes      | <!--a-->
 | `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
 | `levelID`       | The ID of the level to comment on. If commenting on a list, the ID should be negative | Yes      | <!--a-->
-| `percent`       | The level percentage shown on the comment | Yes      | <!--o: not sent when zero-->
-| [`chk`](/topics/encryption/chk) | `userName` + `comment` + `levelID` + `percent` | Yes      | <!--a-->
+| [`chk`](/topics/encryption/chk#comment) | `userName` + `comment` + `levelID` + `percent` + `0` | Yes      | <!--a-->
+| `percent`       | The level percentage shown on the comment as an integer. Only sent if percentage is not 0 |          | <!--o: not sent when zero-->
 | `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
 | `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
 | `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
@@ -35,7 +35,7 @@ import requests
 
 # With this code, DevExit is posting the comment "Hello from the GDDocs!" to 62687277
 
-chk = generate_chk(key="29481", values=["devexit", "SGVsbG8gZnJvbSB0aGUgR0REb2NzIQ==", 62687277, 69], salt="0xPT6iUrtws0J")
+chk = generate_chk(key="29481", values=["devexit", "SGVsbG8gZnJvbSB0aGUgR0REb2NzIQ==", 62687277, 69, 0], salt="xPT6iUrtws0J")
 # These values can be found in the XOR and CHK pages
 
 data = {
