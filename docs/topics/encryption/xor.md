@@ -10,12 +10,13 @@ When needed, Geometry Dash iterates through every byte of the data and applies t
 
 ## Examples
 
-Below are pseudocode examples of the algorithms used
+Below are examples of the algorithms used
 
 <!-- tabs:start -->
 
 ### **Singular**
 
+#### Pseudocode
 ```js
 result = "";
 for (i = 0; i < input.length; i++) {
@@ -24,8 +25,18 @@ for (i = 0; i < input.length; i++) {
 }
 ```
 
+#### Python
+```py
+def xor(input: str, key: int):
+    return "".join(
+        chr(ord(char) ^ key)
+        for char in input
+    )
+```
+
 ### **Cycle**
 
+#### Pseudocode
 ```js
 result = "";
 for (i = 0; i < input.length; i++) {
@@ -33,6 +44,17 @@ for (i = 0; i < input.length; i++) {
   xKey = key[i % key.length].toByte();
   result += (byte ^ xKey).toChar();
 }
+```
+
+#### Python
+```py
+def cyclic_xor(input: str, key: int):
+    key_str = str(key)
+    
+    return "".join(
+        chr(ord(char) ^ ord(key_str[i % len(key_str)]))
+        for i, char in enumerate(input)
+    )
 ```
 
 <!-- tabs:end -->
