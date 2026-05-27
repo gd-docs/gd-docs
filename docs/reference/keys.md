@@ -6,7 +6,7 @@ Geometry Dash uses [XOR Cipher](/topics/encryption/xor.md) combined with [base64
 
 | Key     | Usage                       | XOR Type |
 | ------- | --------------------------- | -------- |
-| `11`    | Player Save Data            | Singular |
+| `11`*   | Player Save Data            | Singular |
 | `14251` | Player Messages             | Cycled   |
 | `19283` | Vault Codes                 | Cycled   |
 | `19847` | Daily Challenges            | Cycled   |
@@ -21,6 +21,8 @@ Geometry Dash uses [XOR Cipher](/topics/encryption/xor.md) combined with [base64
 | `58281` | Rating Integrity            | Cycled   |
 | `59182` | Chest Rewards               | Cycled   |
 | `85271` | Stat Submission Integrity   | Cycled   |
+
+- *`11` in this case refers to the literal `11` (`0x0B`) byte, not the number `11`
 
 ## XOR Types
 

@@ -40,11 +40,16 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: "/assets/logo.png",
     nav: [
-      { text: 'Home', link: '/' }
+      { text: 'Useful stuff', items: [
+        { text: 'Object Property Explorer by FlowVix', link: 'https://flowvix.github.io/gd-info-explorer' },
+        { text: 'Spritesheet Browser by undefined0', link: 'https://undefined06855.github.io/GDImageBrowser/' },
+        { text: 'Library of Geometria by Unsimply', link: 'https://a-zalt.github.io/gdknowledge/resources.html' }
+      ]}
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/gd-docs/gd-docs' }
+      { icon: 'github', link: 'https://github.com/gd-docs/gd-docs' },
+      { icon: 'discord', link: 'https://discord.gg/uHHnxry4sR' }
     ],
 
     editLink: {
