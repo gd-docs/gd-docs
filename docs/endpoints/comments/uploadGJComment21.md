@@ -12,7 +12,7 @@ Uploads a comment to a user level.
 | `comment`       | The comment, converted to [URL-safe base64](/topics/encryption/base64) | Yes      | <!--a-->
 | `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
 | `levelID`       | The ID of the level to comment on. If commenting on a list, the ID should be negative | Yes      | <!--a-->
-| [`chk`](/topics/encryption/chk#comment) | `userName` + `comment` + `levelID` + `percent` + `0` | Yes      | <!--a-->
+| `chk`           | [Comments CHK](/topics/encryption/chk#comment) | Yes      | <!--a-->
 | `percent`       | The level percentage shown on the comment as an integer. Only sent if percentage is not 0 |          | <!--o: not sent when zero-->
 | `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
 | `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
