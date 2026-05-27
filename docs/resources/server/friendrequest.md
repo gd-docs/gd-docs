@@ -35,6 +35,7 @@ A list of all known keys can be found in the table below
 | 35  | message | **String** | The friend request's message, encoded in [base64](/topics/encryption/base64.md)
 | 37  | age | **String** | How long ago the friend request was sent (e.g. "2 months")
 | 41  | newFriendRequest | **Bool** | if the friend request is new
+| 51  | color3 | **Integer** | The player's glow color |
 
 #### Trivia
 

@@ -55,6 +55,7 @@ A list of all known keys can be found in the table below
 | 15  | special | **Integer** | functions the same as glow however it returns a 2 rather than a 1
 | 16  | accountID | **Integer** | The user's account ID. **This is different than the player ID**
 | 42  | age | **String** | How long ago the score was set (e.g. "2 months")
+| 51  | color3 | **Integer** | The player's glow color |
 
 ### Top Leaderboard Score Structure
 
