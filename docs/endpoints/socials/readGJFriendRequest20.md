@@ -1,18 +1,20 @@
 # readGJFriendRequest20.php
 
-This endpoint is used to read friend requests recieved from other players
+Marks a received friend request as read.
 
 ## Parameters
 
-| Parameter       | Explanation                                              | Required |
-| --------------- | -------------------------------------------------------- | -------- |
-| `accountID`     | The player's account ID                                  | Yes      |
-| `gjp2`          | The player's [GJP2](/topics/gjp.md)                      | Yes      |
-| `requestID`     | The ID for the friend request recieved                   | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`     | Yes      |
-| `gameVersion`   | The Game Version the player is playing on. 22 for 2.2    |          |
-| `binaryVersion` | The current build the player is playing on. 42 for 2.206 |          |
-| `gdw`           | If the player is using Geometry Dash World               |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `requestID`     | The ID of the received friend request | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
 
 ## Response
 

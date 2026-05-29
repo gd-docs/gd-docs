@@ -4,11 +4,11 @@ Gets the URL for the data server.
 
 ## Parameters
 
-| Parameter   | Explanation                                                                                           | Required |
-| ----------- | ----------------------------------------------------------------------------------------------------- | -------- |
-| `accountID` | Any valid account ID                                                                                  | Yes      |
-| `type`      | used to decide which endpoint is used after the data server is found - 1 = backup data/ 2 = sync data | Yes      |
-| `secret`    | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                                    | Yes      |
+| Parameter   | Explanation | Required |
+| ----------- | ----------- | -------- |
+| `accountID` | <ParamDesc name="accountID"/> | Yes      | <!--a-->
+| `type`      | Used to decide which endpoint is used after the data server is found. `1` = backup data, `2` = sync data | Yes      | <!--a-->
+| `secret`    | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
 
 ## Response
 

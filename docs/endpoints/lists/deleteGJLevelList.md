@@ -4,16 +4,17 @@ Deletes a list from the server.
 
 ## Parameters
 
-| Parameter       | Explanation                                       | Required |
-| --------------- | ------------------------------------------------- | -------- |
-| `accountID`     | The list author's account ID                      | Yes      |
-| `udid`          | The list author's UDID                            | Yes      |
-| `uuid`          | The list author's UUID                            | Yes      |
-| `gjp2`          | The level author's [GJP2](/topics/gjp.md)         | Yes      |
-| `listID`        | The ID of the level being deleted                 | Yes      |
-| `secret`        | [Level Secret](/reference/secrets.md): `Wmfv2898gc9` | Yes      |
-| `gameVersion`   | 22                                                |          |
-| `binaryVersion` | 42                                                |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> | Yes      | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> | Yes      | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `listID`        | The ID of the list being deleted | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="level"/> | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
 
 ## Response
 

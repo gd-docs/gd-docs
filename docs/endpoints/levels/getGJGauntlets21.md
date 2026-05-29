@@ -4,14 +4,18 @@ Gets the gauntlet levels.
 
 ## Parameters
 
-| Parameter       | Explanation                                                | Required |
-| --------------- | ---------------------------------------------------------- | -------- |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`         | Yes      |
-| `gameVersion`   | 22                                                         |          |
-| `binaryVersion` | 47                                                         |          |
-| `gdw`           | 0                                                          |          |
-| `special`       | 1 (fetches the 2.2 gauntlets)                              |          |
-| `vkey`          | equal to binaryVersion (starting with 46, which is 2.2080) |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
+| `special`       | 1 (fetches the 2.2 gauntlets)                              |          | <!--a-->
+| `vkey`          | equal to `binaryVersion` (starting with `46`, which is 2.2080) |          | <!--a-->
 
 ## Response
 

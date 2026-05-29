@@ -10,15 +10,17 @@ Saves account data
 
 ## Parameters
 
-| Parameter       | Explanation                                                                                                                                  | Required |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| `accountID`      | Account ID of the account to be added                                                                                                      | Yes      |
-| `gjp2`      | The [GJP2](/topics/gjp#generating-gjp2) of the account to be added                                                                                                      | Yes      |
-| `gameVersion`   | 22                                                                                                                                           | Yes      |
-| `binaryVersion` | 42                                                                                                                                           | Yes      |
-| `saveData`      | The save data for CCGameManager.dat compressed with gzip, then a semicolon `;` and the save data for CCLocalLevels.dat compressed with gzip. | Yes      |
-| `secret`        | [Account Secret](/reference/secrets.md): `Wmfv3899gc9`                                                                                          | Yes      |
-| `dvs`           | 3                                                                                                                                            |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> | Yes      | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> | Yes      | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> | Yes      | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> | Yes      | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+| `saveData`      | The save data for CCGameManager.dat compressed with gzip, then a semicolon `;` and the save data for CCLocalLevels.dat compressed with gzip | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="account"/> | Yes      | <!--a-->
 
 ## Response
 

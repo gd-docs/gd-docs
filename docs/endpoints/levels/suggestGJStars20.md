@@ -4,17 +4,19 @@ Endpoint used by moderators to send levels to RobTop
 
 ## Parameters
 
-| Parameter       | Explanation                                                               | Required |
-| --------------- | ------------------------------------------------------------------------- | -------- |
-| `accountID`     | accountID of the user                                                     | Yes      |
-| `gjp2`          | The [GJP2](/topics/gjp#generating-gjp2) of the user                                     | Yes      |
-| `levelID`       | The ID of the level                                                       | Yes      |
-| `stars`         | How many stars that are requested                                         | Yes      |
-| `secret`        | [Moderator Secret](/reference/secrets.md): `Wmfp3879gc3`                     | Yes      |
-| `gameVersion`   | the game version                                                          | Yes      |
-| `binaryVersion` | the binary version                                                        | Yes      |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `accountID`     | <ParamDesc name="accountID"/> | Yes      |
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      |
+| `levelID`       | The ID of the level | Yes      |
+| `stars`         | How many stars that are requested | Yes      |
+| `secret`        | <ParamDesc name="secret" type="mod"/> | Yes      |
+| `gameVersion`   | <ParamDesc name="gameVersion"/> | Yes      |
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> | Yes      |
 | `feature`       | 0 for star rate, 1 for feature, 2 for epic, 3 for legendary, 4 for mythic | Yes      |
-| `gdw`           | 0                                                                         | Yes      |
+| `udid`          | <ParamDesc name="udid"/> |          |
+| `uuid`          | <ParamDesc name="uuid"/> |          |
+| `dvs`           | <ParamDesc name="dvs"/> |          |
 
 ## Response
 

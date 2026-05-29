@@ -4,17 +4,19 @@ Gets which daily level we're on and gets how much time is left.
 
 ## Parameters
 
-| Parameter                   | Explanation                                                                                                   | Required |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------- | -------- |
-| `secret`                    | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                                            | Yes      |
-| `gameVersion`               | 22                                                                                                            |          |
-| `binaryVersion`             | 47                                                                                                            |          |
-| `dvs`                       | 3                                                                                                             |          |
-| `accountID`                 | The user's account ID                                                                                         |          |
-| `gjp2`                      | The user's [GJP2](/topics/gjp.md)                                                                             |          |
-| `type`                      | 0 for daily, 1 for weekly, 2 for event level.                                                                 |          |
-| `chk` (required for type 2) | [Rewards CHK](/topics/encryption/rewards_chk) using the [chest rewards](/topics/encryption/xor.html#keys) key |          |
-| `weekly`                    | 0 for daily, 1 for weekly. Defaults to 0 if not sent. This parameter is outdated since 2.207                  |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
+| `type`          | 0 for daily, 1 for weekly, 2 for event level. |          | <!--a-->
+| `chk`           | [Rewards CHK](/topics/encryption/rewards_chk) using the [chest rewards](/topics/encryption/xor.html#keys) key |          | <!--a/*: required for type 2-->
+| `weekly`        | 0 for daily, 1 for weekly. Defaults to 0 if not sent. This parameter is outdated since 2.207 |          |
 
 ## Response
 
@@ -52,7 +54,7 @@ curl -X POST https://www.boomlings.com/database/getGJDailyLevel.php -d "secret=W
 <!-- tabs:end -->
 
 **Response**
-```py
+```plain
 2959|19186
 ```
 

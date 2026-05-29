@@ -4,10 +4,10 @@ Reports a level
 
 ## Parameters
 
-| Parameter | Explanation                                          | Required |
-| --------- | ---------------------------------------------------- | -------- |
-| `secret`  | [Common Secret](/reference/secrets.md): `Wmfd2893gb7` | Yes      |
-| `levelID` | The ID of the level being reported                   |          |
+| Parameter | Explanation | Required |
+| --------- | ----------- | -------- |
+| `secret`  | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `levelID` | The ID of the level being reported |          | <!--a-->
 
 ## Response
 

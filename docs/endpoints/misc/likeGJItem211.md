@@ -4,20 +4,22 @@ Likes a level, comment, etc.
 
 ## Parameters
 
-| Parameter       | Explanation                                                                                | Required |
-| --------------- | ------------------------------------------------------------------------------------------ | -------- |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                         | Yes      |
-| `itemID`        | The ID of the level, comment, or account comment                                           | Yes      |
-| `type`          | 1 for level, 2 for level comment, 3 for account comment, 4 for list                        | Yes      |
-| `gameVersion`   | 22                                                                                         |          |
-| `binaryVersion` | 42                                                                                         |          |
-| `gdw`           | 0                                                                                          |          |
-| `accountID`     | The liking/disliking person's account ID                                                   |          |
-| `gjp2`          | The liking/disliking person's [GJP2](/topics/gjp#generating-gjp2)                                        |          |
-| `udid`          | The liking/disliking person's [udid](/topics/encryption/id#udid)                           |          |
-| `uuid`          | The liking/disliking person's [uuid](/topics/encryption/id#uuid)                           |          |
-| `like`          | 0 is dislike, 1 is like. Not sure what it defaults to if left out, but it can be left out. |          |
-| `chk`           | [See here](/topics/encryption/chk.md#like)                                                 |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      |
+| `itemID`        | The ID of the level, comment, or account comment | Yes      | <!--a-->
+| `type`          | 1 for level, 2 for level comment, 3 for account comment, 4 for list | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="dvs"/> |          | <!--a-->
+| `like`          | 0 is dislike, 1 is like. Not sure what it defaults to if left out, but it can be left out. |          | <!--a-->
+| `special`       | 0 if liking level/list, the level/list ID for comment (list ID should be negative), the account ID for profile post |          | <!--a-->
+| `rs`            | 10 randomly generated characters |          | <!--a-->
+| `chk`           | [See here](/topics/encryption/chk.md#like) |          | <!--a-->
 
 ## Response
 

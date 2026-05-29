@@ -4,16 +4,18 @@ Deletes a level comment.
 
 ## Parameters
 
-| Parameter       | Explanation                                                       | Required |
-| --------------- | ----------------------------------------------------------------- | -------- |
-| `accountID`     | The account ID of the user who is deleting the comment            | Yes      |
-| `gjp2`          | The [GJP2](/topics/gjp#generating-gjp2) of the user who is deleting the comment | Yes      |
-| `commentID`     | ID of the comment                                                 | Yes      |
-| `levelID`       | ID of the level the comment is on                                 | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                | Yes      |
-| `gameVersion`   | 21                                                                |          |
-| `binaryVersion` | 35                                                                |          |
-| `gdw`           | 0                                                                 |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `accountID`     | Account ID of the user deleting the comment | Yes      | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `commentID`     | ID of the comment | Yes      | <!--a-->
+| `levelID`       | ID of the level the comment is on | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
 
 ## Response
 

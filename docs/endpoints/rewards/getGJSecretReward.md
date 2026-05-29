@@ -4,17 +4,18 @@ Gets the rewards from the Secret Room ("Wraith") vault depending on the entered 
 
 ## Parameters
 
-| Parameter       | Explanation                                                                                                   | Required |
-| --------------- | ------------------------------------------------------------------------------------------------------------- | -------- |
-| `udid`          | A unique identifier for the user's device. You can put anything here                                          | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                                            | Yes      |
-| `chk`           | [Rewards CHK](/topics/encryption/rewards_chk) using the [chest rewards](/topics/encryption/xor.html#keys) key | Yes      |
-| `gameVersion`   | 22                                                                                                            |          |
-| `binaryVersion` | 42                                                                                                            |          |
-| `gdw`           | 0                                                                                                             |          |
-| `accountID`     | Account ID of the user                                                                                        |          |
-| `gjp2`          | The user's [GJP2](/topics/gjp.md)                                                                             |          |
-| `uuid`          | Seemingly a random number also used for identifying someone                                                   |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `udid`          | <ParamDesc name="udid"/> | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `chk`           | [Rewards CHK](/topics/encryption/rewards_chk) using the [chest rewards](/topics/encryption/xor.html#keys) key | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |  | <!--a-->
+| `rewardKey`     | The input reward key string |  | <!--a-->
 
 ## Response
 
@@ -24,7 +25,6 @@ A list of attributes of the Rewards, separated by colons `:` as follows:
 - The rewardID
 - The chest type (1 small, 2 large)
 - comma separated chest reward in the format `{itemid},{total1},{itemid2},{total2},...`
-
 
 Where each itemID is as follows:
 | itemID | Type         |
@@ -64,9 +64,9 @@ If the itemID is greater than 1000, it seems to be treated as a special reward (
 | `14`          | Jetpack     |
 | `15`          | ShipFire    |
 
-
-
 This list is then [XOR](/topics/encryption/xor.md)'d and [URL-Safe Base64](/topics/encryption/base64.md) encoded. Then it is separated with its [hash](/resources/server/hashes.md#getgjrewards) by a pipe `|`. It also has a random string of 5 characters appended to the front.
+
+Error code `-1` is returned if the reward key is incorrect.
 
 ## Example
 

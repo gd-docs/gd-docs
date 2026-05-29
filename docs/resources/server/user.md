@@ -61,7 +61,7 @@ Each `key` is tied to a component within the client and the `value` sets data fo
 | 45* | twitch | **String** | The player's Twitch channel |
 | 46 | diamonds | **Integer** | The number of diamonds the player has |
 | 48* | accExplosion | **Integer** | The ID of the player's explosion effect |
-| 49* | mod | **Integer** | The mod level of the player. 0 = None, 1 = Normal Mod (Yellow), 2 = Elder Mod (Orange) |
+| 49* | mod | **Integer** | The mod level of the player. 0 = None, 1 = Normal Mod (Yellow), 2 = Elder Mod (Orange), 3 = Leaderboard Mod (Blue). Leaderboard mods show as 0 if gameVersion is not set to 22 or above |
 | 50* | commentHistoryState | **Integer** | Who can view the player's comment history. 0 = All, 1 = Friends only, 2 = None |
 | 51 | color3 | **Integer** | The player's glow color |
 | 52 | moons | **Integer** | The player's moon count |

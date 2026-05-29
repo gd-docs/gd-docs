@@ -4,35 +4,35 @@ Downloads a user level and info so it can be played.
 
 ## Parameters
 
-| Parameter       | Explanation                                                                                                | Required |
-| --------------- | ---------------------------------------------------------------------------------------------------------- | -------- |
-| `levelID`       | The ID of the level to download. Use -1 for the daily level, -2 for the weekly and -3 for the event level. | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                                         | Yes      |
-| `gameVersion`   | 22                                                                                                         |          |
-| `binaryVersion` | 47                                                                                                         |          |
-| `dvs`           | 3                                                                                                          |          |
-| `accountID`     | The account ID of the user who is downloading the level                                                    |          |
-| `gjp2`          | The [GJP2](/topics/gjp#generating-gjp2) of the user who is downloading the level                                         |          |
-| `udid`          | The [udid](/topics/encryption/id#udid) of the user who is downloading the level                            |          |
-| `uuid`          | The [uuid](/topics/encryption/id#uuid) of the user who is downloading the level                            |          |
-| `inc`           | Whether the amount of downloads should be incremented on the level (requires proper authentication)        |          |
-| `extras`        | Used to return some extra data when set to 1, but was disabled sometime in 2022                            |          |
-| `rs`            | [See here](/topics/encryption/id#rs)                                                                       |          |
-| `chk`           | [See here](/topics/encryption/chk#download-level)                                                          |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `levelID`       | The ID of the level to download. Use -1 for the daily level, -2 for the weekly and -3 for the event level. | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `inc`           | Whether the amount of downloads should be incremented on the level (requires proper authentication) |          | <!--o-->
+| `extras`        | Used to return some extra data when set to 1, but was disabled sometime in 2022 |          |
+| `rs`            | [See here](/topics/encryption/id#rs) |          | <!--a-->
+| `chk`           | [See here](/topics/encryption/chk#download-level) |          | <!--a-->
 
 ## Response
 
-Returns a [level object](/resources/server/level.md) along with 2 hashes. All of this is separated by `#`. If binary version is 42 or higher, returns data in the following format:
 ```
-{level}#{hash1}#{hash2}#{user}#{songs}#
+{level}#{hash1}#{hash2}#{user}#{songs}#{extraArtistNames}
 ```
 where:
-- `{level}` is the level object
+- `{level}` is the [level object](/resources/server/level)
 - `{hash1}` and `{hash2}` are integrity [hashes](/resources/server/hashes.md#downloadgjlevel) the GD client uses to validate the response
 - `{user}` is the user that uploaded the level, in the format `userID:username:accountID` - only returned when requesting level ID `-1` (daily), `-2` (weekly) or `-3` (event)
-- `{songs}` is the list of song objects that the level uses
+- `{songs}` is the list of [song objects](/resources/server/song) (without key 15 `extraArtistNames`) the level uses, separated by `~:~`
+- `{extraArtistNames}` is a deduplicated dictionary of extra artists' names for all `{songs}` in the format `id,name,id,name,...`
 
-The last 2 segments are only returned when `binaryVersion` >= 42, else it's just `{level}#{hash1}#{hash2}`
+The last 3 segments are only returned when `binaryVersion` >= 42, else it's just `{level}#{hash1}#{hash2}`
 
 ## Example
 

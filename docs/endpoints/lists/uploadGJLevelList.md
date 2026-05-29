@@ -4,23 +4,26 @@ Uploads a created list to the servers.
 
 ## Parameters
 
-| Parameter       | Explanation                                                                                                                                       | Required |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| `gameVersion`   | The game version. Currently 22                                                                                                                    | Yes      |
-| `accountID`     | The uploader's account ID                                                                                                                         | Yes      |
-| `gjp2`          | The uploader's [GJP2](/topics/gjp.md)                                                                                                             | Yes      |
-| `listID`        | The ID of the list if updating to a newer version, otherwise 0                                                                                    | Yes      |
-| `listName`      | The name of the list, in plain text                                                                                                               | Yes      |
-| `listDesc`      | The description of the list, in [URL-safe base64](/topics/encryption/base64.md)                                                                   | Yes      |
-| `listVersion`   | The version number of the level                                                                                                                   | Yes      |
-| `original`      | The ID of the original list if the list was copied, otherwise 0                                                                                   | Yes      |
-| `difficulty`    | The list's difficulty face. -1 is N/A, and then it's 0-10 where 0 is Auto and 10 is Extreme Demon                                                 | Yes      |
-| `unlisted`      | Set to 2 if the list should be unlisted, and to 1 if the list should be unlisted and only viewable by friends                                     | Yes      |
-| `listLevels`    | All level IDs included in the list. Each ID is separated by `,`                                                                                   | Yes      |
-| `seed`          | A mandatory [chk value](/topics/encryption/chk.md) generated from the first 50 characters of the listLevels parameter, followed by the accountID. | Yes      |
-| `seed2`         | 5 randomly generated characters from \[A-Za-z0-9]                                                                                                 | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                                                                                | Yes      |
-| `binaryVersion` | Currently 42                                                                                                                                      |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `gameVersion`   | <ParamDesc name="gameVersion"/>| Yes      | <!--a-->
+| `accountID`     | <ParamDesc name="accountID"/>| Yes      | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `listID`        | The ID of the list if updating to a newer version, otherwise `0` | Yes      | <!--a-->
+| `listName`      | The name of the list, in plain text | Yes      | <!--a-->
+| `listDesc`      | The description of the list, in [URL-safe base64](/topics/encryption/base64.md) | Yes      | <!--a-->
+| `listLevels`    | All level IDs included in the list, separated by `,` | Yes      | <!--a-->
+| `difficulty`    | The list's difficulty face. `-1` is N/A, and then it's `0`-`10` where `0` is Auto and `10` is Extreme Demon | Yes      | <!--a-->
+| `listVersion`   | Always `0` | Yes      | <!--a-->
+| `original`      | The ID of the original list if the list was copied, otherwise `0` | Yes      | <!--a-->
+| `unlisted`      | Set to `2` if the list should be unlisted, and to `1` if the list should be unlisted and only viewable by friends | Yes      | <!--a-->
+| `seed`          | A mandatory [chk value](/topics/encryption/chk.md) generated from the first 50 characters of the listLevels parameter, followed by the accountID | Yes      | <!--a-->
+| `seed2`         | 5 randomly generated characters from `[A-Za-z0-9]` | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="common"/>| Yes      | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
 
 ## Response
 

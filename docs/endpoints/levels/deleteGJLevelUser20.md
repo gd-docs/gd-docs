@@ -4,12 +4,17 @@ Deletes a level from the server.
 
 ## Parameters
 
-| Parameter   | Explanation                                       | Required |
-| ----------- | ------------------------------------------------- | -------- |
-| `accountID` | The level author's account ID                     | Yes      |
-| `gjp2`      | The level author's [GJP2](/topics/gjp#generating-gjp2)          | Yes      |
-| `levelID`   | The ID of the level being deleted                 | Yes      |
-| `secret`    | [Level Secret](/reference/secrets.md): `Wmfv2898gc9` | Yes      |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `levelID`       | The ID of the level being deleted                 | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="level"/> | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
 
 ## Response
 

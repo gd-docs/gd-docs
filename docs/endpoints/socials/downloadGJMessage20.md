@@ -4,15 +4,18 @@ Download a message.
 
 ## Parameters
 
-| Parameter       | Explanation                                        | Required |
-| --------------- | -------------------------------------------------- | -------- |
-| `accountID`     | The person's account ID                            | Yes      |
-| `gjp2`          | The person's [GJP2](/topics/gjp.md)                | Yes      |
-| `messageID`     | The ID of the message to read                      | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7` | Yes      |
-| `gameVersion`   | 22                                                 |          |
-| `binaryVersion` | 42                                                 |          |
-| `gdw`           | 0                                                  |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `messageID`     | The ID of the message to read | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `isSender`      | Whether you're the message author. If not, this isn't sent |          | <!--*/o: required when 1-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
 
 ## Response
 
@@ -41,7 +44,7 @@ print(req.text)
 ```
 
 **Response**
-```py
+```plain
 6:DevExit:3:3935672:2:173831:1:54109536:4:WW91J3JlIGR1bWIgbG9s:8:1:9:0:5:TWhtIHllcCB5b3UncmUgcCBkdW1iIGxtYW8=:7:19 minutes
 ```
 

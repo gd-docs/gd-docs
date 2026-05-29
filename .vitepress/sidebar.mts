@@ -501,6 +501,10 @@ export default [
               {
                 "text": "Particle String",
                 "link": "/resources/client/level-components/particle-string"
+              },
+              {
+                "text": "Replay String",
+                "link": "/resources/client/level-components/replay-string"
               }
             ],
             "collapsed": true

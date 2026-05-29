@@ -1,19 +1,21 @@
 # uploadFriendRequest20.php
 
-This endpoint is used to send a friend request to other players
+Sends a friend request to another player.
 
 ## Parameters
 
-| Parameter       | Explanation                                                        | Required |
-| --------------- | ------------------------------------------------------------------ | -------- |
-| `accountID`     | The player's account ID                                            | Yes      |
-| `toAccountID`   | The account which the player is trying to send a friend request to | Yes      |
-| `gjp2`          | The player's [GJP2](/topics/gjp.md)                                | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`               | Yes      |
-| `comment`       | The message sent along with the friend request                     | Yes      |
-| `gameVersion`   | The Game Version the player is playing on. 22 for 2.2              |          |
-| `binaryVersion` | The current build the player playing on. 42 for 2.206              |          |
-| `gdw`           | If the player is using Geometry Dash World                         |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
+| `toAccountID`   | The account which the player is trying to send a friend request to | Yes      | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `comment`       | The message sent along with the friend request | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
 
 ## Response
 

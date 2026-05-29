@@ -4,15 +4,17 @@ Blocks a user.
 
 ## Parameters
 
-| Parameter         | Explanation                                        | Required |
-| ----------------- | -------------------------------------------------- | -------- |
-| `accountID`       | The blocking person's account ID                   | Yes      |
-| `gjp2`            | The blocking person's [GJP2](/topics/gjp.md)       | Yes      |
-| `targetAccountID` | The account ID of the person being blocked         | Yes      |
-| `secret`          | [Common Secret](/reference/secrets.md): `Wmfd2893gb7` | Yes      |
-| `gameVersion`     | 22                                                 |          |
-| `binaryVersion`   | 42                                                 |          |
-| `gdw`             | 0                                                  |          |
+| Parameter         | Explanation | Required |
+| ----------------- | ----------- | -------- |
+| `accountID`       | <ParamDesc name="accountID"/> | Yes      | <!--a-->
+| `gjp2`            | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `targetAccountID` | The account ID of the person being blocked         | Yes      | <!--a-->
+| `secret`          | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `gameVersion`     | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion`   | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`            | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`            | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`             | <ParamDesc name="dvs"/> |          | <!--a-->
 
 ## Response
 

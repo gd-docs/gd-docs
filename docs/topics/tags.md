@@ -25,7 +25,7 @@ Colour Tags are used to style areas of text with colour. They contain both a sta
 | `<cl>` | `0x60ABEF`  | <gdfmt><cl>Sample</cl></gdfmt> |
 | `<cj>` | `0x32C8FF`  | <gdfmt><cj>Sample</cj></gdfmt> |
 | `<cy>` | `0xFFFF00`  | <gdfmt><cy>Sample</cy></gdfmt> |
-| `<co>` | `0xFF5A4B`  | <gdfmt><co>Sample</co></gdfmt> |
+| `<co>` | `0xFFA54B`  | <gdfmt><co>Sample</co></gdfmt> |
 | `<cr>` | `0xFF5A5A`  | <gdfmt><cr>Sample</cr></gdfmt> |
 | `<cp>` | `0xFF00FF`  | <gdfmt><cp>Sample</cp></gdfmt> |
 | `<ca>` | `0x9632FF`  | <gdfmt><ca>Sample</ca></gdfmt> |

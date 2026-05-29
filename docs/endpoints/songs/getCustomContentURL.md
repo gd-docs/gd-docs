@@ -4,6 +4,16 @@ Gets the URL for the music & SFX library server.
 
 ## Parameters
 
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
+
 ### Required Parameters
 
 None
@@ -28,7 +38,7 @@ print(req.text)
 ```
 
 **Response**
-```py
+```plain
 https://geometrydashfiles.b-cdn.net
 ```
 

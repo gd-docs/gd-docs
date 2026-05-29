@@ -34,6 +34,7 @@ The valid supported color values are the following:
 - A color value of 0.8 will result in an orange guideline.
 - Color values less than 0.8 will result in a transparent guideline.
 - Color values above 0.8 that do not match the yellow or the green guideline color values will result in an orange guideline.
+- Before 1.9, the delimiter used to be `;`
 
 ### Trivia
 - A number of guidelines with color value 0.7 were found in Blast Processing, which are all transparent.

@@ -6,13 +6,15 @@ Gets info about a user
 
 | Parameter         | Explanation                                        | Required |
 | ----------------- | -------------------------------------------------- | -------- |
-| `targetAccountID` | The account ID of the person you want the info of  | Yes      |
-| `secret`          | [Common Secret](/reference/secrets.md): `Wmfd2893gb7` | Yes      |
-| `gameVersion`     | 22                                                 |          |
-| `binaryVersion`   | 35                                                 |          |
-| `gdw`             | 0                                                  |          |
-| `accountID`       | Your accountID                                     |          |
-| `gjp2`            | Your [GJP2](/topics/gjp#generating-gjp2)                         |          |
+| `targetAccountID` | The account ID of the person you want the info of  | Yes      | <!--a-->
+| `secret`          | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `gameVersion`     | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion`   | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `accountID`       | <ParamDesc name="accountID"/> |          | <!--a-->
+| `gjp2`            | <ParamDesc name="gjp2"/> |          | <!--a-->
+| `udid`            | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`            | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`             | <ParamDesc name="dvs"/> |          | <!--a-->
 
 ## Response
 
@@ -51,7 +53,7 @@ curl -X POST https://www.boomlings.com/database/getGJUserInfo20.php -d "secret=W
 
 
 **Response**
-```py
+```plain
 1:meluwudy:2:3935672:13:148:17:1068:10:12:11:15:51:10:3:9990:52:320:46:21504:4:476:8:1:18:0:19:0:50:0:20:UCZoN2WLAooS6uhREa9Cgpwg:21:82:22:17:23:113:24:83:25:85:26:24:28:1:43:2:48:2:53:26:54:3:30:29855:16:173831:31:0:44:logout:45:devexit:49:0:55:143,67,56,112,56,1,1,2,1,0,21,14:56:144,157,134,300,190,88,59,67:57:4,7,7,18,16,5,0:29:1
 ```
 

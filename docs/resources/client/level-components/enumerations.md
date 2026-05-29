@@ -82,4 +82,11 @@ Here you will find the enumerations that are related to the level string.
 | 1   | Larger  |
 | 2   | Smaller |
 
+## Player Color
+
+| Key | Name    |
+| --- | ------- |
+| -1  | None    |
+| 1   | 1st     |
+| 2   | 2nd     |
 

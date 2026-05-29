@@ -1,7 +1,7 @@
 # Client Level String Resource
 
 > [!NOTE]
-> 2.2 adds a ton of new object properties. Most of the object properties can be found [here](https://flowvix.github.io/gd-info-explorer/).
+> 2.2 adds a ton of new object properties. Most of the object properties can be found [here](https://flowvix.github.io/gd-info-explorer/props).
 
 ## Object String
 The object string is contained within the inner level string. It is formatted as follows:

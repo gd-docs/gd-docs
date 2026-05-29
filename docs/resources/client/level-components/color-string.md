@@ -14,7 +14,7 @@ The color entries have the following properties:
 | 1   | FromColourRed       | **Integer**                         | the Red component of the color             |
 | 2   | FromColourGreen     | **Integer**                         | the Green component of the color           |
 | 3   | FromColourBlue      | **Integer**                         | the Blue component of the color            |
-| 4   | PlayerColor         | **[Player Color](/resources/client/level-components/enumerations.md)** | the Player Color that the color is copying |
+| 4   | PlayerColor         | **[Player Color](/resources/client/level-components/enumerations.md#player-color)** | the Player Color that the color is copying |
 | 5   | Blending            | **Bool**                            | the Blending property of the color         |
 | 6   | ColourChannelIndex  | **Integer**                         | the Color Channel ID of the color          |
 | 7   | FromOpacity         | **Float**                           | the Opacity property of the color          |

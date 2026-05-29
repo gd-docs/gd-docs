@@ -4,19 +4,21 @@ Removes someone from a user's friend list
 
 ## Parameters
 
-| Parameter         | Explanation                                               | Required |
-| ----------------- | --------------------------------------------------------- | -------- |
-| `accountID`       | The accountID of the user removing the friend             | Yes      |
-| `gjp2`            | The [GJP2](/topics/gjp#generating-gjp2) of the user removing the friend | Yes      |
-| `targetAccountID` | The accountID of the user being removed                   | Yes      |
-| `secret`          | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`        | Yes      |
-| `gameVersion`     | 21                                                        |          |
-| `binaryVersion`   | 35                                                        |          |
-| `gdw`             | 0                                                         |          |
+| Parameter         | Explanation | Required |
+| ----------------- | ----------- | -------- |
+| `accountID`       | <ParamDesc name="accountID"/> | Yes      | <!--a-->
+| `gjp2`            | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `targetAccountID` | The accountID of the user being removed | Yes      | <!--a-->
+| `secret`          | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `gameVersion`     | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion`   | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`            | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`            | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`             | <ParamDesc name="dvs"/> |          | <!--a-->
 
 ## Response
 
-
+Always returns `1`, regardless of the passed `targetAccountID`.
 
 ## Example
 

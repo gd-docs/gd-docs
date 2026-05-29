@@ -4,14 +4,16 @@ Requests moderator access.
 
 ## Parameters
 
-| Parameter       | Explanation                                                  | Required |
-| --------------- | ------------------------------------------------------------ | -------- |
-| `accountID`     | The accountID of the user requesting mod access              | Yes      |
-| `gjp2`          | The [GJP2](/topics/gjp.md) of the user requesting mod access | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`           | Yes      |
-| `gameVersion`   | 22                                                           |          |
-| `binaryVersion` | 42                                                           |          |
-| `gdw`           | 0                                                            |          |
+| Parameter       | Explanation| Required |
+| --------------- | ----------- | -------- |
+| `accountID`     | The accountID of the user requesting mod access | Yes      | <!--a-->
+| `gjp2`          | The [GJP2](/topics/gjp.md) of the user requesting mod access | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
 
 ## Response
 

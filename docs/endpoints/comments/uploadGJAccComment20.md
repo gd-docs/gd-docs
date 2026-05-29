@@ -4,17 +4,20 @@ Posts an account comment
 
 ## Parameters
 
-| Parameter                               | Explanation                                                                    | Required |
-| --------------------------------------- | ------------------------------------------------------------------------------ | -------- |
-| `accountID`                             | Account ID of the user posting the comment                                     | Yes      |
-| `gjp2`                                  | The [GJP2](/topics/gjp.md) of the user posting the comment                     | Yes      |
-| `comment`                               | The comment's text, converted to [URL-safe base64](/topics/encryption/base64). | Yes      |
-| `secret`                                | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                             | Yes      |
-| `gameVersion`                           | 22                                                                             |          |
-| `binaryVersion`                         | 42                                                                             |          |
-| `gdw`                                   | 0                                                                              |          |
-| `cType`                                 | The comment type, 0 for level, 1 for user                                      |          |
-| [`chk`](/topics/encryption/chk#comment) | Unsure                                                                         |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `comment`       | The comment's text, converted to [URL-safe base64](/topics/encryption/base64) | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+| `userName`      | The name of the user |          | <!--a-->
+| `cType`         | The comment type. `0` for level (unused), `1` for account |          | <!--a-->
+| [`chk`](/topics/encryption/chk#comment) | The comment chk |          | <!--a-->
 
 ## Response
 

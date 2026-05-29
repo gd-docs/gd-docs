@@ -4,16 +4,18 @@ Updates the description of a level
 
 ## Parameters
 
-| Parameter       | Explanation                                                                                 | Required |
-| --------------- | ------------------------------------------------------------------------------------------- | -------- |
-| `accountID`     | The account ID of the level's author                                                        | Yes      |
-| `gjp2`          | The [GJP2](/topics/gjp.md) of the level's author                                            | Yes      |
-| `levelID`       | The ID of the level                                                                         | Yes      |
-| `levelDesc`     | The new description of the level, converted to [URL-safe base64](/topics/encryption/base64) | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                        | Yes      |
-| `gameVersion`   | 22                                                                                          |          |
-| `binaryVersion` | 42                                                                                          |          |
-| `gdw`           | 0                                                                                           |          |
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `levelID`       | The ID of the level                                                                         | Yes      | <!--a-->
+| `levelDesc`     | The new description of the level, converted to [URL-safe base64](/topics/encryption/base64) | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
 
 ## Response
 

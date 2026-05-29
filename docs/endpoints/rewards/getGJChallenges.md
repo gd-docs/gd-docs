@@ -4,18 +4,20 @@ Gets a user's quests.
 
 ## Parameters
 
-| Parameter       | Explanation                                                                                                      | Required |
-| --------------- | ---------------------------------------------------------------------------------------------------------------- | -------- |
-| `udid`          | A unique identifier for the user's device, can be replaced with anything                                         | Yes      |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                                               | Yes      |
-| `chk`           | [Rewards CHK](/topics/encryption/rewards_chk) using the [daily challenges](/topics/encryption/xor.html#keys) key | Yes      |
-| `gameVersion`   | 22                                                                                                               |          |
-| `binaryVersion` | 42                                                                                                               |          |
-| `gdw`           | 0                                                                                                                |          |
-| `accountID`     | Account ID of the user                                                                                           |          |
-| `gjp2`          | The user's [GJP2](/topics/gjp.md)                                                                                |          |
-| `uuid`          | Seemingly a random number also used for identifying someone                                                      |          |
-| `world`         | Effectively `gdw`                                                                                                |          |
+<ParamDesc />
+
+| Parameter       | Explanation | Required |
+| --------------- | ----------- | -------- |
+| `udid`          | <ParamDesc name="udid"/> | Yes | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes | <!--a-->
+| `chk`           | [Rewards CHK](/topics/encryption/rewards_chk) using the [daily challenges](/topics/encryption/xor.html#keys) key | Yes | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |  | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |  | <!--a-->
+| `accountID`     | <ParamDesc name="accountID"/> |  | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> |  | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |  | <!--a-->
+| `world`         | Effectively [`gdw`](/endpoints/generic#common-parameters), default is `0` |  | <!--a-->
+| `gdl`           | <ParamDesc name="gdl"/> |  | <!--a-->
 
 ## Response
 

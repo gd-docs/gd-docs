@@ -39,7 +39,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k27  | FeatureScore                   | **integer**                                                      | A featured levels Feature Score                                                  |
 | k33  | Auto                           | **Bool**                                                         | If the level is auto                                                             |
 | k34  | Replay Data                    | **[Gziped String](/topics/encryption/zip.md)**                   | Contains a Gzipped String which contains replay data for levels                  |
-| k35  | isPlayable?                    | **Bool**                                                        | if the level is downloaded (honestly not much is known about this)                |
+| k35  | isHidden                       | **Bool**                                                        | true if the level is deleted (hidden) from Saved                                 |
 | k36 | Jumps                          | **integer**                                                      | total Jumps on a level                                                           |
 | k37 | required coins                 | **Integer**                                                      | coins required to unlock an official level                                       |
 | k38 | isUnlocked                     | **Bool**                                                         | is Official level Unlocked                                                       |
@@ -107,7 +107,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k116 | Ticks (Best Points)            | **integer**                                                      | Amount of 240 TPS ticks on the attempt that had the most points |
 | k117 | Clicks (Best Time)             | **integer**                                                      | Amount of clicks on the attempt that had the fastest time |
 | k118 | Clicks (Best Points)           | **integer**                                                      | Amount of clicks on the attempt that had the most points |
-| k119 | Inputs? (Best Time)            | **string**                                                       | The inputs on the attempt that had the fastest time? - seems to be unused |
+| k119 | Inputs (Best Time)             | **string**                                                       | The inputs on the attempt that had the fastest time - only used for local levels |
 | k120 | Inputs? (Best Points)          | **string**                                                       | The inputs on the attempt that had the most points? - seems to be unused |
 | k121 | Coins Collected (Best Time)    | **integer**                                                      | Amount of coins collected on the attempt that has the fastest time |
 | k122 | Coins Collected (Best Points)  | **integer**                                                      | Amount of coins collected on the attempt that has the most points |

@@ -4,22 +4,20 @@ This endpoint is used to search level lists by name and / or filter
 
 ## Parameters
 
-| Parameter       | Description                                                                                                   | Required                        |
-| --------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7`                                                          | Yes                             |
-| `gameVersion`   | [Game Version](#), 22 on 2.2                                                                                  |                                 |
-| `binaryVersion` | [Binary Version](#), 42 on 2.206                                                                              |                                 |
-| `type`          | Search type, [see values](#type). Defaults to most liked                                                      |                                 |
-| `str`           | Search query, user ID or level list depending on `type`                                                       | Only on [types 5 and 10](#type) |
-| `page`          | Which page to request, defaults to 0                                                                          |                                 |
-| `gjp2`          | The [GJP2](/topics/gjp.md) for the `accountID`.                                                               |                                 |
-| `accountID`     | The ID for the account which is doing the search. Only sent on types 8, 13 and 5                              |                                 |
-| `diff`          | Difficulty filter, [see values](#diff)                                                                        |                                 |
-| `demonFilter`   | Selects which demon difficulty to search, [see values](#demon-filter). If not sent will search all demon types |                                 |
-| `star`          | Rated filter, either 0 or 1                                                                                   |                                 |
-| `followed`      | Comma separated list of the followed user IDs                                                                 | Only on [type 12](#type)        |
-| `udid`          | Your [UDID](/topics/encryption/id.md)                                                                         |                                 |
-| `uuid`          | Your [UUID](/topics/encryption/id.md)                                                                         |                                 |
+| Parameter       | Description | Required |
+| --------------- | ----------- | -------- |
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes | <!--a-->
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |  | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |  | <!--a-->
+| `accountID`     | <ParamDesc name="accountID"/> |  | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> |  | <!--a-->
+| `str`           | Search query, user ID or level list depending on `type` | Only on [types 5 and 10](#type) | <!--a-->
+| `type`          | Search type, [see values](#type). Defaults to most liked |  | <!--a-->
+| `page`          | Which page to request, defaults to 0 |  | <!--a-->
+| `diff`          | Difficulty filter, [see values](#diff) |  | <!--a-->
+| `star`          | Rated filter, either 1 or not sent |  | <!--o-->
+| `demonFilter`   | Selects which demon difficulty to search, [see values](#demon-filter). If not sent will search all demon types |  | <!--o-->
+| `followed`      | Comma separated list of the followed user IDs | Only on [type 12](#type) | <!--*/o-->
 
 ::: details `type` {#type open}
 
@@ -44,6 +42,7 @@ This endpoint is used to search level lists by name and / or filter
 
 | diff | Description                                                |
 | ---- | ---------------------------------------------------------- |
+| `-`  | None                                                       |
 | `-1` | N/A                                                        |
 | `-2` | Demons (see `demonFilter` for specifying demon difficulty) |
 | `1`  | Easy                                                       |
@@ -63,19 +62,6 @@ This endpoint is used to search level lists by name and / or filter
 | `3`         | Hard demon    |
 | `4`         | Insane demon  |
 | `5`         | Extreme demon |
-
-:::
-
-::: details `len` {#len open}
-
-| len | Value      |
-| --- | ---------- |
-| `0` | Tiny       |
-| `1` | Short      |
-| `2` | Medium     |
-| `3` | Long       |
-| `4` | XL         |
-| `5` | Platformer |
 
 :::
 

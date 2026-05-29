@@ -6,14 +6,16 @@ Rates the demon difficulty of a demon level - only works for Geometry Dash moder
 
 | Parameter       | Explanation                                                                                        | Required |
 | --------------- | -------------------------------------------------------------------------------------------------- | -------- |
-| `gameVersion`   | 22                                                                                                 | Yes      |
-| `binaryVersion` | 42                                                                                                 | Yes      |
-| `secret`        | [Moderator Secret](/reference/secrets.md): `Wmfp3879gc3`                                                | Yes      |
-| `accountID`     | The accountID of the user who's rating the demon's difficulty                                      | Yes      |
-| `gjp2`          | The [GJP2](/topics/gjp#generating-gjp2) of the user who's rating the demon's difficulty                          | Yes      |
-| `levelID`       | The ID of the demon being rated                                                                    | Yes      |
-| `rating`        | 1 for Easy Demon, 2 for Medium Demon, 3 for Hard Demon, 4 for Insane Demon and 5 for Extreme Demon | Yes      |
-| `gdw`           | 0                                                                                                  |          |
+| `gameVersion`   | <ParamDesc name="gameVersion"/> | Yes      | <!--a-->
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> | Yes      | <!--a-->
+| `secret`        | <ParamDesc name="secret" type="mod"/> | Yes      | <!--a-->
+| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `levelID`       | The ID of the demon being rated                                                                    | Yes      | <!--a-->
+| `rating`        | 1 for Easy Demon, 2 for Medium Demon, 3 for Hard Demon, 4 for Insane Demon and 5 for Extreme Demon | Yes      | <!--a-->
+| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
+| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
+| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
 
 ## Response
 

@@ -4,21 +4,21 @@ Updates a user's account settings
 
 ## Parameters
 
-| Parameter   | Explanation                                                                                               | Required |
-| ----------- | --------------------------------------------------------------------------------------------------------- | -------- |
-| `accountID` | The accountID of the user whose account is being updated                                                  | Yes      |
-| `gjp2`      | The [GJP2](/topics/gjp.md) of the user whose account is being updated                                     | Yes      |
-| `secret`    | [Account Secret](/reference/secrets.md): `Wmfv3899gc9`                                                       | Yes      |
-| `mS`        | Who the user allows messages from: 0 for anyone, 1 for just friends, and 2 for no one                     |          |
-| `frS`       | Who the user allows friend requests from: 0 for anyone, and 1 for no one                                  |          |
-| `cS`        | Who the user allows to view their comments: 0 for anyone, 1 for just friends, and 2 for only themselves   |          |
-| `yt`        | The end of the link to the user's youtube channel, after the `/channel/`. e.g. `UCZoN2WLAooS6uhREa9Cgpwg` |          |
-| `twitter`   | The user's twitter handle                                                                                 |          |
-| `twitch`    | The user's twitch username                                                                                |          |
-| `instagram` | The user's Instagram username                                                                             |          |
-| `tiktok`    | The user's TikTok handle                                                                                  |          |
-| `discord`   | The user's Discord handle                                                                                 |          |
-| `custom`    | The user's custom one-time authentication token                                                           |          |
+| Parameter   | Explanation | Required |
+| ----------- | ------------ | -------- |
+| `accountID` | <ParamDesc name="accountID"/> | Yes      | <!--a-->
+| `gjp2`      | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
+| `secret`    | <ParamDesc name="secret" type="account"/> | Yes      | <!--a-->
+| `mS`        | Who the user allows messages from: 0 for anyone, 1 for just friends, and 2 for no one |          | <!--a-->
+| `frS`       | Who the user allows friend requests from: 0 for anyone, and 1 for no one |          | <!--a-->
+| `cS`        | Who the user allows to view their comments: 0 for anyone, 1 for just friends, and 2 for only themselves |          | <!--a-->
+| `yt`        | The end of the link to the user's youtube channel, after the `/channel/`. e.g. `UCZoN2WLAooS6uhREa9Cgpwg` |          | <!--a-->
+| `twitter`   | The user's twitter handle |          | <!--a-->
+| `twitch`    | The user's twitch username |          | <!--a-->
+| `instagram` | The user's Instagram username |          | <!--a-->
+| `tiktok`    | The user's TikTok handle |          | <!--a-->
+| `discord`   | The user's Discord handle |          | <!--a-->
+| `custom`    | The user's custom one-time authentication token |          | <!--a-->
 
 ## Response
 
