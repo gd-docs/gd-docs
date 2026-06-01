@@ -4,8 +4,6 @@ Gets a user's quests.
 
 ## Parameters
 
-<ParamDesc />
-
 | Parameter       | Explanation | Required |
 | --------------- | ----------- | -------- |
 | `udid`          | <ParamDesc name="udid"/> | Yes | <!--a-->
