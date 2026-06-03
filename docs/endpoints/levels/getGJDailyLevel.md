@@ -1,6 +1,6 @@
 # getGJDailyLevel.php
 
-Gets which daily level we're on and gets how much time is left.
+Gets which daily level we're on and gets how much time is left. To fetch the current level ID of the daily level, either use [downloadGJLevel](/endpoints/levels/downloadGJLevel22) with a negative `levelID` or check [the safe](/endpoints/levels/getGJLevels21).
 
 ## Parameters
 
@@ -15,7 +15,7 @@ Gets which daily level we're on and gets how much time is left.
 | `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
 | `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
 | `type`          | 0 for daily, 1 for weekly, 2 for event level. |          | <!--a-->
-| `chk`           | [Rewards CHK](/topics/encryption/rewards_chk) using the [chest rewards](/topics/encryption/xor.html#keys) key |          | required for type 2
+| `chk`           | [Rewards CHK](/topics/encryption/rewards_chk) using the [chest rewards](/topics/encryption/xor.html#keys) key | Only when type is 2 | <!--a-->
 | `weekly`        | 0 for daily, 1 for weekly. Defaults to 0 if not sent. This parameter is outdated since 2.207 |          |
 
 ## Response
