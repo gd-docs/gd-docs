@@ -2,7 +2,7 @@ export default {
     "descriptions": {
         "@default": "<em>No description found for this parameter</em>",
         "gameVersion": "A number representing the game's version. The current value is <code>22</code> for 2.2",
-        "binaryVersion": "A number representing the game's small version. The current value is <code>47</code> for 2.2081 on PC and <code>48</code> for 2.208 on mobile",
+        "binaryVersion": "A number representing the game's small version. The current value is <code>47</code> for 2.2081 on PC and <code>48</code> for 2.2082 on mobile",
         "uuid": "In modern versions, this is sent as the user ID. See the previous format <a href=\"/topics/encryption/id#uuid\">here</a>",
         "udid": "The player's <a href=\"/topics/encryption/id#udid\">UDID</a> (Unique Device Identifier). Used to identify unregistered users",
         "accountID": "The player's account ID (not to be confused with user ID). Used for authorization",
