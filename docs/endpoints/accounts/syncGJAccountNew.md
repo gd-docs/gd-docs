@@ -35,6 +35,18 @@ A list of values, separated by semicolons `;`:
 
 - a list of [map pack objects](/resources/server/mappack.md) separated by pipes `|`, with keys 1, 3, 4 and 5, compressed with deflate, URL safe Base64 encoded, and a random string of *20* characters at the front and back
 
+If the response was not successful, there are several different error codes that can be returned:
+
+| Code | Name | Description |
+|------|------|-------------|
+| `-1`   | Generic error | Displays a generic "Sync failed." message |
+| `-2`   | Login Failed  | Your login credentials were wrong and you need to log back in, prompts the user to login and verify their account |
+| `-3`   | Generic error | Unlike code -1 (or any other unknown codes), this error code displays -3 alongside the sync failed message |
+| `-4`   | Request is too large | Your request to the server was too large |
+| `-5`   | Bad login info | Invalid login info was provided  |
+| `-6`   | Something went wrong | Something went wrong on the servers' end |
+| `-11`  | Bad login info | Returned from syncGJAccount when backupGJAccount returns -5, so supposedly means the same thing |
+
 ## Example
 
 <!-- tabs:start -->

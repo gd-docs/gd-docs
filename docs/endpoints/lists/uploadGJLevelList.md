@@ -27,7 +27,7 @@ Uploads a created list to the servers.
 
 ## Response
 
-Returns the ID of the uploaded list, or `-1` if the request was rejected.
+Returns the ID of the uploaded list, or `-1` if the request was rejected. Oddly, this endpoint returns a wide variety of error codes for errors that traditionally return a generic error code, but the game displays the generic error message for all of them (while also displaying the error code if it is not -1).
 
 ## Example
 

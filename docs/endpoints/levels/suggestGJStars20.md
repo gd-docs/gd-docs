@@ -20,7 +20,7 @@ Endpoint used by moderators to send levels to RobTop
 
 ## Response
 
--2 or 1
+-2 if not a moderator (which clears the moderator status from save data), 1 otherwise
 
 ## example
 

@@ -26,12 +26,12 @@ This endpoint is used to register an account. In 2.2, this was replaced with [re
 
 | Error Code | Meaning                                                                          |
 | ---------- | -------------------------------------------------------------------------------- |
-| `-1`       | Generic Error                                                                    |
-| `-2`       | Username taken                                                                   |
-| `-3`       | Email taken                                                                      |
-| `-4`       | Username is longer than 20 characters                                            |
-| `-5`       | Invalid Password                                                                 |
-| `-6`       | Invalid Email                                                                    |
+| `-1`       | Generic Error (displays "Something went wrong." ingame)                          |
+| `-2`       | Username is already in use                                                       |
+| `-3`       | Email is already in use                                                          |
+| `-4`       | Username is longer than 20 characters (displays "Username is invalid" ingame)    |
+| `-5`       | Password is invalid                                                              |
+| `-6`       | Email is invalid                                                                 |
 | `-7`       | Password confirmation does not match (only used internally, not sent by servers) |
 | `-8`       | Password too short (under 6 characters)                                          |
 | `-9`       | Username too short (under 3 characters)                                          |

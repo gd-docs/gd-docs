@@ -659,10 +659,6 @@ export default [
         "link": "/topics/shop"
       },
       {
-        "text": "Status Codes",
-        "link": "/topics/status_codes"
-      },
-      {
         "text": "Tags",
         "link": "/topics/tags"
       },

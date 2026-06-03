@@ -32,9 +32,9 @@ If the request was not successful, there are 7 different error codes that can be
 | Error Code | Meaning                                                                                                |
 | ---------- | ------------------------------------------------------------------------------------------------------ |
 | `-1`       | Generic Error                                                                                          |
-| `-8`       | If the user's password is less than 6 characters long                                                  |
-| `-9`       | If the user's Username is less than 3 characters long                                                  |
-| `-10`      | User account ID does not match the currently logged in ID (only used internally, not sent by servers)  |
-| `-11`      | If the user's login credentials are incorrect                                                          |
-| `-12`      | If the user's account is disabled                                                                      |
-| `-13`      | If the account the user is trying to log into has a different steam ID to to that account **(Unused)** |
+| `-8`       | "Too short. Minimum 6 characters". If the user's password is less than 6 characters long                                                  |
+| `-9`       | "Too short. Minimum 3 characters". If the user's Username is less than 3 characters long                                                  |
+| `-10`      | "Already linked to different account". User account ID does not match the currently logged in ID (only used internally while refreshing login, not sent by servers)  |
+| `-11`      | If the user's login credentials are incorrect. Displays the generic "Login failed" message                                                          |
+| `-12`      | "Account has been disabled". If the user's account is disabled                                                                      |
+| `-13`      | "Already linked to different Steam account". If the account the user is trying to log into has a different steam ID to to that account **(Unused)** |

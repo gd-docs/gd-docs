@@ -25,7 +25,7 @@ if mode=1
 
 mod: levelID
 
-normal user: -2
+normal user: -2 (which clears mod status from the save data)
 
 ## Example
 

@@ -24,7 +24,18 @@ Saves account data
 
 ## Response
 
-1 if data was saved, -1 if not. -5 is returned if the login information is incorrect
+1 if data was saved.
+
+If the response was not successful, there are several different error codes that can be returned:
+
+| Code | Name | Description |
+|------|------|-------------|
+| `-1`   | Generic error | Displays a generic "Backup failed." message along with the save sizes of `GameManager` and `LocalLevelManager`, if they are over 32mb combined. |
+| `-2`   | Login Failed  | Your login credentials were wrong and you need to log back in, prompts the user to login and verify their account |
+| `-3`   | Generic error | Unlike code -1 (or any other unknown codes), this error code displays -3 alongside the backup failed message |
+| `-4`   | Request is too large | Your request to the server was too large |
+| `-5`   | Bad login info | Invalid login info was provided  |
+| `-6`   | Something went wrong | Something went wrong on the servers' end |
 
 ## Example
 
