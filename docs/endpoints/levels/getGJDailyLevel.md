@@ -15,7 +15,7 @@ Gets which daily level we're on and gets how much time is left.
 | `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
 | `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
 | `type`          | 0 for daily, 1 for weekly, 2 for event level. |          | <!--a-->
-| `chk`           | [Rewards CHK](/topics/encryption/rewards_chk) using the [chest rewards](/topics/encryption/xor.html#keys) key |          | <!--a/*: required for type 2-->
+| `chk`           | [Rewards CHK](/topics/encryption/rewards_chk) using the [chest rewards](/topics/encryption/xor.html#keys) key |          | required for type 2
 | `weekly`        | 0 for daily, 1 for weekly. Defaults to 0 if not sent. This parameter is outdated since 2.207 |          |
 
 ## Response
@@ -35,7 +35,8 @@ import requests
 url = "https://www.boomlings.com/database/getGJDailyLevel.php"
 data = {
     "secret": "Wmfd2893gb7",
-    "type": "2"
+    "type": "2",
+    "chk": f"{''.join(random.choice('1234567890qwertyuiopaqsdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM') for i in range(5))}{base64.b64encode(xor_cipher(str(random.randint(10000, 1000000)), '59182').encode()).decode()}",
 }
 headers = {
     "User-Agent": ""  # Empty User-Agent
@@ -48,7 +49,7 @@ print(response.text)
 ### **curl**
 
 ```plain
-curl -X POST https://www.boomlings.com/database/getGJDailyLevel.php -d "secret=Wmfd2893gb7&type=2" -A ""
+curl -X POST https://www.boomlings.com/database/getGJDailyLevel.php -d "secret=Wmfd2893gb7&type=1" -A ""
 ```
 
 <!-- tabs:end -->
