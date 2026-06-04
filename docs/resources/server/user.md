@@ -23,7 +23,7 @@ Each `key` is tied to a component within the client and the `value` sets data fo
 | 3 | stars | **Integer** | The player's star count |
 | 4 | demonCount | **Integer** | The number of demons the player has completed |
 | 6 | ranking | **Integer** | The player's ranking on the global leaderboard |
-| 7 | accountHighlight | **Integer** | The player's account ID. Used for highlighting the player on the leaderboards<br/>*(only returned by [getGJScores20](/endpoints/users/getGJScores20) when viewing yourself on a leaderboard)* |
+| 7 | accountHighlight | **String** | The player's account ID, or the device ID for unregistered players. Used for highlighting unregistered players on the leaderboards. For registered players, the game instead checks if the `accountID` field matches the current account.<br/>*(only returned by [getGJScores20](/endpoints/users/getGJScores20) when viewing yourself on a leaderboard)*. |
 | 8 | creatorpoints | **Integer** | The number of creator points the player has |
 | 9 | iconID | **Integer** | The ID of the player's display icon (see iconType) |
 | 10 | color | **Integer** | The player's primary icon color |
