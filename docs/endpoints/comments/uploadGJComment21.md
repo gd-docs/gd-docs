@@ -26,7 +26,7 @@ Returns the ID of the posted comment if successful. Otherwise the following erro
 
 - `-1` if the request was rejected
 - `-10` if the user is permanently comment banned (directly by RobTop, prior to 2.11). This displays a message to contact support with the player's user ID.
-- `temp_{time}_{reason}` if the user is temporarily comment banned (by an Elder Moderator/RobTop), with `time` representing the number of seconds left until the user is unbanned. Traditionally, this value would be capped at 34 days and 22 hours, even if the ban was longer. If no ban reason is provided, the last section, including the underscore is omitted (`temp_{time}`)
+- `temp_{time}_{reason}` if the user/IP is temporarily comment banned (by an Elder Moderator/RobTop), with `time` representing the number of seconds left until the user is unbanned. The servers cap the time at 34 days and 22 hours (3020399 seconds) even if the ban is longer. If no ban reason was provided, the reason value and its separator are omitted (`temp_{time}`)
 
 ## Example
 
