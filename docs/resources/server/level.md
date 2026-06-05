@@ -20,6 +20,8 @@ A list of all known keys can be found in the table below
 
 Keys indicated with an asterisk (\*) are only returned from the downloadGJLevel22 endpoint.
 
+Keys indicated with a dagger (†) were only returned from downloadGJLevel22 when extras was enabled. These were restricted to RobTop's account during 2022, and are not parsed or displayed by the client at all (outside of [developer builds](https://www.youtube.com/watch?v=UdMo19JstYg)).
+
 #### Level Structure
 
 | Key | Name/Value | Type | Description 
@@ -42,13 +44,21 @@ Keys indicated with an asterisk (\*) are only returned from the downloadGJLevel2
 | 17  | demon | **Bool** | If the level's difficulty is demon 
 | 18  | stars | **Integer** | The amount of stars rewarded for completing the level
 | 19  | featureScore | **Integer** | 0 if the level is not featured, otherwise a positive number. The higher it is, the higher the level appears on the featured levels list.
+| 20† | starRatings | **Integer** | Amount of users who voted on a star rating for the level
+| 21† | starRatingsSum | **Integer** | Sum of star rating votes
+| 22† | minStarRatings | **Integer** | Amount of users who voted for a 1 star rating (auto)
+| 23† | maxStarRatings | **Integer** | Amount of users who voted for a 10 star rating (demon)
+| 24† | demonVotes | **Integer** | Amount of users who voted for a demon difficulty. After the difficulty voting system was removed in 2.0, this value would instead be incremented from 10 star votes.
 | 25  | auto | **Bool** | If the level's difficulty is auto
-| 26  | recordString | **String** | appears in the [GJGameLevel parser](https://imgur.com/a/S2bWLCC) but is unused
+| 26† | recordString | **String** | Replay string captured during level verification (`levelInfo` parameter during upload)
 | 27* | password | **Encrypted String** | The password required to copy the level. It is XOR encrypted with a key of 26364
 | 28* | uploadDate | **String** | The approximate date the level was uploaded on
 | 29* | updateDate | **String** | The approximate date the level was last updated on
 | 30  | copiedID | **Integer** | The ID the of the original level (if the level was copied) 
 | 31  | twoPlayer | **Bool** | Whether the level uses two player mode
+| 32† | rateStars | **Integer** | Star rating from the last Moderator to send the level
+| 33† | rateFeature | **Bool** | If the latest send was a feature
+| 34† | rateUser | **String** | Account ID of the latest send (possibly originally referred to the secret used when sending a level with the original send page)
 | 35  | customSongID | **Integer** | The ID of the custom Newgrounds song used in the level 
 | 36  | extraString | **String** | The extraString passed when uploading the level. Its use is currently unknown
 | 37  | coins | **Integer** | The number of user coins placed in the level 
@@ -77,3 +87,5 @@ Keys indicated with an asterisk (\*) are only returned from the downloadGJLevel2
 - key `45` caps at the 16-bit integer limit so any level with more objects won't be accurate
 
 - Key `57` caps at the 24-bit integer limit so any time longer than around 465 hours won't be accurate
+
+- Keys `28` and `29` were originally formatted as absolute datetimes, with commas being used in place of colons as a time separator (`yyyy-MM-dd HH,mm`). Those commas would be replaced with colons during parsing. This was changed to relative timestamps during 2.0, with the character replacement being removed as well.
