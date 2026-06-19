@@ -1,6 +1,6 @@
 # restoreGJItems.php
 
-Restores user's data; defunct as of the new save system
+Restores user's data; no longer exists as of the new save system
 
 ## Parameters
 
@@ -11,7 +11,7 @@ Restores user's data; defunct as of the new save system
 
 ## Response
 
-A 500 error code
+A 404 error code; original response is below
 
 ## Example
 
