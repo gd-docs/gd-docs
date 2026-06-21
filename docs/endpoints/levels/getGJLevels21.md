@@ -24,8 +24,8 @@
 | `twoPlayer`       | Two Player Mode filter, either 0 or 1 |  | <!--a-->
 | `coins`           | Coins filter, either 0 or 1 |  | <!--a-->
 | `epic`            | Epic filter, either 1 or not sent |  | <!--o: missing/1-->
-| `legendary`       | Mythic filter, either 1 or not sent (__swapped with `legendary`__) |  | <!--o: missing/1-->
-| `mythic`          | Legendary filter, either 1 or not sent (__swapped with `mythic`__) |  | <!--o: missing/1-->
+| `legendary`       | Mythic filter, either 1 or not sent (__swapped with `mythic`__) |  | <!--o: missing/1-->
+| `mythic`          | Legendary filter, either 1 or not sent (__swapped with `legendary`__) |  | <!--o: missing/1-->
 | `local`           | Whether to fetch "My Online Levels", either 1 or not sent |  | <!--o: sent if type=5 and str=senderUserID-->
 | `song`            | Official (or custom) song ID, not sent when off (Stereo Madness = 1) |  | <!--o: missing/non-zero-->
 | `customSong`      | Whether the `song` is a Newgrounds song. Either 1 or not sent |  | <!--o-->
