@@ -16,7 +16,7 @@ Gets the rewards from the chests.
 | `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
 | `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
 | `dvs`           | <ParamDesc name="dvs"/> |  | <!--a-->
-| `rewardType`    | 0 for getting info about the chests, 1 for small chest, 2 for large chest. Defaults to 0 if left out | Yes      | <!--a-->
+| `rewardType`    | 0 for getting info about the chests, 1 to get a new small chest, 2 to get a new large chest. Defaults to 0 if left out | Yes      | <!--a--> <!--TODO: can you leave it out or is it required???-->
 | `r1`            | A random 3-5 digit number |          | <!--a-->
 | `r2`            | A random 3-5 digit number |          | <!--a-->
 
@@ -30,14 +30,14 @@ A list of attributes of the Rewards, separated by colons `:` as follows:
 - User's account ID
 - Small chest time remaining
 - Small chest's rewards in a comma separated list
-	- Orbs
-	- Diamonds
-	- Item 1 (1 is Fire, 2 is Ice, 3 is Poison, 4 is Shadow, 5 is Lava, 6 is Demon Key, 10 is Earth, 11 is Blood, 12 is Metal, 13 is Light and 14 is Soul)
+	- Number of orbs
+	- Number of diamonds
+	- Item 1 (0 is none, 1 is Fire, 2 is Ice, 3 is Poison, 4 is Shadow, 5 is Lava, 6 is Demon Key, 10 is Earth, 11 is Blood, 12 is Metal, 13 is Light and 14 is Soul)
 	- Item 2
-- Amount of small chests claimed
+- Small chest ID
 - Large chest time remaining
-- Large chest's rewards in a comma separated list
-- Amount of large chests claimed
+- Large chest's rewards in a comma separated list following the above format
+- Large chest ID
 - `rewardType`
 
 This list is then [XOR](/topics/encryption/xor.md)'d and [URL-Safe Base64](/topics/encryption/base64.md) encoded. Then it is separated with its [hash](/resources/server/hashes.md#getgjrewards) by a pipe `|`. It also has a random string of 5 characters appended to the front.
