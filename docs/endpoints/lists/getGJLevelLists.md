@@ -11,7 +11,7 @@ This endpoint is used to search level lists by name and / or filter
 | `binaryVersion` | <ParamDesc name="binaryVersion"/> |  | <!--a-->
 | `accountID`     | <ParamDesc name="accountID"/> |  | <!--a-->
 | `gjp2`          | <ParamDesc name="gjp2"/> |  | <!--a-->
-| `str`           | Search query, user ID or level list depending on `type` | Only on [types 5 and 10](#type) | <!--a-->
+| `str`           | Search query, user ID or level list depending on `type` | Only on [type 5](#type) | <!--a-->
 | `type`          | Search type, [see values](#type). Defaults to most liked |  | <!--a-->
 | `page`          | Which page to request, defaults to 0 |  | <!--a-->
 | `diff`          | Difficulty filter, [see values](#diff). A comma-separated list of filters is valid, but only the first one is used |  | <!--a-->
