@@ -1,6 +1,9 @@
 # restoreGJItems.php
 
-Restores user's data; no longer exists as of the new save system
+> [!NOTE]
+> This endpoint no longer exists. This page is kept for historical reasons.
+
+Restores user's data. Defunct as of the new save system.
 
 ## Parameters
 

@@ -24,7 +24,7 @@ A list of attributes of the Rewards, separated by colons `:` as follows:
 - The number used to verify the `chk`
 - The rewardID
 - The chest type (1 small, 2 large)
-- comma separated chest reward in the format `{itemid},{total1},{itemid2},{total2},...`
+- Comma separated chest reward in the format `{itemid1},{total1},{itemid2},{total2},...`
 
 Where each itemID is as follows:
 | itemID | Type         |

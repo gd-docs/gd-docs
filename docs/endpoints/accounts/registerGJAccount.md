@@ -1,6 +1,6 @@
 # registerGJAccount.php
 
-This endpoint is used to register an account. In 2.2, this was replaced with [register.php](/topics/account_management#register-php).
+This endpoint is used to register an account. In 2.2, it was replaced with [register.php](/topics/account_management#register-php), but is still functional.
 
 > [!NOTE]
 > This page is under the `database/accounts` directory.
@@ -12,7 +12,7 @@ This endpoint is used to register an account. In 2.2, this was replaced with [re
 | `userName` | The username of the account to create               | Yes      |
 | `password` | The password of the account to create               | Yes      |
 | `email`    | The email of the account to create                  | Yes      |
-| `secret`   | [Account Secret](/reference/secrets.md): `Wmfv3899gc9` | Yes      |
+| `secret`   | <ParamDesc name="secret" type="account"/> | Yes      |
 
 ## Response
 

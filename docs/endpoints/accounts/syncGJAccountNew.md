@@ -6,7 +6,7 @@ Loads account data
 > This page is under the `database/accounts` directory.
 
 > [!NOTE]
-> This page is on the account server. You can find the domain name by sending a request to /database/getAccountURL.php (currently https://www.robtopgames.org) 
+> This page is on the account server. You can find the domain name by sending a request to [/database/getAccountURL.php](/endpoints/misc/getAccountURL) (currently https://www.robtopgames.org)
 
 ## Parameters
 
