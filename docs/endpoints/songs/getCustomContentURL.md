@@ -14,10 +14,6 @@ Gets the URL for the music & SFX library server.
 | `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
 | `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
 
-### Required Parameters
-
-None
-
 ## Response
 
 https://geometrydashfiles.b-cdn.net
