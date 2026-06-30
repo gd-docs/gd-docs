@@ -1,5 +1,8 @@
 # getSaveData.php
 
+> [!NOTE]
+> This endpoint is no longer functional. This page is kept for historical reasons.
+
 Unknown
 
 ## Parameters
