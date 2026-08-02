@@ -43,7 +43,8 @@ export default defineConfig({
       { text: 'Useful stuff', items: [
         { text: 'Object Property Explorer by FlowVix', link: 'https://flowvix.github.io/gd-info-explorer' },
         { text: 'Spritesheet Browser by undefined0', link: 'https://undefined06855.github.io/GDImageBrowser/' },
-        { text: 'Library of Geometria by Unsimply', link: 'https://a-zalt.github.io/gdknowledge/resources.html' }
+        { text: 'Library of Geometria by Unsimply', link: 'https://a-zalt.github.io/gdknowledge/resources.html' },
+        { text: 'GD Resources by OmgRod', link: 'https://gdresources.omgrod.me' },
       ]}
     ],
 
