@@ -9,7 +9,7 @@ This endpoint is used to log in to a player's Geometry Dash account.
 
 | Parameter  | Explanation | Required |
 | ---------- | ----------- | -------- |
-| `udid`     | <ParamDesc name="udid"/> | No?     | <!--o: sent on android, not on windows-->
+| `udid`     | <ParamDesc name="udid"/> | Yes     | <!--o: sent on android, not on windows-->
 | `userName` | The username of the account the player is trying to log into | Yes      | <!--a-->
 | `gjp2`     | The password of the account the player is trying to log into, encoded with [GJP2](/topics/gjp.md) | Yes      | <!--a-->
 | `secret`   | <ParamDesc name="secret" type="account"/> | Yes      | <!--a-->
@@ -17,6 +17,8 @@ This endpoint is used to log in to a player's Geometry Dash account.
 
 **Note** 
 the `sID` parameter is only sent to the servers if the player is logging into their account from the steam release of Geometry Dash. From what has been observed, it has not been utilised.
+**Note 2**
+`udid` must be present and non-empty, but its value can be anything
 
 ## Responses
 
