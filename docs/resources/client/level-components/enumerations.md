@@ -90,3 +90,13 @@ Here you will find the enumerations that are related to the level string.
 | 1   | 1st     |
 | 2   | 2nd     |
 
+## Level Length
+
+| Key       | Name           |
+| --------- | -------------- |
+| 0 (None)  | Tiny           |
+| 1         | Short          |
+| 2         | Medium         |
+| 3         | Long           |
+| 4         | XL             |
+| 5         | Platformer     |
