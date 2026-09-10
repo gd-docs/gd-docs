@@ -10,7 +10,6 @@ aside: true
 - level key [`54`](/resources/server/level#:~:text=54,SFX%2C%20in%20bytes), which was only present in the game's code, is now sent by the server
 - new user keys `62` and `63` (unknown integers), as well as `64`, which contains the Unix timestamp indicating when you became friends with the user
 - on top of the new `64` key appearing in your friendlist, it now also returns the stats of each user, hinting at a complete friendlist rework in 2.209
-- syncGJAccountNew now returns 6 semicolon-separated parts instead of 2
 - [Account Management](/topics/account_management#changeemail-php) now supports changing the primary email and also managing the recovery email
 
 ## 2.2082
