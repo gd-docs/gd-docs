@@ -7,6 +7,7 @@ aside: true
 
 - `binaryVersion`: `49`
 - new level keys [`62` and `63`](/resources/server/level#:~:text=62,was%20last%20updated) with exact upload/update times, presumably replacing keys `28` and `29`
+- comment/profile post key `15`, which contains the unix timestamp of when the comment was posted
 - level key [`54`](/resources/server/level#:~:text=54,SFX%2C%20in%20bytes), which was only present in the game's code, is now sent by the server
 - new user keys `62` and `63` (unknown integers), as well as `64`, which contains the Unix timestamp indicating when you became friends with the user
 - on top of the new `64` key appearing in your friendlist, it now also returns the stats of each user, hinting at a complete friendlist rework in 2.209
