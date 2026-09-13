@@ -39,7 +39,7 @@ Keys indicated with a dagger (†) were only returned from downloadGJLevel22 whe
 | 12  | officialSong | **Integer** | The official song number used by the level, if applicable 
 | 13  | gameVersion | **Integer** | The GD version the level was uploaded in. Versions 1.0 to 1.6 use version numbers 1 to 7 respectively. Version 10 is 1.7. Otherwise, divide the version number by ten to get the correct number. 
 | 14  | likes | **Integer** | likes - dislikes |
-| 15  | length | **Integer** | A number from 0-4, where 0 is tiny and 4 is XL |  
+| 15  | length | **Integer** | A number from 0-5, where 0 is tiny and 5 is Platformer |  
 | 16  | dislikes | **Integer** | dislikes - likes |
 | 17  | demon | **Bool** | If the level's difficulty is demon 
 | 18  | stars | **Integer** | The amount of stars rewarded for completing the level
