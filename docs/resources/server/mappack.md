@@ -27,8 +27,8 @@ A list of all known keys can be found in the table below
 | 4   | stars	   | **Integer** | How many stars the map pack should give
 | 5   | coins	   | **Integer** | How many coins the map pack should give
 | 6   | [difficulty](/resources/client/level-components/enumerations.md) | **Integer** | Difficulty ranging from `0->10`
-| 7   | textColor | **String** | RGB color for the title text separated by `,`
-| 8   | barColor  | **String** | RGB color for the completion bar separated by `,`
+| 7   | barColor | **String** | RGB color for the completion bar separated by `,`
+| 8   | textColor  | **String** | RGB color for the title text separated by `,`
 
 
 ### Trivia
