@@ -12,6 +12,10 @@ aside: true
 - new user keys `62` and `63` (unknown integers), as well as `64`, which contains the Unix timestamp indicating when you became friends with the user
 - on top of the new `64` key appearing in your friendlist, it now also returns the stats of each user, hinting at a complete friendlist rework in 2.209
 - [Account Management](/topics/account_management#changeemail-php) now supports changing the primary email and also managing the recovery email
+- downloadGJLevel responses include new data at the end
+- new error responses with the title and body of an error message popup
+- `getGJEditorSounds`, `uploadGJEditorSound`, `downloadGJEditorSound`, `deleteGJEditorSound`, `updateGJSoundDesc`. Editor sound packs reuse the level list structure with a few new keys
+- `getGJDeathData`, `uploadGJDeathData` - probably death markers
 
 ## 2.2082
 
