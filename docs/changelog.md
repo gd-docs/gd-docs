@@ -16,6 +16,9 @@ aside: true
 - new error responses with the title and body of an error message popup
 - `getGJEditorSounds`, `uploadGJEditorSound`, `downloadGJEditorSound`, `deleteGJEditorSound`, `updateGJSoundDesc`. Editor sound packs reuse the level list structure with a few new keys
 - `getGJDeathData`, `uploadGJDeathData` - probably death markers
+- `getGJThreads`, `getGJThreadMessages`, `getGJThreadMembers`, `getGJThreadInvites`, `sendGJThreadMessage`, `updateGJThread`, `searchGJThreadMessages`
+- `reportGJContent` probably for reporting comments
+- in-game news: https://geometrydashfiles.b-cdn.net/news/news.dat
 
 ## 2.2082
 
