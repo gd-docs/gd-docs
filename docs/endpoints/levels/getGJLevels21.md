@@ -22,13 +22,13 @@ This endpoint is used to search levels by name and or filter
 | `featured`        | Featured filter, either 0 or 1 |  | <!--a-->
 | `original`        | Original filter, either 0 or 1 |  | <!--a-->
 | `twoPlayer`       | Two Player Mode filter, either 0 or 1 |  | <!--a-->
-| `coins`           | Coins filter, either 0 or 1 |  | <!--a-->
+| `coins`           | If a level has been granted verified/silver coins (which does not require the level to have coins), either 0 or 1 |  | <!--a-->
 | `epic`            | Epic filter, either 1 or not sent |  | <!--o: missing/1-->
 | `legendary`       | Mythic filter, either 1 or not sent (__swapped with `mythic`__) |  | <!--o: missing/1-->
 | `mythic`          | Legendary filter, either 1 or not sent (__swapped with `legendary`__) |  | <!--o: missing/1-->
 | `local`           | Whether to fetch "My Online Levels", either 1 or not sent |  | <!--o: sent if type=5 and str=senderUserID-->
 | `song`            | Official (or custom) song ID, not sent when off (Stereo Madness = 1) |  | <!--o: missing/non-zero BUT CAN BE SENT AS 0 WHEN customSong=1-->
-| `customSong`      | Whether the `song` is a Newgrounds song. Either 1 or not sent |  | <!--o-->
+| `customSong`      | Whether the `song` is a Newgrounds song. Either 1 or not sent. Levels with Newgrounds songs will not be removed, even if this parameter is 0/not present. |  | <!--o-->
 | `star`            | Rated filter, either 1 or not sent |  | <!--o: missing/1, mut excl with noStar-->
 | `noStar`          | Unrated filter, either 1 or not sent |  | <!--o: missing/1, mut excl with star-->
 | `demonFilter`     | Selects which demon difficulty to search, [see values](#demon-filter). If not sent will search all demon types |  | <!--o-->
