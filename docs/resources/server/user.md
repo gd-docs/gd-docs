@@ -74,7 +74,7 @@ Each `key` is tied to a component within the client and the `value` sets data fo
 | 59* | instagram | **String** | The player's Instagram username |
 | 60* | tiktok | **String** | The player's TikTok handle |
 | 61* | custom | **String** | The player's custom one-time authentication token |
-| 64  | friendsSince | **Integer** | The amount of time you've been friends with this player |
+| 64  | friendsSince | **Integer** | The unix timestamp representing the amount of time you've been friends with this player |
 
 Keys indicated with an asterisk (*) are only returned from the [getGJUserInfo20](/endpoints/users/getGJUserInfo20) endpoint. Conversely, keys 6, 9, 14, & 15 are only returned by user search endpoints ([getGJUsers20](/endpoints/users/getGJUsers20), [getGJScores20](/endpoints/users/getGJScores20)). Key 64 is only returned by endpoint [getGJUserList20](/endpoints/socials/getGJUserList20).
 
