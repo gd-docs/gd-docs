@@ -19,7 +19,9 @@ aside: true
 - `getGJThreads`, `getGJThreadMessages`, `getGJThreadMembers`, `getGJThreadInvites`, `sendGJThreadMessage`, `updateGJThread`, `searchGJThreadMessages`
 - `reportGJContent` probably for reporting comments
 - in-game news: https://geometrydashfiles.b-cdn.net/news/news.dat
-- new user keys `65` through `70`, i have no clue what these are. key 66 seems to be the only one that actively changes and we still don't know what causes it
+- `followGJUser.php`, `unfollowGJUser.php` - following system has been made server-sided
+- new user keys `65` through `70`. 68 is your personal followed amount, and 69 is if you follow the person whose profile you're viewing (0 or 1). 67 is speculated to be total follower count, but has not been entirely confirmed as it might just not update live.
+- new types for getGJUserList20 (friendlist) `3` and `4` - 3 contains the user objects of the people you follow, 4 has not been figured out yet
 
 ## 2.2082
 
