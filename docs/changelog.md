@@ -19,6 +19,7 @@ aside: true
 - `getGJThreads`, `getGJThreadMessages`, `getGJThreadMembers`, `getGJThreadInvites`, `sendGJThreadMessage`, `updateGJThread`, `searchGJThreadMessages`
 - `reportGJContent` probably for reporting comments
 - in-game news: https://geometrydashfiles.b-cdn.net/news/news.dat
+- new user keys `65` through `70`, i have no clue what these are. key 66 seems to be the only one that actively changes and we still don't know what causes it
 
 ## 2.2082
 
