@@ -17,6 +17,8 @@ This endpoint is used to log in to a player's Geometry Dash account.
 
 **Note** 
 the `sID` parameter is only sent to the servers if the player is logging into their account from the steam release of Geometry Dash. From what has been observed, it has not been utilised.
+**Note 2**
+`udid` must be present and non-empty, but its value can be anything
 
 ## Responses
 
