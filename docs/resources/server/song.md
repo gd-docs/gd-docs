@@ -45,6 +45,8 @@ The IDs for Music Library songs start at 10,000,000
 | 14  | newType          | **Integer**         | Type of NEW icon. 0 for Yellow, 1 for Blue             |
 | 15  | extraArtistNames | **Array**           | Artist names in this format: `{id},{name},{id},{name}` |
 | 16  | downloadSoundtrackOverride | **String** | The link to open with the "Download Soundtrack" button |
+| 17  | songURL          | **String**          | Song link in this format: `{artistID},{platformID},,{URL}`. Platform IDs: 1 = YouTube, 3 = SoundCloud, 5 = Bandcamp, 6 = NCS, 7 = Personal Website, 8 = Instagram, 14 = Itch.io |
+| 18  | artistURLs       | **String**          | Artist links in the same format as songURL, seperated by a `;` if multiple. |
 
 #### **Trivia**
 - The savefile song structure uses the exact same keys as the server response

@@ -25,6 +25,7 @@ aside: true
 - `followGJUser.php`, `unfollowGJUser.php` - following system has been made server-sided
 - new user keys `65` through `70`. 68 is your personal followed amount, and 69 is if you follow the person whose profile you're viewing (0 or 1). 67 is speculated to be total follower count, but has not been entirely confirmed as it might just not update live.
 - new types for getGJUserList20 (friendlist) `3` and `4` - 3 contains the user objects of the people you follow, 4 has not been figured out yet
+- new song keys `17` and `18`, being a songURL and artistURLs respectively
 
 ## 2.2082
 
