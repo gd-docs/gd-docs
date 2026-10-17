@@ -28,7 +28,7 @@ A list of all known keys can be found in the table below
 | 49  | accountID | **Integer** | The account ID of the pack author
 | 50  | username | **String** | The username of the pack author
 | 51  | soundString | **Editor SFX Pack String** | The data for this pack
-| 59  | actions | **Integer** | How many actions have a sound
+| 59  | actions | **Integer** | HOw many actions have a sound
 | 60  | sounds | **Integer** | The amount of sounds used
-| 61  | unknown | **Integer** | Seems to always be 0
+| 61  | visibility | **Integer** | The visibility of the pack. `0` for listed, `4` for unlisted, `3` for friends-only unlisted.
 | 64  | icon | **String** | The emote used as the icon
