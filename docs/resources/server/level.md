@@ -79,6 +79,7 @@ Keys indicated with a dagger (†) were only returned from downloadGJLevel22 whe
 | 57* | verificationTime | **Integer** | How long the level took to verify (in frames, assume 240 FPS)
 | 62   | exactUploadTime | **Integer** | The Unix timestamp of when the level was uploaded
 | 63   | exactUpdateTime | **Integer** | The Unix timestamp of when the level was last updated
+| 65   | dailyNumber*    | **Integer** | The level's daily number spot. If it's a Weekly, subtract 100,000, If it's an Event, subtract 200,000
 
 ### Trivia
 
@@ -91,3 +92,4 @@ Keys indicated with a dagger (†) were only returned from downloadGJLevel22 whe
 - Key `57` caps at the 24-bit integer limit so any time longer than around 465 hours won't be accurate
 
 - Keys `28` and `29` were originally formatted as absolute datetimes, with commas being used in place of colons as a time separator (`yyyy-MM-dd HH,mm`). Those commas would be replaced with colons during parsing. This was changed to relative timestamps during 2.0, with the character replacement being removed as well.
+- Key `65` is only returned by getGJLevels21 types `32`, `33` and `34`, to indicate Daily/Weekly/Event Recalls. If this parameter is not sent, the client doesn't render the demon key purchase button.
