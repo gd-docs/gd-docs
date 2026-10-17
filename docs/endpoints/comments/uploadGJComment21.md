@@ -19,6 +19,7 @@ Uploads a comment to a user level.
 | `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
 | `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
 | `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+| `cType`         | The comment type. `6` if an Editor SFX Pack, not sent otherwise. |          | <!--a-->
 
 ## Response
 
