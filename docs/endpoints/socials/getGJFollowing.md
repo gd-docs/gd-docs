@@ -18,8 +18,12 @@ This endpoint is used to fetch which accounts are being followed
 
 ## Response
 
-All the account IDs this account follows, separated by commas
+All the account IDs this account follows, separated by commas. Or `0` if the user follows no one.
 
 ```plain
 761691,4569963,8927557,5327860
+```
+or
+```plain
+0
 ```
