@@ -1,6 +1,6 @@
 # sendGJThreadMessage.php
 
-Sends a message in an existing thread or starts a new thread. This endpoint has a cooldown of 20 messages per minute.
+Sends a message in an existing thread or starts a new thread. A sender can post at most 20 messages in any rolling 60-second period.
 
 ## Parameters
 
@@ -26,7 +26,7 @@ Sends a message in an existing thread or starts a new thread. This endpoint has 
 
 ## Response
 
-Returns the thread ID and message ID separated by a colon `:` if the message was successfully posted. If you started a new DM thread, there will be an extra value that always seems to be `0`. If you started a new group thread, there will be 2 extra values: the amount of people you invited and a value that always seems to be `0`.
+Returns the thread ID and message ID separated by a colon `:` if the message was successfully posted. Starting a new DM adds a third value: `1` if the DM was created as a pending message request, otherwise `0`. Starting a new group adds two values: the number of invited accounts and a final value of `0`.
 
 If you are not in the thread, returns a [Custom Error Message](/topics/custom_error) with the title "Group Chat" and body "You are no longer in this group chat."
 

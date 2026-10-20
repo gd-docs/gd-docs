@@ -9,7 +9,7 @@ Gets the members of a thread. You can use this for threads you are a member of a
 | `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
 | `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
 | `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `threadID`      | The ID of the thread to fetch messages from | Yes | <!--a-->
+| `threadID`      | The ID of the thread whose membership to fetch | Yes | <!--a-->
 | `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
 | `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
 | `udid`          | <ParamDesc name="udid"/> |          | <!--a-->

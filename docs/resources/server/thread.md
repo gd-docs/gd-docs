@@ -34,7 +34,7 @@ Values indicated with a dagger (†) are only returned for group threads, and ar
 | 9     | lastSenderUsername | **String** | The username of the person who sent the last message encoded in [Base64](/topics/encryption/base64.md)
 | 10    | ownerID	   | **Integer** | The account ID of the user who owns this thread
 | 11    | muted		   | **Bool** | Whether you have muted the thread or not
-| 12    | unknown		   | **Integer** | Seems to always be 0
+| 12    | invitePermission | **Integer** | Who can invite members to the group: `0` = any active member, `1` = owner only
 | 13    | threadType		 | **Bool** | 0 if this is a group thread and 1 if it's a DM thread
 | 14    | unknown		 | **Integer** | Seems to always be 0
 | 15  | pinned		 | **Bool** | Whether you have pinned the thread or not
@@ -47,35 +47,44 @@ Values indicated with a dagger (†) are only returned for group threads, and ar
 | 22  | description†  	 | **String** | The description of this group thread encoded in [Base64](/topics/encryption/base64.md)
 | 23  | emoteIcon†  	 | **String** | The emote icon used for this group thread
 | 24  | lastMessageTimestamp | **Integer** | The UNIX timestamp of the last message
-| 25  | modBadgeLevel?* | **Integer** | Presumably the mod badge of the user on the other end of the thread
-| 26  | status		 | **Integer** | Thread status. 0 - default, 2 - pending, 4 - this user only accepts messages from friends, 5 - this user does not accept messages, 7 - one of the users has the other one blocked, 8 - removed (kicked from group thread)
+| 25  | modBadgeLevel* | **Integer** | The mod level of the user on the other end of the DM |
+| 26  | status		 | **Integer** | DM status: `0` = default, `2` = pending request, `4` = friends-only recipient, `5` = recipient does not accept messages, `7` = one user blocked the other. `8` =  kicked from group thread. |
 
 ### Thread Invite Object
-In the getGJThreadMessages.php endpoint, a different set of values is returned. They are as follows:
+The getGJThreadInvites.php endpoint returns a fixed list of values for each pending invite:
 
 | Index | Name/Value  | Type | Description |
 | ----- | ----------- | ---- | ----------- |
-| 1     | threadID      | **Integer** | The thread ID
-| 2     | accountID     | **Integer** | The account ID of the user who invited you
-| 3     | username     | **String** | The username of the user who invited you encoded in [Base64](/topics/encryption/base64.md)
-| 4     | title        | **String** | The title of the group thread encoded in [Base64](/topics/encryption/base64.md)
-| 5     | members   | **Integer** | Amount of members in the thread
-| 6     | inviteAge | **String** | How long ago you were invited (e.g. "1 hour")
-| 7     | lastMessage   | **String** | How long ago the last message in the thread was sent (e.g. "13 hours")
-| 8     | unknown		   | **String** | Seems to always be empty
-| 9     | description | **String** | The description of the thread encoded in [Base64](/topics/encryption/base64.md)
-| 10    | threadType	   | **Bool** | 0 - group thread, 1 - DM thread
-| 11    | muted		   | **Bool** | Whether you have muted the thread or not
-| 12    | unknown		   | **Integer** | Seems to always be 0
-| 13    | ignoredInvite		 | **Bool** | Whether you have ignored this invite
-| 14  | icon  	 | **Integer** | The icon ID of the user who invited you
-| 15  | color1  	 | **Integer** | The primary color of the user who invited you
-| 16  | color2  	 | **Integer** | The secondary color of the user who invited you
-| 17  | color3  	 | **Integer** | The glow color of the user who invited you
-| 18  | iconType 	 | **Integer** | The icon type of the user who invited you
-| 19  | special 	 | **Integer** | The special value of the user who invited you
-| 20  | emoteIcon 	 | **String** | The emote icon used for this group thread
-| 21  | inviteTimestamp 	 | **Integer** | The UNIX timestamp of when you were invited
+| 1 | threadID | **Integer** | The thread ID |
+| 2 | inviterAccountID | **Integer** | The account ID of the user who invited you |
+| 3 | inviterUsername | **String** | The inviter's username encoded in [Base64](/topics/encryption/base64.md) |
+| 4 | title | **String** | The group title encoded in [Base64](/topics/encryption/base64.md); empty for DMs |
+| 5 | members | **Integer** | Number of active group members; `0` for DMs |
+| 6 | inviteAge | **String** | Relative age of the invite |
+| 7 | lastMessageAge | **String** | Relative age of the latest message, or the thread creation time if there is no message |
+| 8 | requestMessage | **String** | First regular message in a DM request; empty for groups and when absent |
+| 9 | description | **String** | Group description encoded in [Base64](/topics/encryption/base64.md); empty for DMs |
+| 10 | threadType | **Bool** | `0` = group, `1` = DM |
+| 11 | muted | **Bool** | Whether the invitee has muted the thread |
+| 12 | inviterIcon | **Integer** | The inviter's icon ID |
+| 13 | ignoredInvite | **Bool** | Whether the invite was ignored |
+| 14 | inviterColor2 | **Integer** | The inviter's secondary color |
+| 15 | inviterColor3 | **Integer** | The inviter's glow color |
+| 16 | inviterIconType | **Integer** | The inviter's icon type |
+| 17 | inviterGlow | **Integer** | `2` when the inviter has glow enabled, otherwise `0` |
+| 18 | inviterIcon | **Integer** | The inviter's icon ID (repeated in this position) |
+| 19 | inviterColor1 | **Integer** | The inviter's primary color |
+| 20 | emoteIcon | **String** | The group emote icon; empty for DMs |
+| 21 | inviteTimestamp | **Integer** | UNIX timestamp when the invite was created |
+
+### Pending Member Object
+In getGJThreadMessages.php and getGJThreadMembers.php, pending invitees are represented differently from the invite objects returned by getGJThreadInvites.php. The fixed list is:
+
+```
+accountID:userID:username:invitedBy:iconID:color1:color2:color3:iconType:special:stars:moons:demons:secretCoins:userCoins:diamonds:inviteTimestamp:accIcon:accShip:accBall:accBird:accDart:accRobot:accGlow:accSpider:accExplosion:accSwing:accJetpack
+```
+
+The username is encoded in [Base64](/topics/encryption/base64.md).
 
 ### Thread Metadata
 
@@ -84,7 +93,7 @@ In the getGJThreadMessages.php endpoint, a more limited set of values is returne
 | Index | Name/Value  | Type | Description |
 | ----- | ----------- | ---- | ----------- |
 | 1     | threadID      | **Integer** | The thread ID
-| 2     | unknown     | **Integer** | Seems to always be 0
+| 2     | invitePermission | **Integer** | `0` = any active member can invite; `1` = owner only
 | 3     | memberCount     | **Integer** | The amount of members in the group
 | 4     | description        | **String** | The description of this group thread encoded in [Base64](/topics/encryption/base64.md)
 | 5     | mv   | **Integer** | The value used in the `mv` key which is sent when refreshing the messages. What it does is currently unknown
@@ -93,6 +102,6 @@ In the getGJThreadMessages.php endpoint, a more limited set of values is returne
 | 8     | unknown		   | **Integer** | Seems to always be 0
 | 9     | title | **String** | The title of the group thread encoded in [Base64](/topics/encryption/base64.md)
 | 10    | locked	   | **Bool** | Whether the thread is locked or not
-| 11    | unknown		   | **Bool** | Seems to always be 0
+| 11    | status		   | **Integer** | DM status: `0` = default, `2` = pending request, `4` = friends-only recipient, `5` = recipient does not accept messages, `7` = one user blocked the other. `8` =  removed from group thread.
 
-`{threadID}:0:{memberCount}:{description}:{mv}:{shwoL`
+`{threadID}:{invitePermission}:{memberCount}:{description}:{mv}:0:0:0:{title}:{locked}:{status}`

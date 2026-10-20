@@ -1,6 +1,6 @@
 # searchGJThreadMessages.php
 
-Searches messages in a thread for a substring.
+Searches regular messages in a thread for a case-insensitive substring. System messages are not searched.
 
 ## Parameters
 
@@ -10,7 +10,7 @@ Searches messages in a thread for a substring.
 | `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
 | `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
 | `threadID`      | The ID of the thread to search messages in | Yes | <!--a-->
-| `query`         | The search query converted to [Base64](/topics/encryption/base64.md) | Yes | <!--a-->
+| `query`         | The non-empty search query converted to [URL-safe Base64](/topics/encryption/base64.md) | Yes | <!--a-->
 | `beforeID`      | All fetched messages will be older than this message ID | | <!--a-->
 | `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
 | `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
@@ -29,7 +29,7 @@ A successful request will return the data in the format
 where:
 
 - `{messages}` is a list of [Thread Message Objects](/resources/server/threadmessage) separated by pipes `|`. If no messages were fetched, this segment is returned as `none`
-- `{pages}` is the amount of pages left
+- `{pages}` is the number of result pages remaining after this response.
 
 ## Example
 
