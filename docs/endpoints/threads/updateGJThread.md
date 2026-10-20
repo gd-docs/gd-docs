@@ -11,7 +11,7 @@ Performs a wide variety of actions on threads.
 | `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
 | `threadID`      | The thread to update | Yes (except type 3) | <!--a-->
 | `mode`          | The type of action to perform, [see values](#mode) | Yes | <!--a-->
-| `value`         | Action-specific value. **Always** encoded in Base64 | Depends on mode |
+| `value`         | Action-specific value encoded in [URL-safe Base64](/topics/encryption/base64) | Depends on mode |
 | `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
 | `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
 | `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
@@ -25,7 +25,7 @@ Performs a wide variety of actions on threads.
 | `1`   | Clear message history | Not sent |
 | `2`   | Rename thread         | The new name |
 | `3`   | Mark as read          | Thread IDs to mark as read, separated by commas. The threadID param is sent as 0 |
-| `4`   | Invite users          | List of account IDs, separated by commas |
+| `4`   | Invite users          | Account IDs separated by commas; the successful response contains the invited IDs between colons |
 | `5`   | Leave thread          | Not sent |
 | `6`   | Kick member           | Account ID of the person you want to kick |
 | `7`   | Transfer ownership    | Account ID of the new owner |
@@ -44,4 +44,4 @@ Performs a wide variety of actions on threads.
 
 ## Response
 
-1 if successful, -1 otherwise.
+`1` if successful, `-1` otherwise, except mode `4`, which returns the invited account IDs in the form `:accountID:accountID:...`.

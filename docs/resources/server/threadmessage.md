@@ -18,7 +18,7 @@ The values are as follows:
 - Sender account ID. This is 0 for system messages
 - Message content. This is just the message content encoded in [Base64](/topics/encryption/base64.md) if this is a regular message, otherwise this is its own string with a few values which are comma-separated
 - UNIX timestamp of when the message was sent
-- Whether the message is deleted
+- Deleted flag. It is `0` in observed responses; deleting a message removes it from the returned history.
 
 ### System Messages
 

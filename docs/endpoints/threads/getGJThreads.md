@@ -12,7 +12,7 @@ Gets a user's message threads.
 | `page`          | The page of threads you want to fetch, starting from 0. Defaults to the first if left out |       |
 | `filter`        | Which threads to show: 0 for all (default), 1 for DM, 2 for Group |       |
 | `removed`       | Unknown, always sent as 1 |       |
-| `user`          | Filter for threads that have these users. Comma-separated list of account IDs |       |
+| `user`          | Optional comma-separated account IDs; only threads with every listed user as an active member are returned |       |
 | `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
 | `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
 | `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
@@ -25,11 +25,13 @@ A list of [Thread Objects](/resources/server/thread.md) separated by pipes `|`. 
 
 The page info has 5 values separated with colons `:`, which are:
 
-- total - total number of levels for the query
+- total - total number of threads matching the query
 - offset - offset from which the current page starts
-- amount - number of levels per page (always 10 for the gd servers)
-- invites - the amount of new invites
+- amount - page size (10)
+- invites - number of unignored pending invites
 - interval - how often to refresh threads (in seconds). The GD server sets this to 60
+
+Threads are ordered with pinned threads first, then by most recently updated. The `filter` parameter selects all threads (`0`), DMs (`1`) or group threads (`2`). A `user` filter requires all of its account IDs to be active members of the thread. The `page` parameter is zero-based.
 
 ## Example
 

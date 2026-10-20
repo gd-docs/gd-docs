@@ -31,5 +31,5 @@ A list of all known keys can be found in the table below.
 | 51  | soundString | **Sound Pack String** | The data for this pack
 | 59  | actions | **Integer** | How many actions have a sound
 | 60  | sounds | **Integer** | The amount of sounds used
-| 61  | unknown | **Integer** | Seems to always be 0
+| 61  | unlisted | **Integer** | Visibility mode: `0` is public, `3` is friends-unlisted, and `4` is unlisted. |
 | 64  | icon | **String** | The emote used as the icon

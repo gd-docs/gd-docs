@@ -46,15 +46,15 @@ Each `key` is tied to a component within the client and the `value` sets data fo
 | 27 | accStreak | **Integer** | The ID of the player's trail. Is not sent, see [trivia](#trivia) |
 | 28* | accGlow | **Bool** | If the player has glow enabled |
 | 29* | isRegistered | **Bool** | If the player is registered |
-| 30* | globalRank | **Integer** | The global rank of the player |
+| 30* | globalRank | **Integer** | The player's rank by stars among enabled, non-leaderboard-banned accounts; `0` for a leaderboard-banned account |
 | 31* | friendState | **Integer** | Friendship status. Empty = Unfriended, 1 = Friended, 3 = Friend request sent to the player, 4 = Friend request received from the player |
 | 32* | friendRequestID | **Integer** | An ID unique to each friend request<br/>*(only returned if player sent you a friend request)* |
 | 35* | friendRequestMessage | **String** | The friend request's message, encoded in [base64](/topics/encryption/base64.md)<br/>*(only returned if player sent you a friend request)* |
 | 37* | friendRequestAge | **Integer** | How long ago the friend request was sent (e.g. "2 months")<br/>*(only returned if player sent you a friend request)* |
-| 38* | messages | **Integer** | The number of new messages you have<br/>*(only returned when logged in and viewing own profile)* |
-| 39* | friendRequests | **Integer** | The number of new friend requests you have |
-| 40* | newFriends | **Integer** | The number of new friends you have |
-| 41 | newFriendRequest | **Bool** | If the friend request is new<br/>*(only returned by [getGJFriendRequests20](/endpoints/socials/getGJFriendRequests20))* |
+| 38* | messages | **Integer** | The number of unread messages you have<br/>*(only returned when logged in and viewing your own profile)* |
+| 39* | friendRequests | **Integer** | The number of pending, non-ignored friend requests you have<br/>*(only returned when logged in and viewing your own profile)* |
+| 40* | newFriends | **Integer** | The number of friendships marked as new<br/>*(only returned when logged in and viewing your own profile)* |
+| 41 | newFriendRequest | **Bool** | Whether a friend request is new |
 | 42* | age | **String** | The time since you submitted a levelScore<br/>*(only returned by [getGJLevelScores211](/endpoints/levels/getGJLevelScores211 ))* |
 | 43* | accSpider | **Integer** | The ID of the player's spider |
 | 44* | twitter | **String** | The player's Twitter handle |
@@ -77,11 +77,12 @@ Each `key` is tied to a component within the client and the `value` sets data fo
 | 62* | groupState | **Integer** | Who can invite the player to groups. 1 = Friends, 2 = None |
 | 63* | gO | **Integer** | Unknown. Seemingly related to the gO parameter in [updateGJAccSettings20](/endpoints/accounts/updateGJAccSettings20) |
 | 64  | friendsSince / followingSince | **Integer** | The unix timestamp representing the amount of time you've been friends with this player. In getGJUserList type 3, it's replaced with the UNIX timestamp that represents when you followed this user |
-| 67* | followers | **Integer** | The amount of people following this account
-| 68* | following | **Integer** | How many accounts you follow. Can only be fetched for yourself (requires your own gjp2)
-| 69* | isFollowing | **Bool** | Whether you are following this person (requires auth)
+| 65* | notifications | **Integer** | The number of unread notifications<br/>*(only returned when logged in and viewing your own profile)* |
+| 67* | followers | **Integer** | The number of accounts following this user (omitted when zero) |
+| 68* | following | **Integer** | The number of accounts you follow (only returned for your own profile when logged in; omitted when zero) |
+| 69* | isFollowing | **Bool** | Whether the authenticated account follows this user (returned when logged in, including when false) |
 
-Keys indicated with an asterisk (*) are only returned from the [getGJUserInfo20](/endpoints/users/getGJUserInfo20) endpoint. Conversely, keys 6, 9, 14, & 15 are only returned by user search endpoints ([getGJUsers20](/endpoints/users/getGJUsers20), [getGJScores20](/endpoints/users/getGJScores20)). Key 64 is only returned by endpoint [getGJUserList20](/endpoints/socials/getGJUserList20).
+Keys indicated with an asterisk (*) are returned by [getGJUserInfo20](/endpoints/users/getGJUserInfo20), often conditionally. They can also appear in partial user objects embedded in other responses, such as thread member lists. Keys 6, 9, 14 and 15 are used by leaderboard or user-search results ([getGJUsers20](/endpoints/users/getGJUsers20), [getGJScores20](/endpoints/users/getGJScores20)). Key 64 is returned by [getGJUserList20](/endpoints/socials/getGJUserList20) and as the join timestamp in thread member objects.
 
 ### **Thread Invite User Object**
 In threads, users who are invited to the group but haven't accepted the invite yet are represented differently than regular user objects. They do not use `key:value:key:value` pairings, and instead are a fixed list of values separated by colons `:`. The values are as follows:
@@ -90,7 +91,7 @@ In threads, users who are invited to the group but haven't accepted the invite y
 accountID:userID:username:invitedBy:iconID:color1:color2:color3:iconType:special:stars:moons:demons:secretCoins:userCoins:diamonds:friendsSince
 ```
 
-The username is encoded in [base64](/topics/encryption/base64.md). invitedBy is the account ID of the user that invited them.
+The username is encoded in [base64](/topics/encryption/base64.md). `invitedBy` is the account ID of the user who invited them.
 
 ### **Thread Former User Object**
 In threads, users who have left or have been kicked are represented similarly to invited users, but with less values. They are as follows:

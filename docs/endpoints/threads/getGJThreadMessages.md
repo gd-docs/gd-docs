@@ -13,8 +13,8 @@ Gets the messages in a thread.
 | `beforeID`      | All fetched messages will be older than this message ID | | <!--a-->
 | `afterID`       | All fetched messages will be newer than this message ID | | <!--a-->
 | `aroundID`      | All fetched messages will be around this message ID. Used when jumping to a message from search | |
-| `date`          |
-| `mv`            | Unknown. Only sent when refreshing the thread | |
+| `date`          | Sent by some clients; does not affect the response | |
+| `mv`            | Sent when refreshing the thread; the endpoint does not use it to filter messages | |
 | `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
 | `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
 | `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
@@ -34,10 +34,12 @@ where:
 - `{messages}` is a list of [Thread Message Objects](/resources/server/threadmessage) separated by pipes `|`. If no messages were fetched, this segment is returned as `none`
 - `{members}` is a list of [User Objects](/resources/server/user) of all the members, separated by pipes `|`
 - `{formerMembers}` is a list of [Thread Former User Objects](/resources/server/user#thread-former-user-object) of members that left or were kicked, separated by pipes `|`
-- `{invites}` is a list of [Thread Invite User Objects](/resources/server/user#thread-invite-user-object) of all the users wh0 currently have pending invites, separated by pipes `|`
+- `{invites}` is a list of [Thread Invite User Objects](/resources/server/user#thread-invite-user-object) for pending group invites, separated by pipes `|`.
 - `{metadata}` is a [Thread Metadata Object](/resources/server/thread#thread-metadata)
 - `{lastMessageID}` is the last message ID you can see before you were removed from the group thread. If you are still in the thread, it's set to 0
-- `{unk}` is unknown and always seems to be `3,1,10,50`. The `50` is likely how many messages can be loaded at once
+- `{unk}` is the fixed value `3,1,10,50`; the last value matches the 50-message page limit, while the meanings of the first three values are unknown
+
+Without a cursor, the endpoint returns the latest messages. `beforeID` fetches earlier messages, `afterID` fetches later messages, and `aroundID` fetches messages nearest that ID. Only one cursor is used, with precedence `aroundID`, then `afterID`, then `beforeID`. Fetching messages marks the latest returned message as read. Opening an incoming DM request through this endpoint accepts it.
 
 ## Example
 
