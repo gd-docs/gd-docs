@@ -34,7 +34,7 @@ Saves account data
 If the response was not successful, there are several different error codes that can be returned:
 
 | Code | Name | Description |
-|------|------|-------------|
+| ---- | ---- | ----------- |
 | `-1`   | Generic error | Displays a generic "Backup failed." message along with the save sizes of `GameManager` and `LocalLevelManager`, if they are over 32mb combined. |
 | `-2`   | Login Failed  | Your login credentials were wrong and you need to log back in, prompts the user to login and verify their account |
 | `-3`   | Generic error | Unlike code -1 (or any other unknown codes), this error code displays -3 alongside the backup failed message |
