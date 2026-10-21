@@ -4,22 +4,27 @@ Gets comments of a level, list or sound pack.
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `levelID`       | The ID of the level, list or sound pack. Negative if it's a list ID | Yes      | <!--a-->
-| `page`          | Which page of comments you want to see | Yes      | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `cType`         | If set to 6, `levelID` is a sound pack ID. Not sent otherwise |          |
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
-| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
-| `mode`          | Set to 0 for most recent, and 1 for most liked |          | <!--a-->
-| `total`         | Probably the cached total number of comments, default is `0` |          | <!--a-->
-| `count`         | Number of comments to fetch. Defaults to 10, but doubles if "More Comments" is enabled or in compact view (stacking) |          | <!--o: not sent when =10-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `levelID`<ParamInfo req="always"/> | The ID of the level, list or sound pack. Negative if it's a list ID |
+| `page`<ParamInfo req="always"/> | Which page of comments you want to see |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `cType` | If set to 6, `levelID` is a sound pack ID. Not sent otherwise |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+| `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
+| `mode`<ParamInfo req="no" sent="always"/> | Set to 0 for most recent, and 1 for most liked |
+| `total`<ParamInfo req="no" sent="always"/> | Probably the cached total number of comments, default is `0` |
+| `count`<ParamInfo req="no" sent="cond"/> | Number of comments to fetch. Defaults to 10, but doubles if "More Comments" is enabled or in compact view (stacking) <ParamCond sent="cond">value is not 10</ParamCond> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

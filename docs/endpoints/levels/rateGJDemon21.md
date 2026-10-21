@@ -4,18 +4,23 @@ Rates the demon difficulty of a demon level - only works for Geometry Dash moder
 
 ## Parameters
 
-| Parameter       | Explanation                                                                                        | Required |
-| --------------- | -------------------------------------------------------------------------------------------------- | -------- |
-| `gameVersion`   | <ParamDesc name="gameVersion"/> | Yes      | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> | Yes      | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="mod"/> | Yes      | <!--a-->
-| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `levelID`       | The ID of the demon being rated                                                                    | Yes      | <!--a-->
-| `rating`        | 1 for Easy Demon, 2 for Medium Demon, 3 for Hard Demon, 4 for Insane Demon and 5 for Extreme Demon | Yes      | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `gameVersion`<ParamInfo req="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="always"/> | <ParamDesc name="binaryVersion"/> |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="mod"/> |
+| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
+| `levelID`<ParamInfo req="always"/> | The ID of the demon being rated |
+| `rating`<ParamInfo req="always"/> | 1 for Easy Demon, 2 for Medium Demon, 3 for Hard Demon, 4 for Insane Demon and 5 for Extreme Demon |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

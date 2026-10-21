@@ -4,16 +4,21 @@ Searches for a user and returns their info
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
-| `str`           | The name or user ID of the user you want to search for |          | <!--a-->
-| `page`          | The page of users you want. Redundant as it only returns 1 user |          | <!--a-->
-| `total`         | Probably the cached total number of users, default is `0` |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
+| `str`<ParamInfo req="no" sent="always"/> | The name or user ID of the user you want to search for |
+| `page`<ParamInfo req="no" sent="always"/> | The page of users you want. Redundant as it only returns 1 user |
+| `total`<ParamInfo req="no" sent="always"/> | Probably the cached total number of users, default is `0` |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

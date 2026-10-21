@@ -4,18 +4,23 @@ Gets a user's quests.
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `udid`          | <ParamDesc name="udid"/> | Yes | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes | <!--a-->
-| `chk`           | [Rewards CHK](/topics/encryption/rewards_chk) using the [daily challenges](/topics/encryption/xor.html#keys) key | Yes | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |  | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |  | <!--a-->
-| `accountID`     | <ParamDesc name="accountID"/> |  | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> |  | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |  | <!--a-->
-| `world`         | Effectively [`gdw`](/endpoints/generic#common-parameters), default is `0` |  | <!--a-->
-| `gdl`           | <ParamDesc name="gdl"/> |  | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `udid`<ParamInfo req="always"/> | <ParamDesc name="udid"/> |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `chk`<ParamInfo req="always"/> | [Rewards CHK](/topics/encryption/rewards_chk) using the [daily challenges](/topics/encryption/xor.html#keys) key |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `world`<ParamInfo req="no" sent="always"/> | Effectively [`gdw`](/endpoints/generic#common-parameters), default is `0` |
+| `gdl`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gdl"/> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

@@ -4,26 +4,31 @@ Uploads a created list to the servers.
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `gameVersion`   | <ParamDesc name="gameVersion"/>| Yes      | <!--a-->
-| `accountID`     | <ParamDesc name="accountID"/>| Yes      | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `listID`        | The ID of the list if updating to a newer version, otherwise `0` | Yes      | <!--a-->
-| `listName`      | The name of the list, in plain text | Yes      | <!--a-->
-| `listDesc`      | The description of the list, in [URL-safe base64](/topics/encryption/base64.md) | Yes      | <!--a-->
-| `listLevels`    | All level IDs included in the list, separated by `,` | Yes      | <!--a-->
-| `difficulty`    | The list's difficulty face. `-1` is N/A, and then it's `0`-`10` where `0` is Auto and `10` is Extreme Demon | Yes      | <!--a-->
-| `listVersion`   | Always `0` | Yes      | <!--a-->
-| `original`      | The ID of the original list if the list was copied, otherwise `0` | Yes      | <!--a-->
-| `unlisted`      | Set to `2` if the list should be unlisted, and to `1` if the list should be unlisted and only viewable by friends | Yes      | <!--a-->
-| `seed`          | A mandatory [chk value](/topics/encryption/chk.md) generated from the first 50 characters of the listLevels parameter, followed by the accountID | Yes      | <!--a-->
-| `seed2`         | 5 randomly generated characters from `[A-Za-z0-9]` | Yes      | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="common"/>| Yes      | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `gameVersion`<ParamInfo req="always"/> | <ParamDesc name="gameVersion"/> |
+| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
+| `listID`<ParamInfo req="always"/> | The ID of the list if updating to a newer version, otherwise `0` |
+| `listName`<ParamInfo req="always"/> | The name of the list, in plain text |
+| `listDesc`<ParamInfo req="always"/> | The description of the list, in [URL-safe base64](/topics/encryption/base64.md) |
+| `listLevels`<ParamInfo req="always"/> | All level IDs included in the list, separated by `,` |
+| `difficulty`<ParamInfo req="always"/> | The list's difficulty face. `-1` is N/A, and then it's `0`-`10` where `0` is Auto and `10` is Extreme Demon |
+| `listVersion`<ParamInfo req="always"/> | Always `0` |
+| `original`<ParamInfo req="always"/> | The ID of the original list if the list was copied, otherwise `0` |
+| `unlisted`<ParamInfo req="always"/> | Set to `2` if the list should be unlisted, and to `1` if the list should be unlisted and only viewable by friends |
+| `seed`<ParamInfo req="always"/> | A mandatory [chk value](/topics/encryption/chk.md) generated from the first 50 characters of the listLevels parameter, followed by the accountID |
+| `seed2`<ParamInfo req="always"/> | 5 randomly generated characters from `[A-Za-z0-9]` |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

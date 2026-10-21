@@ -7,10 +7,15 @@ Reports a level
 
 ## Parameters
 
-| Parameter | Explanation | Required |
-| --------- | ----------- | -------- |
-| `secret`  | <ParamDesc name="secret" type="common"/> | Yes      |
-| `levelID` | The ID of the level being reported |          |
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `levelID` | The ID of the level being reported |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 
