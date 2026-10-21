@@ -3,7 +3,7 @@ import DefaultTheme from 'vitepress/theme';
 import ParamDesc from '../components/ParamDesc.vue';
 import ParamInfo from '../components/ParamInfo.vue';
 import ParamCond from '../components/ParamCond.vue';
-import ParamInfoGroup from '../components/ParamInfoGroup.vue';
+import ParamGroup from '../components/ParamGroup.vue';
 import ParamInfoFooter from '../components/ParamInfoFooter.vue';
 
 export default {
@@ -12,7 +12,7 @@ export default {
         app.component('ParamDesc', ParamDesc);
         app.component('ParamInfo', ParamInfo);
         app.component('ParamCond', ParamCond);
-        app.component('ParamInfoGroup', ParamInfoGroup);
+        app.component('ParamGroup', ParamGroup);
         app.component('ParamInfoFooter', ParamInfoFooter);
     }
 } satisfies Theme;

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { provide } from 'vue';
-import { paramInfoRegistryKey, type ParamInfoEntry } from './param-info-group.mts';
+import { paramInfoRegistryKey, type ParamInfoEntry } from './param-group.mts';
 
 const entries: ParamInfoEntry[] = [];
 

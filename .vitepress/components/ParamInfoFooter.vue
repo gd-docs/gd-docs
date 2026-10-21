@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, inject } from 'vue';
-import { paramInfoRegistryKey } from './param-info-group.mts';
+import { paramInfoRegistryKey } from './param-group.mts';
 
 const registry = inject(paramInfoRegistryKey);
 const symbolOrder = ['*', '?', 'a', 'p', 'c'];

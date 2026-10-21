@@ -2,7 +2,7 @@
 import { computed, inject } from 'vue';
 import './param-info.css';
 import config from './param-info.mts';
-import { paramInfoRegistryKey } from './param-info-group.mts';
+import { paramInfoRegistryKey } from './param-group.mts';
 
 type Requirement = 'always' | 'cond' | 'no'
 type Sending = 'always' | 'platform' | 'cond'
