@@ -26,6 +26,21 @@
     color: var(--vp-c-indigo-1);
 }
 
-.param-cond {
+.param-cond,
+.param-info__footer {
     line-height: 1.35;
 }
+
+.param-info__footer li {
+    list-style: none;
+}
+
+ul.param-info__footer li + li,
+table + small > ul.param-info__footer {
+    margin-top: 0;
+}
+
+table:has(+ small > ul.param-info__footer) {
+    margin-bottom: 10px;
+}
+

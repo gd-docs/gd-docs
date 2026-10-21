@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, inject } from 'vue';
 import './param-info.css';
 import config from './param-info.mts';
+import { paramInfoRegistryKey } from './param-info-group.mts';
 
 type Requirement = 'always' | 'cond' | 'no'
 type Sending = 'always' | 'platform' | 'cond'
@@ -10,6 +11,8 @@ const props = defineProps<{
   req: Requirement
   sent?: Sending
 }>();
+
+const registry = inject(paramInfoRegistryKey, null);
 
 const markers = computed(() => {
   const result: {
@@ -58,6 +61,15 @@ const markers = computed(() => {
 
   return result;
 });
+
+// Register synchronously so a footer rendered after the group's slot sees all markers.
+for (const marker of markers.value) {
+  registry?.register({
+    symbol: marker.symbol,
+    description: marker.description,
+    kind: marker.kind
+  });
+}
 </script>
 
 <template v-if="markers.length">
