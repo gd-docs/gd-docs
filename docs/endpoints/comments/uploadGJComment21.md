@@ -15,7 +15,7 @@ Uploads a comment to a user level.
 | `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
 | `levelID`<ParamInfo req="always"/> | The ID of the level to comment on. If commenting on a list, the ID should be negative |
 | `chk`<ParamInfo req="always"/> | [Comments CHK](/topics/encryption/chk#comment) |
-| `percent`<ParamInfo req="no" sent="cond"/> | The level percentage shown on the comment as an integer <ParamCond sent="cond">value is non-zero</ParamCond> |
+| `percent`<ParamInfo req="no" sent="cond"/> | The level percentage shown on the comment as an integer <ParamCond sent="cond">non-zero</ParamCond> |
 | `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
 | `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
 | `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
