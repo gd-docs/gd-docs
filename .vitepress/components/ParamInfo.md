@@ -37,6 +37,26 @@ Adds text explaining a parameter's condition. Put the text between the component
 | `accountID`<ParamInfo req="cond" sent="cond"/> | The account ID <ParamCond req>the request requires authentication</ParamCond> <ParamCond sent="req"/> |
 ```
 
+### Examples of conditions
+
+❌ 1\
+✔️ value is 1
+
+❌ not 0\
+✔️ non-zero
+
+❌ `otherParam`=1\
+✔️ `otherParam` is 1
+
+✔️ value is 1 and `p1` is 2 and the mogus is asus
+
+❌ `type` is 5 or `type` is 10 or `p` is 4\
+✔️ `type` is 5 or 10 or `p` is 4
+
+✔️ (`type` is 5 or `p1` is 10) and `p2` is 4
+
+✔️ it's a beautiful day outside and flowers are blooming and birds are singing and on days like these kids like you should be burning in hell
+
 ## `ParamGroup`
 
 Groups a parameter table with its legend. `ParamInfoFooter` then lists only the symbols used by `ParamInfo`s in that group. Place both the table and its footer inside a `ParamGroup`.
