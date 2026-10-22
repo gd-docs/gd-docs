@@ -19,7 +19,7 @@ This endpoint is used to search level lists by name and / or filter
 | `diff`<ParamInfo req="no" sent="always"/> | Difficulty filter, [see values](#diff). A comma-separated list of filters is valid, but only the first one is used |
 | `star`<ParamInfo req="no" sent="cond"/> | Rated filter <ParamCond sent="cond">value is 1</ParamCond> |
 | `demonFilter`<ParamInfo req="no" sent="cond"/> | Selects which demon difficulty to search, [see values](#demon-filter). If not sent will search all demon types <ParamCond sent="cond">a demon difficulty is selected</ParamCond> |
-| `followed`<ParamInfo req="cond" sent="cond"/> | Comma separated list of the followed user IDs <ParamCond req>[`type`](#type) is 12</ParamCond> <ParamCond sent="cond">[`type`](#type) is 12</ParamCond> |
+| `followed`<ParamInfo req="cond" sent="cond"/> | Comma separated list of the followed user IDs <ParamCond req>[`type`](#type) is 12</ParamCond> <ParamCond sent="req"/> |
 
 <ParamInfoFooter/>
 </ParamGroup>

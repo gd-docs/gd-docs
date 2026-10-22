@@ -12,7 +12,7 @@ Download a message.
 | `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
 | `messageID`<ParamInfo req="always"/> | The ID of the message to read |
 | `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
-| `isSender`<ParamInfo req="cond" sent="cond"/> | Whether you're the message author <ParamCond req>you are the message author</ParamCond> <ParamCond sent="cond">you are the message author</ParamCond> |
+| `isSender`<ParamInfo req="cond" sent="cond"/> | Whether you're the message author <ParamCond req>you are the message author</ParamCond> <ParamCond sent="req"/> |
 | `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
 | `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
 | `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |

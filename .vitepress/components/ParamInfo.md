@@ -30,9 +30,11 @@ Adds text explaining a parameter's condition. Put the text between the component
 - `req` — explains when the parameter is required.
 - `sent="cond"` — explains when the client sends the parameter.
 - `sent="platform"` — explains on which platforms the client sends it. The text should be a list of OS platforms or spin-off versions.
+- `sent="req"` — indicates that the client sends the parameter when it is required. This is used to avoid duplicating the condition from `ParamCond req`. No text is needed between the component tags.
 
 ```md
 | `percent`<ParamInfo req="no" sent="cond"/> | The completion percentage <ParamCond sent="cond">non-zero</ParamCond> |
+| `accountID`<ParamInfo req="cond" sent="cond"/> | The account ID <ParamCond req>the request requires authentication</ParamCond> <ParamCond sent="req"/> |
 ```
 
 ## `ParamGroup`

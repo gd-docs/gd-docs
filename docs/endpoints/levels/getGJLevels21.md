@@ -35,8 +35,8 @@ This endpoint is used to search levels by name and or filter
 | `noStar`<ParamInfo req="no" sent="cond"/> | Unrated filter <ParamCond sent="cond">value is 1; mutually exclusive with `star`</ParamCond> |
 | `demonFilter`<ParamInfo req="no" sent="cond"/> | Selects which demon difficulty to search, [see values](#demon-filter). If not sent will search all demon types <ParamCond sent="cond">a demon difficulty is selected</ParamCond> |
 | `hypeSecret`<ParamInfo req="no" sent="cond"/> | Sent as 1 for hyped searches. Does not seem to do anything though <ParamCond sent="cond">[`type`](#type) is 31</ParamCond> |
-| `followed`<ParamInfo req="cond" sent="cond"/> | Comma-separated list of the followed account IDs <ParamCond req>[`type`](#type) is 12</ParamCond> <ParamCond sent="cond">[`type`](#type) is 12</ParamCond> |
-| `completedLevels`<ParamInfo req="cond" sent="cond"/> | Comma-separated list of completed level IDs surrounded by `()` <ParamCond req>an (un)completed filter is used</ParamCond> <ParamCond sent="cond">required for the selected (un)completed filter</ParamCond> |
+| `followed`<ParamInfo req="cond" sent="cond"/> | Comma-separated list of the followed account IDs <ParamCond req>[`type`](#type) is 12</ParamCond> <ParamCond sent="req"/> |
+| `completedLevels`<ParamInfo req="cond" sent="cond"/> | Comma-separated list of completed level IDs surrounded by `()` <ParamCond req>`uncompleted` is 1 or `onlyCompleted` is 1</ParamCond> <ParamCond sent="req"/> |
 
 <ParamInfoFooter/>
 </ParamGroup>
