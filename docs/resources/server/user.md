@@ -77,6 +77,7 @@ Each `key` is tied to a component within the client and the `value` sets data fo
 | 62* | groupState | **Integer** | Who can invite the player to groups. 1 = Friends, 2 = None |
 | 63* | gO | **Integer** | Unknown. Seemingly related to the gO parameter in [updateGJAccSettings20](/endpoints/accounts/updateGJAccSettings20) |
 | 64  | friendsSince / followingSince | **Integer** | The unix timestamp representing the amount of time you've been friends with this player. In getGJUserList type 3, it's replaced with the UNIX timestamp that represents when you followed this user |
+| 65  | notifications | **Integer** | The amount of unread notifications you have
 | 67* | followers | **Integer** | The amount of people following this account
 | 68* | following | **Integer** | How many accounts you follow. Can only be fetched for yourself (requires your own gjp2)
 | 69* | isFollowing | **Bool** | Whether you are following this person (requires auth)
