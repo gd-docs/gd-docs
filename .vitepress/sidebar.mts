@@ -234,6 +234,10 @@ export default [
             "link": "/endpoints/misc/likeGJItem211"
           },
           {
+            "text": "news.dat",
+            "link": "/endpoints/misc/news"
+          },
+          {
             "text": "reportGJContent.php",
             "link": "/endpoints/misc/reportGJContent"
           },
@@ -608,6 +612,10 @@ export default [
           {
             "text": "SFX Library Format",
             "link": "/resources/client/sfxlibrary"
+          },
+          {
+            "text": "News Format",
+            "link": "/resources/client/news"
           }
         ],
         "collapsed": true
