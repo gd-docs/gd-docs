@@ -149,7 +149,7 @@ You can access the old table of object properties (with all 2.1 properties and a
 | 111 | Free Mode                            | **bool**                                        | the Free Mode property of the Camera Mode trigger or portal                        |
 | 112 | Edit Camera Settings                 | **bool**                                        | the Edit Camera Settings property of the Camera Mode trigger or portal             |
 | 113 | Easing (Free Mode)                   | **integer**                                     | the Easing property in a Camera Mode trigger or portal                             |
-| 114 | Padding                              | **float**                                       | the Paddding property in a Camera Mode trigger or portal                           |
+| 114 | Padding                              | **float**                                       | the Padding property in a Camera Mode trigger or portal                           |
 | 115 | ord                                  | **integer**                                     | the Ord property of the object                                                     |
 | 116 | No Effects                           | **bool**                                        | Whether the object doesn't emit any special effects (e.g. portal flash)            |
 | 117 | Reverse                              | **bool**                                        | Whether the orb/pad reverses your direction                                        |

@@ -4,19 +4,24 @@ Endpoint used by moderators to send levels to RobTop
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `accountID`     | <ParamDesc name="accountID"/> | Yes      |
-| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      |
-| `levelID`       | The ID of the level | Yes      |
-| `stars`         | How many stars that are requested | Yes      |
-| `secret`        | <ParamDesc name="secret" type="mod"/> | Yes      |
-| `gameVersion`   | <ParamDesc name="gameVersion"/> | Yes      |
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> | Yes      |
-| `feature`       | 0 for star rate, 1 for feature, 2 for epic, 3 for legendary, 4 for mythic | Yes      |
-| `udid`          | <ParamDesc name="udid"/> |          |
-| `uuid`          | <ParamDesc name="uuid"/> |          |
-| `dvs`           | <ParamDesc name="dvs"/> |          |
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
+| `levelID`<ParamInfo req="always"/> | The ID of the level |
+| `stars`<ParamInfo req="always"/> | How many stars that are requested |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="mod"/> |
+| `gameVersion`<ParamInfo req="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="always"/> | <ParamDesc name="binaryVersion"/> |
+| `feature`<ParamInfo req="always"/> | 0 for star rate, 1 for feature, 2 for epic, 3 for legendary, 4 for mythic |
+| `udid` | <ParamDesc name="udid"/> |
+| `uuid` | <ParamDesc name="uuid"/> |
+| `dvs` | <ParamDesc name="dvs"/> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

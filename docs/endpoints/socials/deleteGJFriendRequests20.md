@@ -4,19 +4,24 @@ Removes friend requests.
 
 ## Parameters
 
-| Parameter         | Explanation | Required |
-| ----------------- | ----------- | -------- |
-| `accountID`       | <ParamDesc name="accountID"/> | Yes      | <!--a-->
-| `gjp2`            | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `targetAccountID` | The accountID of the player you are declining the friend request or `0` if multiple requests are being declined | Yes      | <!--a-->
-| `secret`          | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `gameVersion`     | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion`   | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `udid`            | <ParamDesc name="udid"/> |          | <!--a-->
-| `uuid`            | <ParamDesc name="uuid"/> |          | <!--a-->
-| `dvs`             | <ParamDesc name="dvs"/> |          | <!--a-->
-| `accounts`        | Account IDs seperated by `,` for players whose requests are being declined. Sent only if there are multiple requests being declined |          | <!--o: sent when targetaccountid=0-->
-| `isSender`        | `1` if the player is the sender of the friend request(s) to the target account(s) |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
+| `targetAccountID`<ParamInfo req="always"/> | The accountID of the player you are declining the friend request or `0` if multiple requests are being declined |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+| `accounts`<ParamInfo req="no" sent="cond"/> | Account IDs seperated by `,` for players whose requests are being declined. Sent only if there are multiple requests being declined <ParamCond sent="cond">`targetAccountID` is 0</ParamCond> |
+| `isSender`<ParamInfo req="no" sent="always"/> | `1` if the player is the sender of the friend request(s) to the target account(s) |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

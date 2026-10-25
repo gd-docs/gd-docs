@@ -70,8 +70,10 @@ All Geometry Dash endpoints that can be found in the binary or inside another en
 | [`https://www.boomlings.com/database/getCustomContentURL.php`](/endpoints/songs/getCustomContentURL.md)             | Songs           |
 | [`https://www.boomlings.com/database/getGJSongInfo.php`](/endpoints/songs/getGJSongInfo.md)                         | Songs           |
 | [`https://www.boomlings.com/database/getGJTopArtists.php`](/endpoints/songs/getGJTopArtists.md)                     | Songs           |
-| [`https://geometrydashfiles.b-cdn.net/music/musiclibrary_02.dat`](/endpoints/songs/musiclibrary.md)                 | Songs           |
-| [`https://geometrydashfiles.b-cdn.net/sfx/sfxlibrary.dat`](/endpoints/songs/sfxlibrary.md)                          | Songs           |
+| [`https://geometrydashfiles.b-cdn.net/music/musiclibrary_02.dat`](/endpoints/songs/musiclibrary.md) | Songs           |
+| [`https://geometrydashfiles.b-cdn.net/music/musiclibrary_version_02.txt`](/endpoints/songs/musiclibrary.md) | Songs           |
+| [`https://geometrydashfiles.b-cdn.net/sfx/sfxlibrary.dat`](/endpoints/songs/sfxlibrary.md) | Songs           |
+| [`https://geometrydashfiles.b-cdn.net/sfx/sfxlibrary_version.txt`](/endpoints/songs/sfxlibrary.md) | Songs           |
 | &ZeroWidthSpace;                                                                                                    |                 |
 | [`https://www.boomlings.com/database/getGJScores20.php`](/endpoints/users/getGJScores20.md)                         | Users           |
 | [`https://www.boomlings.com/database/getGJUserInfo20.php`](/endpoints/users/getGJUserInfo20.md)                     | Users           |
@@ -88,3 +90,59 @@ All Geometry Dash endpoints that can be found in the binary or inside another en
 | &ZeroWidthSpace;                                                                                                    |                 |
 | `https://www.boomlings.com/databas/checkIfServerOnline.php`                                                         | *Unused*        |
 | [`https://www.boomlings.com/database/testSong.php`](/endpoints/songs/testSong.md)                                   | *Unused*        |
+| &ZeroWidthSpace;
+| `https://www.boomlings.com/database/uploadGJDeathData.php` |
+| `https://www.boomlings.com/database/downloadGJEditorSound.php` |
+| `https://www.boomlings.com/database/getGJContentStatus.php` |
+| `https://www.boomlings.com/database/adminGetUserHistory.php` |
+| `https://www.boomlings.com/database/adminGetReportedContent.php` |
+| `https://www.boomlings.com/database/adminClearReportedContent.php` |
+| `https://www.boomlings.com/database/adminGetReportQueue.php` |
+| `https://www.boomlings.com/database/adminGetAbuseInfo.php` |
+| `https://www.boomlings.com/database/adminGetAccountReview.php` |
+| `https://www.boomlings.com/database/adminThreadAction.php` |
+| `https://www.boomlings.com/database/sendGJThreadMessage.php` |
+| `https://www.boomlings.com/database/getGJThreads.php` |
+| `https://www.boomlings.com/database/getGJThreadMessages.php` |
+| `https://www.boomlings.com/database/searchGJThreadMessages.php` |
+| `https://www.boomlings.com/database/getGJThreadInvites.php` |
+| `https://www.boomlings.com/database/getGJNotifications.php` |
+| `https://www.boomlings.com/database/muteGJUser.php` |
+| `https://www.boomlings.com/database/followGJUser.php` |
+| `https://www.boomlings.com/database/unfollowGJUser.php` |
+| `https://www.boomlings.com/database/getGJFollowing.php` |
+| `https://www.boomlings.com/database/claimGJNotificationReward.php` |
+| `https://www.boomlings.com/database/getGJThreadMembers.php` |
+| `https://www.boomlings.com/database/updateGJThread.php` |
+| `https://www.boomlings.com/database/getGJUserSearch.php` |
+| `https://www.boomlings.com/database/getLevelRateInfo.php` |
+| `https://www.boomlings.com/database/getGJSongUsage.php` |
+| `https://www.boomlings.com/database/getGJEditorSounds.php` |
+| `https://www.boomlings.com/database/deleteGJComments.php` |
+| `https://www.boomlings.com/database/adminDeleteUserComments.php` |
+| `https://www.boomlings.com/database/adminCommentBan.php` |
+| `https://www.boomlings.com/database/adminUploadBan.php` |
+| `https://www.boomlings.com/database/adminMessageBan.php` |
+| `https://www.boomlings.com/database/adminFreezeAccount.php` |
+| `https://www.boomlings.com/database/adminTrendingBan.php` |
+| `https://www.boomlings.com/database/adminNameLock.php` |
+| `https://www.boomlings.com/database/adminCommentUnban.php` |
+| `https://www.boomlings.com/database/adminUploadUnban.php` |
+| `https://www.boomlings.com/database/adminCloseCase.php` |
+| `https://www.boomlings.com/database/adminMessageUnban.php` |
+| `https://www.boomlings.com/database/adminUnfreezeAccount.php` |
+| `https://www.boomlings.com/database/adminTrendingUnban.php` |
+| `https://www.boomlings.com/database/adminNameUnlock.php` |
+| `https://www.boomlings.com/database/reportGJContent.php` |
+| `https://www.boomlings.com/database/syncGJFollowing.php` |
+| `https://www.boomlings.com/database/getGJLevelControls.php` |
+| `https://www.boomlings.com/database/deleteGJLevelControls.php` |
+| `https://www.boomlings.com/database/uploadGJLevelControls.php` |
+| `https://www.boomlings.com/database/getGJDeathData.php` |
+| `https://www.boomlings.com/database/uploadGJEditorSound.php` |
+| `https://www.boomlings.com/database/deleteGJEditorSound.php` |
+| `https://www.boomlings.com/database/updateGJSoundDesc.php` |
+| `https://www.boomlings.com/database/getGJAudioFilesize.php` |
+| `https://www.boomlings.com/database/accounts/openedRegister.php` |
+| `https://geometrydashfiles.b-cdn.net/news/news_version.txt` |
+| `https://geometrydashfiles.b-cdn.net/news/news.dat` |

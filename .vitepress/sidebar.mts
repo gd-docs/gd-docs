@@ -30,6 +30,10 @@ export default [
             "link": "/endpoints/accounts/loginGJAccount"
           },
           {
+            "text": "openedRegister.php",
+            "link": "/endpoints/accounts/openedRegister"
+          },
+          {
             "text": "registerGJAccount.php",
             "link": "/endpoints/accounts/registerGJAccount"
           },
@@ -74,6 +78,28 @@ export default [
           {
             "text": "uploadGJComment21.php",
             "link": "/endpoints/comments/uploadGJComment21"
+          }
+        ],
+        "collapsed": true
+      },
+      {
+        "text": "Sound Packs",
+        "items": [
+          {
+            "text": "deleteGJEditorSound.php",
+            "link": "/endpoints/editorsfx/deleteGJEditorSound"
+          },
+          {
+            "text": "downloadGJEditorSound.php",
+            "link": "/endpoints/editorsfx/downloadGJEditorSound"
+          },
+          {
+            "text": "getGJEditorSounds.php",
+            "link": "/endpoints/editorsfx/getGJEditorSounds"
+          },
+          {
+            "text": "uploadGJEditorSound.php",
+            "link": "/endpoints/editorsfx/uploadGJEditorSound"
           }
         ],
         "collapsed": true
@@ -208,6 +234,10 @@ export default [
             "link": "/endpoints/misc/likeGJItem211"
           },
           {
+            "text": "reportGJContent.php",
+            "link": "/endpoints/misc/reportGJContent"
+          },
+          {
             "text": "requestUserAccess.php",
             "link": "/endpoints/misc/requestUserAccess"
           },
@@ -278,6 +308,14 @@ export default [
             "link": "/endpoints/socials/downloadGJMessage20"
           },
           {
+            "text": "followGJUser.php",
+            "link": "/endpoints/socials/followGJUser"
+          },
+          {
+            "text": "getGJFollowing.php",
+            "link": "/endpoints/socials/getGJFollowing"
+          },
+          {
             "text": "getGJFriendRequests20.php",
             "link": "/endpoints/socials/getGJFriendRequests20"
           },
@@ -290,6 +328,10 @@ export default [
             "link": "/endpoints/socials/getGJUserList20"
           },
           {
+            "text": "muteGJUser.php",
+            "link": "/endpoints/socials/muteGJUser"
+          },
+          {
             "text": "readGJFriendRequest20.php",
             "link": "/endpoints/socials/readGJFriendRequest20"
           },
@@ -300,6 +342,10 @@ export default [
           {
             "text": "unblockGJUser20.php",
             "link": "/endpoints/socials/unblockGJUser20"
+          },
+          {
+            "text": "unfollowGJUser.php",
+            "link": "/endpoints/socials/unfollowGJUser"
           },
           {
             "text": "uploadFriendRequest20.php",
@@ -324,6 +370,10 @@ export default [
             "link": "/endpoints/songs/getGJSongInfo"
           },
           {
+            "text": "getGJSongUsage.php",
+            "link": "/endpoints/songs/getGJSongUsage"
+          },
+          {
             "text": "getGJTopArtists.php",
             "link": "/endpoints/songs/getGJTopArtists"
           },
@@ -338,6 +388,40 @@ export default [
           {
             "text": "testSong.php",
             "link": "/endpoints/songs/testSong"
+          }
+        ],
+        "collapsed": true
+      },
+      {
+        "text": "Threads",
+        "items": [
+          {
+            "text": "getGJThreadInvites.php",
+            "link": "/endpoints/threads/getGJThreadInvites"
+          },
+          {
+            "text": "getGJThreadMembers.php",
+            "link": "/endpoints/threads/getGJThreadMembers"
+          },
+          {
+            "text": "getGJThreadMessages.php",
+            "link": "/endpoints/threads/getGJThreadMessages"
+          },
+          {
+            "text": "getGJThreads.php",
+            "link": "/endpoints/threads/getGJThreads"
+          },
+          {
+            "text": "searchGJThreadMessages.php",
+            "link": "/endpoints/threads/searchGJThreadMessages"
+          },
+          {
+            "text": "sendGJThreadMessage.php",
+            "link": "/endpoints/threads/sendGJThreadMessage"
+          },
+          {
+            "text": "updateGJThread.php",
+            "link": "/endpoints/threads/updateGJThread"
           }
         ],
         "collapsed": true
@@ -536,6 +620,10 @@ export default [
             "link": "/resources/server/comment"
           },
           {
+            "text": "Sound Pack Object",
+            "link": "/resources/server/editorsfx"
+          },
+          {
             "text": "Friend Request Object",
             "link": "/resources/server/friendrequest"
           },
@@ -564,8 +652,12 @@ export default [
             "link": "/resources/server/mappack"
           },
           {
-            "text": "Message Object",
+            "text": "Message Object (Legacy)",
             "link": "/resources/server/message"
+          },
+          {
+            "text": "Notification Object",
+            "link": "/resources/server/notification"
           },
           {
             "text": "Restore Object",
@@ -574,6 +666,14 @@ export default [
           {
             "text": "Song Object",
             "link": "/resources/server/song"
+          },
+          {
+            "text": "Thread Object",
+            "link": "/resources/server/thread"
+          },
+          {
+            "text": "Thread Message Object",
+            "link": "/resources/server/threadmessage"
           },
           {
             "text": "User Object",
@@ -633,6 +733,10 @@ export default [
       {
         "text": "CDN Tokens",
         "link": "/topics/cdn_token"
+      },
+      {
+        "text": "Custom Error Messages",
+        "link": "/topics/custom_error"
       },
       {
         "text": "GJP",

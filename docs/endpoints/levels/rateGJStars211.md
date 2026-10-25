@@ -4,20 +4,25 @@ Sends a star suggestion for a level
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `levelID`       | The ID of the level receiving the star suggestion | Yes      | <!--a-->
-| `stars`         | The amount of stars being suggested | Yes      | <!--a-->
-| `rs`            | 10 randomly generated characters from `[A-Za-z0-9]` | Yes      | <!--a-->
-| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> | Yes      | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> | Yes      | <!--a-->
-| `chk`           | [See here](/topics/encryption/chk.md#rate)           | Yes      | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `levelID`<ParamInfo req="always"/> | The ID of the level receiving the star suggestion |
+| `stars`<ParamInfo req="always"/> | The amount of stars being suggested |
+| `rs`<ParamInfo req="always"/> | 10 randomly generated characters from `[A-Za-z0-9]` |
+| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
+| `udid`<ParamInfo req="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="always"/> | <ParamDesc name="uuid"/> |
+| `chk`<ParamInfo req="always"/> | [See here](/topics/encryption/chk.md#rate) |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

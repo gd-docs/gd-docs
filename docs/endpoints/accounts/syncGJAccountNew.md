@@ -10,16 +10,21 @@ Loads account data
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="account"/> | Yes      | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |          | <!--o: sent on android, not on windows-->
-| `uuid`          | <ParamDesc name="uuid"/> |          | <!--o: sent on android, not on windows-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--o: sent on android, not on windows-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="account"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `udid`<ParamInfo req="no" sent="platform"/> | <ParamDesc name="udid"/> <ParamCond sent="platform">Android</ParamCond> |
+| `uuid`<ParamInfo req="no" sent="platform"/> | <ParamDesc name="uuid"/> <ParamCond sent="platform">Android</ParamCond> |
+| `dvs`<ParamInfo req="no" sent="platform"/> | <ParamDesc name="dvs"/> <ParamCond sent="platform">Android</ParamCond> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 
@@ -38,7 +43,7 @@ A list of values, separated by semicolons `;`:
 If the response was not successful, there are several different error codes that can be returned:
 
 | Code | Name | Description |
-|------|------|-------------|
+| ---- | ---- | ----------- |
 | `-1`   | Generic error | Displays a generic "Sync failed." message |
 | `-2`   | Login Failed  | Your login credentials were wrong and you need to log back in, prompts the user to login and verify their account |
 | `-3`   | Generic error | Unlike code -1 (or any other unknown codes), this error code displays -3 alongside the sync failed message |

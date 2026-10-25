@@ -35,7 +35,7 @@ Keys indicated with a dagger (†) were only returned from downloadGJLevel22 whe
 | 8   | difficultyDenominator | **Integer** | Returns 0 if the level is N/A, returns 10 if a difficulty is assigned. Historically used to be the amount of people who have voted on the difficulty.
 | 9   | difficultyNumerator | **Integer** | The nominator used for calculating the level difficulty. Divided by the denominator to get the difficulty icon. Nowadays just 0 = unrated, 10 = easy, 20 = normal, 30 = hard, 40 = harder, 50 = insane. Can be also used to determine the demon difficulty as a side-effect of the voting system. Historically used to be the sum of stars from all votes |
 | 10  | downloads | **Integer** | The amount of times the level has been downloaded 
-| 11  | setCompletes | **Integer** | The Number of people who have completed a specific level removed in update 2.1
+| 11  | completes | **Integer** | The Number of people who have completed a specific level removed in update 2.1
 | 12  | officialSong | **Integer** | The official song number used by the level, if applicable 
 | 13  | gameVersion | **Integer** | The GD version the level was uploaded in. Versions 1.0 to 1.6 use version numbers 1 to 7 respectively. Version 10 is 1.7. Otherwise, divide the version number by ten to get the correct number. 
 | 14  | likes | **Integer** | likes - dislikes |
@@ -77,8 +77,10 @@ Keys indicated with a dagger (†) were only returned from downloadGJLevel22 whe
 | 53* | sfxIDs | **Comma-Separated List** | The list of all SFX IDs in the level, separated by commas
 | 54  | songSize | **Integer** | The total size of the used songs and SFX, in bytes |
 | 57* | verificationTime | **Integer** | How long the level took to verify (in frames, assume 240 FPS)
-| 62   | exactUploadTime | **Integer** | The Unix timestamp of when the level was uploaded
-| 63   | exactUpdateTime | **Integer** | The Unix timestamp of when the level was last updated
+| 58  | unk | Unknown. Ignored in client code, unknown if ever sent by the server |
+| 62  | exactUploadTime | **Integer** | The Unix timestamp of when the level was uploaded
+| 63  | exactUpdateTime | **Integer** | The Unix timestamp of when the level was last updated
+| 65  | timelyID | **Integer** | The ID of this timely level. Subtract 100,000 if it's a weekly or 200,000 if it's an event. If present, the timely level can be recalled. Returned only by [getGJLevels21](/endpoints/levels/getGJLevels21) with `type`s 32-34 |
 
 ### Trivia
 

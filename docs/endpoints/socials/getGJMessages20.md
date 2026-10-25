@@ -1,22 +1,27 @@
 # getGJMessages20.php
 
-Gets a user's DMs.
+Gets a user's legacy messages.
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
-| `page`          | Which page of messages you want, starting at `0`. Defaults to the first if left out |          | <!--a-->
-| `total`         | Probably the cached total number of messages, default is `0` |          | <!--a-->
-| `getSent`       | `0` for the messages the user has received, `1` for the messages they sent. If left out defaults to `0` |          | <!--o-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+| `page`<ParamInfo req="no" sent="always"/> | Which page of messages you want, starting at `0`. Defaults to the first if left out |
+| `total`<ParamInfo req="no" sent="always"/> | Probably the cached total number of messages, default is `0` |
+| `getSent`<ParamInfo req="no" sent="cond"/> | `0` for the messages the user has received, `1` for the messages they sent <ParamCond sent="cond">value is 1</ParamCond> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

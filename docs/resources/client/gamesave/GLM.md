@@ -136,7 +136,7 @@ GLM_10 contains every daily level you have ever had progress on
 
 ## GLM_11
 
-GLM_11 is the current Daily ID
+GLM_11 is the current Daily ID you are on
 
 ## GLM_12
 
@@ -169,7 +169,7 @@ GLM_16 contains every Gauntlet level you have ever had progress on
 
 ## GLM_17
 
-GLM_17 is the current WeeklyID
+GLM_17 is the current WeeklyID you are on
 
 ## GLM_18
 
@@ -213,4 +213,16 @@ GLM_22 is a dictionary of all your favorited lists
 
 ## GLM_23
 
-GLM_23 is the current Event ID
+GLM_23 is the current Event ID you are on
+
+## GLM_24
+
+GLM_24 is the current Daily ID on the server
+
+## GLM_25
+
+GLM_25 is the current Weekly ID on the server
+
+## GLM_26
+
+GLM_26 is the current Event ID on the server

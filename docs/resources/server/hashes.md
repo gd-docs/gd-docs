@@ -80,7 +80,7 @@ The hash just takes the entire **undecoded** response string (excluding the 5 ch
 
 Salt: `oC36fpYaPtdg`
 
-## getGJRewards/getGJDailyLevel/getGJSecretReward
+## getGJRewards, getGJDailyLevel, getGJSecretReward
 
 The hash is generated the same way as getGJChallenges, with the exception of a different salt.
 
@@ -89,5 +89,11 @@ Salt: `pC26fpYaQCtg`
 ## getGJLevelLists
 
 This hash does not have any parameters, and as such will always be `f5da5823d94bbe7208dd83a30ff427c7d88fdb99`, which is just a hash of the salt itself. This hash isn't validated by the GD client.
+
+Salt: `xI25fpAapCQg`
+
+## getGJEditorSounds, downloadGJEditorSound
+
+Same as the getGJLevelLists hash: `f5da5823d94bbe7208dd83a30ff427c7d88fdb99`
 
 Salt: `xI25fpAapCQg`

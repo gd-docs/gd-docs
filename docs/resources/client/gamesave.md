@@ -72,6 +72,11 @@ Your CCGameManager.dat File contains a lot of information regarding your account
 | practiceOpacity | float | The opacity of the practice UI, from 0 to 1 |
 | practicePosX | float | The X position of the practice UI |
 | practicePosY | float | The Y position of the practice UI |
+| newsLastReadID | integer | The ID of the news post you last saw |
+| recentEmotes | string | 16 of your most recently used emotes, separated by commas |
+| editorSFXGlobalVolume | float | The volume for sound packs |
+| scrollSensitivity | float | The Scroll option in the "Other" settings category |
+| specialPermKey | integer | Unknown, presumably something related to the new mod system |
 
 ## Legacy Keys
 
@@ -112,19 +117,22 @@ These keys were used in old versions of the game but are now obsolete.
 | [GLM_08](/resources/client/gamesave/GLM.md#GLM_08) | filters | Search Filters States |
 | [GLM_09](/resources/client/gamesave/GLM.md#GLM_09) | filters | Search Filters for Online Levels |
 | [GLM_10](/resources/client/gamesave/GLM.md#GLM_10) | [Level](/resources/client/level.md) | Completed dailies |
-| [GLM_11](/resources/client/gamesave/GLM.md#GLM_11) | Integer | Current Daily ID |
+| [GLM_11](/resources/client/gamesave/GLM.md#GLM_11) | Integer | Current Daily ID you are on |
 | [GLM_12](/resources/client/gamesave/GLM.md#GLM_12) | likes | Something Related to likes |
 | [GLM_13](/resources/client/gamesave/GLM.md#GLM_13) | levelID | All levels you submitted a rating on |
 | [GLM_14](/resources/client/gamesave/GLM.md#GLM_14) | reportedLevels | A dictionary of all levels you have reported |
 | [GLM_15](/resources/client/gamesave/GLM.md#GLM_15) | levelID | all Demon levels you have submitted a rating for |
 | [GLM_16](/resources/client/gamesave/GLM.md#GLM_16) | [Level](/resources/client/level.md) | All the levels found in the Gauntlets that you have progress on are stored in here |
-| [GLM_17](/resources/client/gamesave/GLM.md#GLM_17) | integer | Current Weekly ID |
+| [GLM_17](/resources/client/gamesave/GLM.md#GLM_17) | integer | Current Weekly ID you are on |
 | [GLM_18](/resources/client/gamesave/GLM.md#GLM_18) | Folder | The Folder Names for saved levels |
 | [GLM_19](/resources/client/gamesave/GLM.md#GLM_19) | Folder | The Folder names for Local Levels |
 | [GLM_20](/resources/client/gamesave/GLM.md#GLM_20) | [Templates](/resources/client/gamesave/template.md) | Your Smart Templates |
 | [GLM_21](/resources/client/gamesave/GLM.md#GLM_21) | [Lists](/resources/client/gamesave/list.md) | Saved lists, only existed briefly in 2.200 |
 | [GLM_22](/resources/client/gamesave/GLM.md#GLM_22) | [Lists](/resources/client/gamesave/list.md) | Your favourited lists |
-| [GLM_23](/resources/client/gamesave/GLM.md#GLM_23) | Integer | Current Event ID |
+| [GLM_23](/resources/client/gamesave/GLM.md#GLM_23) | Integer | Current Event ID you are on |
+| [GLM_24](/resources/client/gamesave/GLM.md#GLM_24) | Integer | Current Daily ID on the servers |
+| [GLM_25](/resources/client/gamesave/GLM.md#GLM_25) | Integer | Current Weekly ID on the servers |
+| [GLM_26](/resources/client/gamesave/GLM.md#GLM_26) | Integer | Current Event ID on the servers |
 
 ## GS
 

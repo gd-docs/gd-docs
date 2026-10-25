@@ -35,7 +35,7 @@ Each `key` is tied to a component within the client and the `value` sets data fo
 | 16 | accountID | **Integer** | The player's account ID |
 | 17 | userCoins | **Integer** | The number of user coins the player has |
 | 18* | messageState | **Integer** | Who can send the player messages. 0 = All, 1 = Friends only, 2 = None |
-| 19* | friendsState | **Integer** | Who can send the player friend requests. 0 = All, 1 = None |
+| 19* | friendsState | **Integer** | Who can send the player friend requests. 0 = All, 1 = None, 2 = All, and messages can be attached |
 | 20* | youTube | **String** | The player's YouTube channel |
 | 21* | accIcon | **Integer** | The ID of the player's cube |
 | 22* | accShip | **Integer** | The ID of the player's ship |
@@ -74,8 +74,32 @@ Each `key` is tied to a component within the client and the `value` sets data fo
 | 59* | instagram | **String** | The player's Instagram username |
 | 60* | tiktok | **String** | The player's TikTok handle |
 | 61* | custom | **String** | The player's custom one-time authentication token |
+| 62* | groupState | **Integer** | Who can invite the player to groups. 1 = Friends, 2 = None |
+| 63* | gO | **Integer** | Unknown. Seemingly related to the gO parameter in [updateGJAccSettings20](/endpoints/accounts/updateGJAccSettings20) |
+| 64  | friendsSince / followingSince | **Integer** | The unix timestamp representing the amount of time you've been friends with this player. In getGJUserList type 3, it's replaced with the UNIX timestamp that represents when you followed this user |
+| 67* | followers | **Integer** | The amount of people following this account
+| 68* | following | **Integer** | How many accounts you follow. Can only be fetched for yourself (requires your own gjp2)
+| 69* | isFollowing | **Bool** | Whether you are following this person (requires auth)
 
-Keys indicated with an asterisk (*) are only returned from the [getGJUserInfo20](/endpoints/users/getGJUserInfo20) endpoint. Conversely, keys 6, 9, 14, & 15 are only returned by user search endpoints ([getGJUsers20](/endpoints/users/getGJUsers20), [getGJScores20](/endpoints/users/getGJScores20))
+Keys indicated with an asterisk (*) are only returned from the [getGJUserInfo20](/endpoints/users/getGJUserInfo20) endpoint. Conversely, keys 6, 9, 14, & 15 are only returned by user search endpoints ([getGJUsers20](/endpoints/users/getGJUsers20), [getGJScores20](/endpoints/users/getGJScores20)). Key 64 is only returned by endpoint [getGJUserList20](/endpoints/socials/getGJUserList20).
+
+### **Thread Invite User Object**
+In threads, users who are invited to the group but haven't accepted the invite yet are represented differently than regular user objects. They do not use `key:value:key:value` pairings, and instead are a fixed list of values separated by colons `:`. The values are as follows:
+
+```
+accountID:userID:username:invitedBy:iconID:color1:color2:color3:iconType:special:stars:moons:demons:secretCoins:userCoins:diamonds:friendsSince
+```
+
+The username is encoded in [base64](/topics/encryption/base64.md). invitedBy is the account ID of the user that invited them.
+
+### **Thread Former User Object**
+In threads, users who have left or have been kicked are represented similarly to invited users, but with less values. They are as follows:
+
+```
+accountID:userID:username:iconID:color1:color2:color3:iconType:special
+```
+
+The username is encoded in [base64](/topics/encryption/base64.md), just like for invited users.
 
 ### Trivia
 

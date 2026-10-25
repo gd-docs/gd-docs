@@ -4,19 +4,24 @@ Deletes a message between two users.
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `messageID`     | ID of the message being deleted. This parameter isn't sent if multiple messages are being removed |          | <!--*/o: sent if 1 msg, required if messages is not sent-->
-| `messages`      | IDs of the messages being deleted, separated with `,`. This parameter isn't sent if only one message is being removed |          | <!--*/o: sent when >1 msg, required if messageID is not sent-->
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `isSender`      | Whether you're the message author. If not, this isn't sent |          | <!--*/o: required when 1-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
+| `messageID`<ParamInfo req="cond" sent="cond"/> | ID of the message being deleted <ParamCond req>the `messages` parameter is not sent</ParamCond> <ParamCond sent="cond">only one message is removed</ParamCond> |
+| `messages`<ParamInfo req="cond" sent="cond"/> | IDs of the messages being deleted, separated with `,` <ParamCond req>the `messageID` parameter is not sent</ParamCond> <ParamCond sent="cond">more than one message is removed</ParamCond> |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `isSender`<ParamInfo req="cond" sent="cond"/> | Whether you're the message author <ParamCond req>you are the message author</ParamCond> <ParamCond sent="req"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

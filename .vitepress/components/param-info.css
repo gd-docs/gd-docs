@@ -1,0 +1,46 @@
+.param-info__marker {
+    cursor: help;
+
+    /* prevents superscript from increasing line height */
+    line-height: 0;
+    vertical-align: super;
+}
+
+.param-info__requirement-always {
+    color: var(--vp-c-danger-1);
+}
+
+.param-info__requirement-conditional {
+    color: var(--vp-c-warning-1);
+}
+
+.param-info__sending-always {
+    color: var(--vp-c-text-3);
+}
+
+.param-info__sending-platform {
+    color: var(--vp-c-purple-1);
+}
+
+.param-info__sending-conditional {
+    color: var(--vp-c-indigo-1);
+}
+
+.param-cond,
+.param-info__footer {
+    line-height: 1.35;
+}
+
+.param-info__footer li {
+    list-style: none;
+}
+
+ul.param-info__footer li + li,
+table + small > ul.param-info__footer {
+    margin-top: 0;
+}
+
+table:has(+ small > ul.param-info__footer) {
+    margin-bottom: 10px;
+}
+

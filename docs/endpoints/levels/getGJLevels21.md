@@ -4,68 +4,78 @@ This endpoint is used to search levels by name and or filter
 
 ## Parameters
 
-| Parameter         | Description | Required |
-| ----------------- | ----------- | -------- |
-| `secret`          | <ParamDesc name="secret" type="common"/> | Yes | <!--a-->
-| `gameVersion`     | <ParamDesc name="gameVersion"/> |  | <!--a-->
-| `binaryVersion`   | <ParamDesc name="binaryVersion"/> |  | <!--a-->
-| `accountID`       | <ParamDesc name="accountID"/> |  | <!--a-->
-| `gjp2`            | <ParamDesc name="gjp2"/> | | <!--a-->
-| `type`            | Search type, [see values](#type). Defaults to most liked |  | <!--a-->
-| `str`             | Search query, user ID or level list depending on `type` | Only on [types 5 and 10](#type) | <!--*/a-->
-| `diff`            | Comma-separated list of difficulty values, [see values](#diff) |  | <!--a-->
-| `len`             | Level length, [see values](#len) |  | <!--a-->
-| `page`            | Which page to request, defaults to 0 |  | <!--a-->
-| `total`           | Probably the cached total number of levels, default is `0` |  | <!--a-->
-| `uncompleted`     | Uncompleted filter, either 0 or 1 |  | <!--a-->
-| `onlyCompleted`   | Completed filter, either 0 or 1 |  | <!--a-->
-| `featured`        | Featured filter, either 0 or 1 |  | <!--a-->
-| `original`        | Original filter, either 0 or 1 |  | <!--a-->
-| `twoPlayer`       | Two Player Mode filter, either 0 or 1 |  | <!--a-->
-| `coins`           | Coins filter, either 0 or 1 |  | <!--a-->
-| `epic`            | Epic filter, either 1 or not sent |  | <!--o: missing/1-->
-| `legendary`       | Mythic filter, either 1 or not sent (__swapped with `mythic`__) |  | <!--o: missing/1-->
-| `mythic`          | Legendary filter, either 1 or not sent (__swapped with `legendary`__) |  | <!--o: missing/1-->
-| `local`           | Whether to fetch "My Online Levels", either 1 or not sent |  | <!--o: sent if type=5 and str=senderUserID-->
-| `song`            | Official (or custom) song ID, not sent when off (Stereo Madness = 1) |  | <!--o: missing/non-zero BUT CAN BE SENT AS 0 WHEN customSong=1-->
-| `customSong`      | Whether the `song` is a Newgrounds song. Either 1 or not sent |  | <!--o-->
-| `star`            | Rated filter, either 1 or not sent |  | <!--o: missing/1, mut excl with noStar-->
-| `noStar`          | Unrated filter, either 1 or not sent |  | <!--o: missing/1, mut excl with star-->
-| `demonFilter`     | Selects which demon difficulty to search, [see values](#demon-filter). If not sent will search all demon types |  | <!--o-->
-| `followed`        | Comma separated list of the followed account IDs | Only on [type 12](#type) | <!--*/o-->
-| `completedLevels` | Comma separated list of completed level IDs surrounded by `()` | Only when using (un)completed filters |  | <!--*/o: sent only when required-->
+<ParamGroup>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
+| `type`<ParamInfo req="no" sent="always"/> | Search type, [see values](#type). Defaults to most liked |
+| `str`<ParamInfo req="cond" sent="always"/> | Search query, user ID or level list depending on [`type`](#type) <ParamCond req>[`type`](#type) is 5 or 10</ParamCond> |
+| `diff`<ParamInfo req="no" sent="always"/> | Comma-separated list of difficulty values, [see values](#diff) |
+| `len`<ParamInfo req="no" sent="always"/> | Level length, [see values](#len) |
+| `page`<ParamInfo req="no" sent="always"/> | Which page to request, defaults to 0 |
+| `total`<ParamInfo req="no" sent="always"/> | Probably the cached total number of levels, default is 0 |
+| `uncompleted`<ParamInfo req="no" sent="always"/> | Uncompleted filter, either 0 or 1 |
+| `onlyCompleted`<ParamInfo req="no" sent="always"/> | Completed filter, either 0 or 1 |
+| `featured`<ParamInfo req="no" sent="always"/> | Featured filter, either 0 or 1 |
+| `original`<ParamInfo req="no" sent="always"/> | Original filter, either 0 or 1 |
+| `twoPlayer`<ParamInfo req="no" sent="always"/> | Two Player Mode filter, either 0 or 1 |
+| `coins`<ParamInfo req="no" sent="always"/> | If a level has been granted verified/silver coins (which does not require the level to have coins), either 0 or 1 |
+| `epic`<ParamInfo req="no" sent="cond"/> | Epic filter <ParamCond sent="cond">value is 1</ParamCond> |
+| `legendary`<ParamInfo req="no" sent="cond"/> | Mythic filter (__swapped with `mythic`__) <ParamCond sent="cond">value is 1</ParamCond> |
+| `mythic`<ParamInfo req="no" sent="cond"/> | Legendary filter (__swapped with `legendary`__) <ParamCond sent="cond">value is 1</ParamCond> |
+| `local`<ParamInfo req="no" sent="cond"/> | Whether to fetch "My Online Levels" <ParamCond sent="cond">value is 1 and [`type`](#type) is 5 and `str` is the sender's user ID</ParamCond> |
+| `song`<ParamInfo req="no" sent="cond"/> | Official (or custom) song ID (Stereo Madness = 1) <ParamCond sent="cond">non-zero or `customSong` is 1</ParamCond> |
+| `customSong`<ParamInfo req="no" sent="cond"/> | Whether the `song` is a Newgrounds song. Levels with Newgrounds songs will not be removed, even if this parameter is 0/not present. <ParamCond sent="cond">value is 1</ParamCond> |
+| `star`<ParamInfo req="no" sent="cond"/> | Rated filter <ParamCond sent="cond">value is 1; mutually exclusive with `noStar`</ParamCond> |
+| `noStar`<ParamInfo req="no" sent="cond"/> | Unrated filter <ParamCond sent="cond">value is 1; mutually exclusive with `star`</ParamCond> |
+| `demonFilter`<ParamInfo req="no" sent="cond"/> | Selects which demon difficulty to search, [see values](#demon-filter). If not sent will search all demon types <ParamCond sent="cond">a demon difficulty is selected</ParamCond> |
+| `hypeSecret`<ParamInfo req="no" sent="cond"/> | Sent as 1 for hyped searches. Does not seem to do anything though <ParamCond sent="cond">[`type`](#type) is 31</ParamCond> |
+| `followed`<ParamInfo req="cond" sent="cond"/> | Comma-separated list of the followed account IDs <ParamCond req>[`type`](#type) is 12</ParamCond> <ParamCond sent="req"/> |
+| `completedLevels`<ParamInfo req="cond" sent="cond"/> | Comma-separated list of completed level IDs surrounded by `()` <ParamCond req>`uncompleted` is 1 or `onlyCompleted` is 1</ParamCond> <ParamCond sent="req"/> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ::: details `type` {#type open}
 
-| Type | Description                                                                                                                     |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `0`  | Search query (used when opening the original level)                                                                             |
-| `1`  | Most downloaded                                                                                                                 |
-| `2`  | Most liked                                                                                                                      |
-| `3`  | Trending                                                                                                                        |
-| `4`  | Recent                                                                                                                          |
-| `5`  | User's levels, uses `str` as the **user ID**                                                                                    |
-| `6`  | Featured                                                                                                                        |
-| `7`  | Magic                                                                                                                           |
-| `8`  | Moderator sent levels                                                                                                           |
+| Type | Description |
+| ---- | ----------- |
+| `0`  | Search query (used when opening the original level) |
+| `1`  | Most downloaded |
+| `2`  | Most liked |
+| `3`  | Trending |
+| `4`  | Recent |
+| `5`  | User's levels, uses `str` as the **user ID** |
+| `6`  | Featured |
+| `7`  | Magic |
+| `8`  | Moderator sent levels |
 | `10` | List of levels (not to be confused with type 25, which is for in-game lists), uses `str` as a comma separated list of level IDs |
-| `11` | Awarded                                                                                                                         |
-| `12` | Followed (see `followed` parameter)                                                                                             |
-| `13` | Friends (login required)                                                                                                        |
-| `15` | Most liked in GD World                                                                                                          |
-| `16` | Hall of fame                                                                                                                    |
-| `17` | Featured in GD World                                                                                                            |
-| `18` | Unknown (always empty, perhaps robtop only?)                                                                                    |
-| `19` | Unknown (same as type 10 but this type has pagination and no star rate filter)                                                  |
-| `21` | Daily history                                                                                                                   |
-| `22` | Weekly history                                                                                                                  |
-| `23` | Event history                                                                                                                   |
-| `24` | Reported levels (Elder Moderator only)                                                                                          |
-| `25` | Level list, uses `str` as the list ID                                                                                           |
-| `26` | Local level list (same as type 19 but can return up to 100 levels)                                                              |
-| `27` | Sent                                                                                                                            |
-| `28` | GD Lite weekly levels                                                                                                           |
-| `29` | GD Lite bonus levels (platformer)                                                                                               |
+| `11` | Awarded |
+| `12` | Followed (see `followed` parameter) |
+| `13` | Friends (login required) |
+| `15` | Most liked in GD World |
+| `16` | Hall of fame |
+| `17` | Featured in GD World |
+| `18` | Unknown (always empty, perhaps robtop only?) |
+| `19` | Unknown (same as type 10 but this type has pagination and no star rate filter) |
+| `21` | Daily history |
+| `22` | Weekly history |
+| `23` | Event history |
+| `24` | Reported levels (Elder Moderator only) |
+| `25` | Level list, uses `str` as the list ID |
+| `26` | Local level list (same as type 19 but can return up to 100 levels) |
+| `27` | Sent |
+| `28` | GD Lite weekly levels |
+| `29` | GD Lite bonus levels (platformer) |
+| `31` | Hyped |
+| `32` | Daily history (without the current daily) |
+| `33` | Weekly history (without the current weekly) |
+| `34` | Event history (without the current event level) |
 
 :::
 
@@ -129,8 +139,6 @@ where:
   - `offset` - offset from which the current page starts
   - `amount` - number of levels per page (always 10 for the gd servers)
 - `hash` is a hash of every level, see [Hashes](/resources/server/hashes.md#getgjlevels)
-<!-- should the hash be explained here or on its own page like how the old docs had a page for CHK -->
-<!-- no it should be explained on a separate page -Unsimply <3 -->
 
 If the request is not successful, it will return `-1`
 

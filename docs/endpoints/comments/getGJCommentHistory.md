@@ -4,21 +4,26 @@ Gets a user's comment history.
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `userID`        | The user ID of the target user. **This is different from the account ID.** | Yes      | <!--a-->
-| `page`          | Which page of comments you want to see | Yes      | <!--a-->
-| `secret`        | [Common Secret](/reference/secrets.md): `Wmfd2893gb7` | Yes      | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
-| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
-| `mode`          | `0` for most recent, and `1` for most liked |          | <!--a-->
-| `total`         | Probably the cached total number of comments, default is `0` |          | <!--a-->
-| `count`         | The number of comments you want to get. `20` in normal view, `40` in compact view. Capped at `100` |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `userID`<ParamInfo req="always"/> | The user ID of the target user. **This is different from the account ID.** |
+| `page`<ParamInfo req="always"/> | Which page of comments you want to see |
+| `secret`<ParamInfo req="always"/> | [Common Secret](/reference/secrets.md): `Wmfd2893gb7` |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+| `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
+| `mode`<ParamInfo req="no" sent="always"/> | `0` for most recent, and `1` for most liked |
+| `total`<ParamInfo req="no" sent="always"/> | Probably the cached total number of comments, default is `0` |
+| `count`<ParamInfo req="no" sent="always"/> | The number of comments you want to get. `20` in normal view, `40` in compact view. Capped at `100` |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

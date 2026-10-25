@@ -4,20 +4,25 @@ This endpoint is used to search level lists by name and / or filter
 
 ## Parameters
 
-| Parameter       | Description | Required |
-| --------------- | ----------- | -------- |
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |  | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |  | <!--a-->
-| `accountID`     | <ParamDesc name="accountID"/> |  | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> |  | <!--a-->
-| `str`           | Search query, user ID or level list depending on `type` | Only on [type 5](#type) | <!--a-->
-| `type`          | Search type, [see values](#type). Defaults to most liked |  | <!--a-->
-| `page`          | Which page to request, defaults to 0 |  | <!--a-->
-| `diff`          | Difficulty filter, [see values](#diff). A comma-separated list of filters is valid, but only the first one is used |  | <!--a-->
-| `star`          | Rated filter, either 1 or not sent |  | <!--o-->
-| `demonFilter`   | Selects which demon difficulty to search, [see values](#demon-filter). If not sent will search all demon types |  | <!--o-->
-| `followed`      | Comma separated list of the followed user IDs | Only on [type 12](#type) | <!--*/o-->
+<ParamGroup>
+
+| Parameter | Description |
+| --------- | ----------- |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
+| `str`<ParamInfo req="cond" sent="always"/> | Search query, user ID or level list depending on [`type`](#type) <ParamCond req>[`type`](#type) is 5</ParamCond> |
+| `type`<ParamInfo req="no" sent="always"/> | Search type, [see values](#type). Defaults to most liked |
+| `page`<ParamInfo req="no" sent="always"/> | Which page to request, defaults to 0 |
+| `diff`<ParamInfo req="no" sent="always"/> | Difficulty filter, [see values](#diff). A comma-separated list of filters is valid, but only the first one is used |
+| `star`<ParamInfo req="no" sent="cond"/> | Rated filter <ParamCond sent="cond">value is 1</ParamCond> |
+| `demonFilter`<ParamInfo req="no" sent="cond"/> | Selects which demon difficulty to search, [see values](#demon-filter). If not sent will search all demon types <ParamCond sent="cond">a demon difficulty is selected</ParamCond> |
+| `followed`<ParamInfo req="cond" sent="cond"/> | Comma separated list of the followed user IDs <ParamCond req>[`type`](#type) is 12</ParamCond> <ParamCond sent="req"/> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ::: details `type` {#type open}
 
@@ -82,8 +87,7 @@ where:
   - `total` - total number of levels for the query
   - `offset` - offset from which the current page starts
   - `amount` - number of levels per page (always 10 for the gd servers)
-- `hash` is a hash of every level, see [Hashes](#)
-<!-- should the hash be explained here or on its own page like how the old docs had a page for CHK -->
+- `hash` is a hash of every level, see [Hashes](/resources/server/hashes#getgjlevellists)
 
 If the request is not successful, it will return `-1`
 

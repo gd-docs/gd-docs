@@ -6,7 +6,7 @@ aside: true
 
 The replay string is a feature first added in 1.6, removed in 2.200 and re-added in 2.208 as a new format. This page documents the new 2.208 format.
 
-Currently, it is only used for local levels, with it being stored on the client in keys `k34`, `k119` and `k120` and sent to the servers via uploadGJLevel21.php's `lrs` parameter.
+Currently, it is only used for local levels, with it being stored on the client in keys `k34`, `k119` and `k120` and sent to the servers via [uploadGJLevel21.php](/endpoints/levels/uploadGJLevel21)'s `lrs` parameter.
 
 It is separated into 2 sections with a `#` character: the inputs and the metadata
 
@@ -40,13 +40,13 @@ Here are some input examples:
 TODO
 
 ## Metadata
-The metadata is comparatively simple. It's a list of 5 values separated by `,`. The values are:
+The metadata is comparatively simple. It's a list of 6 values separated by `,`. The values are:
 
 `randomSeed,attempts,gameVersion,binaryVersion,unknown,itemPersData`
 
 - Random Seed is the seed used for random triggers on the attempt of the replay.
 - Attempts is NOT the total amount of attempts, just the amount of attempts the replay took
-- gameVersion and binaryVersion are the same as what the game sends to the servers. Currently `22` and `47` (`48` on mobile) respectively.
+- gameVersion and binaryVersion are the same as what the game sends to the servers. Currently `22` and `51` respectively.
 - The next value is unknown and seems to always be 1
 - The Item Pers data stores information about item and timer IDs that have been made persistent with the Item Pers trigger
 

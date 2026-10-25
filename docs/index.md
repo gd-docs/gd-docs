@@ -4,7 +4,7 @@
 
 # Introduction
 
-Welcome to the Geometry Dash documentation project. On this website, you will find lots of information regarding the popular indie game **Geometry Dash!**
+Welcome to the Geometry Dash documentation project. On this website, you will find lots of technical information regarding the popular indie game **Geometry Dash!**
 
 ## Contributions
 

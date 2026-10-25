@@ -76,9 +76,9 @@ Game Variables (gvs) are found inside of the [ValueKeeper](/resources/client/gam
 | gv_0072 | disableGravityEffect |
 | gv_0073 | newCompletedFilter |
 | gv_0074 | showRestartButton |
-| gv_0075 | disableComments |
-| gv_0076 | disableAccountComments |
-| gv_0077 | featuredLevelsOnly |
+| gv_0075 | Disable Comments |
+| gv_0076 | Disable Posts |
+| gv_0077 | Only Curated Levels |
 | gv_0078 | hideBackground (editor) |
 | gv_0079 | hideGridOnPlay (editor) |
 | gv_0081 | disableShakeEffects |
@@ -166,6 +166,36 @@ Game Variables (gvs) are found inside of the [ValueKeeper](/resources/client/gam
 | gv_0179 | Hitbox on Death |
 | gv_0180 | Quick Disable Link Controls (editor, the gray link button) |
 | gv_0181 | Static Trace Arrows (editor) |
+| gv_0191 | Legacy Move Menu |
+| gv_0196 | Disable Player Trail |
+| gv_0197 | Disable Wave Trail |
+| gv_0200 | Local Markers |
+| gv_0201 | Disable Anim (death markers) |
+| gv_0202 | Global Markers |
+| gv_0203 | Disable Auto Creator Controls |
+| gv_0204 | Switch Color (death markers) |
+| gv_0205 | Death Marker Frequency Slider |
+| gv_0206 | Disable Sound (death markers) |
+| gv_0207 | Disable Markers |
+| gv_0208 | Hide Labels (death markers) |
+| gv_0210 | Limited Labels (death markers) |
+| gv_0211 | Death Marker Duration Slider |
+| gv_0212 | Skip Death Triggers |
+| gv_0213 | Show Hitbox Trail |
+| gv_0214 | Hitbox Trail On Death |
+| gv_0215 | Hitbox Trail (editor) |
+| gv_0216 | Live Practice Markers |
+| gv_0217 | Hitbox Trail Highlight |
+| gv_0218 | Safe Mode |
+| gv_0219 | Offline Mode |
+| gv_0228 | Parental Controls Lock |
+| gv_0234 | No Auto-Checkpoints For Start Pos |
+| gv_0235 | Hide Mod Buttons |
+| gv_0239 | Notifications Bitmask (which notification types are disabled) |
+| gv_0242 | Disable Anchor Snap |
+| gv_0243 | Disable Messaging |
+| gv_0245 | Disable Pinch |
+| gv_0246 | Agreed to Messaging Rules |
 
 # Unlocked Game Variables
 

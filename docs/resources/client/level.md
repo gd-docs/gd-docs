@@ -12,7 +12,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | ---- | ------------------------------ | ---------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | k1   | Level ID                       | **integer**                                                      | the id of the level                                                              |
 | k2   | Level Name                     | **string**                                                       | the name of the level                                                            |
-| k3   | Description                    | **string**                                                       | the level description, encoded in [base64](https://en.wikipedia.org/wiki/Base64) |
+| k3   | Description                    | **string**                                                       | the level description, encoded in [Base64](/topics/encryption/base64.md)         |
 | k4   | Start Level Object             | **[Start Object String](/resources/client/level-components/level-start.md)** | the inner level string, or the playable level                  |
 | k5   | Creator                        | **[user](/resources/server/user.md)Name**                                        | the name of the level creator                                                    |
 | k6   | UserID                         | **integer**                                                      | The UserID of the level Creator                                                  |
@@ -21,7 +21,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k9   | Rating                         | **integer**                                                      | The rating a level has                                                           |
 | k10  | RatingSum                      | **integer**                                                      | the sum of all the ratings a level has                                           |
 | k11  | Downloads                      | **integer**                                                      | the amount of times the level's been downloaded                                  |
-| k12  | setCompletes                   | **integer**                                                      | level completions for that particular level                                      |
+| k12  | Completes                      | **integer**                                                      | level completions for that particular level                                      |
 | k13  | isEditable                     | **Bool**                                                         | used to stop people editing online and Official levels                           |
 | k14  | Verified                       | **bool**                                                         | whether the level is verified or not                                             |
 | k15  | Uploaded                       | **bool**                                                         | whether the level is uploaded to the server or not                               |
@@ -32,13 +32,13 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k20  | Practice Mode Percentage       | **integer**                                                      | the max percentage that has been achieved in practice mode in this level         |
 | k21  | levelType                      | **Integer**                                                         | The Level Type (1 = Official, 2 = Local, 3 = Saved, 4 = Online)                  |
 | k22  | Like Rating                    | **integer**                                                      | the level's like rating (`likes - dislikes`)                                     |
-| k23  | Length                         | **[Length](/resources/client/level-components/enumerations.md)**                                    | the level's length                                                               |
+| k23  | Length                         | **[Length](/resources/client/level-components/enumerations#level-length)**                                    | the level's length                                                               |
 | k24  | Dislikes                       | **integer**                                                      | how many dislikes a level has (unused)                                           |
 | k25  | isDemon                        | **Bool**                                                         | if the level is demon or not                                                     |
 | k26  | Stars                          | **integer**                                                      | the stars the level is worth                                                     |
 | k27  | FeatureScore                   | **integer**                                                      | A featured levels Feature Score                                                  |
 | k33  | Auto                           | **Bool**                                                         | If the level is auto                                                             |
-| k34  | Replay Data                    | **[Gziped String](/topics/encryption/zip.md)**                   | Contains a Gzipped String which contains replay data for levels                  |
+| k34  | Replay Data                    | **[Gzipped String](/topics/encryption/zip.md)**                   | Contains a Gzipped String which contains replay data for levels                  |
 | k35  | isHidden                       | **Bool**                                                        | true if the level is deleted (hidden) from Saved                                 |
 | k36 | Jumps                          | **integer**                                                      | total Jumps on a level                                                           |
 | k37 | required coins                 | **Integer**                                                      | coins required to unlock an official level                                       |
@@ -115,6 +115,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k123 | Time Saved                     | **bool**                                                         | Whether level completion was legitimate and time was successfully saved |
 | k124 | Points Saved                   | **bool**                                                         | Whether level completion was legitimate and points were successfully saved |
 | k125 | Click Between Steps override   | **integer**                                                      | The Click Between Steps override for the level (2.2082 only). 0 - none, 1 - enable, 2 - disable |
+| k156 | Editor Build Stats | [Build Stats String](/resources/client/level-components/build-stats-string) | Editor build statistics for the level |
 
 The classic level seed is generated like this (please note you need to add another `1482` when submitting the level score):
 
@@ -139,7 +140,6 @@ def generatePlatformerHash(bestTime, bestPoints):
 
 ```
 
-
 **Last Editor State Key/Value Pairs**
 The last editor state key/value pairs contain a few values that indicate the last state of the editor before exiting the editor on that level.
 
@@ -156,6 +156,11 @@ The last editor state key/value pairs contain a few values that indicate the las
 Note that the build tab pages do not depend on the user's button row/column settings. That means, if the settings are changed, the build tab pages will not reflect the correct changes. For example:
 
 The build tab page is 5, and the button settings are 6x2 (default), meaning the currently shown elements range from `5 * 6 * 2` = 60 to `6 * 6 * 2 - 1` = 71 (zero-indexed). If the user changes the button settings to 12x3, the tab page will remain as 5, showing elements ranging from `5 * 12 * 3` = 180 to `6 * 12 * 3 - 1` = 215 (zero-indexed).
+
+#### .gdlvl Format
+As of 2.209, you can export levels to a file in the `.gdlvl` format. This format is essentially the same thing as the unofficial `.gmd` format used by GDShare, just with Gzip compression and [Base64](/topics/encryption/base64.md) applied to the whole file.
+
+When decoded, the format is an XML file containing the aforementioned keys.
 
 ### GDL22
 

@@ -1,26 +1,34 @@
 # uploadGJMessage20.php
 
+> [!WARNING]
+> This endpoint is deprecated and seems to be always returning `-1` now.
+
 Sends a message to a user
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `toAccountID`   | Account ID of the user retrieving the message | Yes      | <!--a-->
-| `subject`       | The subject of the message, converted to [URL-safe base64](/topics/encryption/base64) | Yes      | <!--a-->
-| `body`          | The body of the message, [Xor'd](/topics/encryption/xor) with a key of `14251` and then encoded in [URL-safe base64](/topics/encryption/base64) | Yes      | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |  | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |  | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
+| `toAccountID`<ParamInfo req="always"/> | Account ID of the user retrieving the message |
+| `subject`<ParamInfo req="always"/> | The subject of the message, converted to [URL-safe base64](/topics/encryption/base64) |
+| `body`<ParamInfo req="always"/> | The body of the message, [Xor'd](/topics/encryption/xor) with a key of `14251` and then encoded in [URL-safe base64](/topics/encryption/base64) |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 
-1 if the message was sent, -1 if a problem occurred, or if the receiver has messages disabled
+1 if the message was sent, -1 if a problem occurred, or if the receiver has messages disabled.
 
 ## Example
 
