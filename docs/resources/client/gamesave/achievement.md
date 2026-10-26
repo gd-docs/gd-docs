@@ -299,7 +299,7 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.lists04 | Claim 100 List Rewards|
 | geometry.ach.lists05 | Claim 150 List Rewards|
 | geometry.ach.lists06 | Claim 200 List Rewards|
-| geometry.ach.hyped   | Get a level Hyped     |
+| geometry.ach.hyped01 | Get a level Hyped     |
 | geometry.ach.shardFire01 | Collect 5 Fire Shards|
 | geometry.ach.shardFire02 | Collect 15 Fire Shards|
 | geometry.ach.shardFire03 | Collect 35 Fire Shards|
