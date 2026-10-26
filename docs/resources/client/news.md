@@ -23,18 +23,21 @@ The header is in the format `{version},{num entries}`. `{version}` corresponds t
 
 Each entry is structured with `key:value` pairing, with each pair being separated with `;`. The list of known keys can be found in the table below:
 
-| Key | Name/Value | Type        | Description                                                                                   |
-| --- | ---------- | ----------- | --------------------------------------------------------------------------------------------- |
-| 1   | Entry ID   | **Integer** | The news entry ID                                                                             |
-| 2   | Date       | **String**  | The date string of the news entry, encoded in [URL-safe base64](/topics/encryption/base64.md) |
-| 3   | Title      | **String**  | The title of the news entry, encoded in [URL-safe base64](/topics/encryption/base64.md)       |
-| 4   | Elements   | **String**  | The elements of the news entry                                                                |
+| Key | Name/Value | Type        | Description                                                                                                                 |
+| --- | ---------- | ----------- | --------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Entry ID   | **Integer** | The news entry ID                                                                                                           |
+| 2   | Date       | **String**  | The date of the news entry in plaintext (ex. "January 1, 1970"), encoded in [URL-safe base64](/topics/encryption/base64.md) |
+| 3   | Title      | **String**  | The title of the news entry, encoded in [URL-safe base64](/topics/encryption/base64.md)                                     |
+| 4   | Elements   | **String**  | The elements of the news entry                                                                                              |
 
 ## Elements format
 
 Elements are in the format `{id},{data}`, and are separated by `~`.
 
 There are 3 known types of elements that can be in a news entry. Information about each type can be found below:
+
+> [!NOTE]
+> All URLs require a trailing slash at the end. If one is not present, the news will fail to load.
 
 | ID | Type   | Description                                    | Data Format                                          |
 | -- | ------ | ---------------------------------------------- | ---------------------------------------------------- |
