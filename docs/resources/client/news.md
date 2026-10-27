@@ -36,9 +36,6 @@ Elements are in the format `{id},{data}`, and are separated by `~`.
 
 There are 3 known types of elements that can be in a news entry. Information about each type can be found below:
 
-> [!NOTE]
-> All URLs require a trailing slash at the end. If one is not present, the news will fail to load.
-
 | ID | Type   | Description                                    | Data Format                                          |
 | -- | ------ | ---------------------------------------------- | ---------------------------------------------------- |
 | 0  | Text   | A text element                                 | `{b64 text}`                                         |
