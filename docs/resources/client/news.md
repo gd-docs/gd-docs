@@ -2,7 +2,7 @@
 
 The news feed is stored in your save directory as `news/news.dat`. The news images are stored in the same folder.
 
-To decode news.dat, you need to [Base64](/topics/encryption/base64.md) URL-Safe decode it and [Gzip](/topics/encryption/zip.md) decompress it.
+To decode news.dat, you need to [Base64](/topics/encryption/base64.md)-decode it and [Gzip](/topics/encryption/zip.md)-decompress it.
 
 The news feed is split into 2 parts:
 
@@ -12,45 +12,45 @@ The news feed is split into 2 parts:
 
 ## Header format
 
-The header is in the format `{version},{num entries}`. `{version}` corresponds to the version at `https://geometrydashfiles.b-cdn.net/news/news_version.txt`.
+The header is in the format `{version},{entryCount}`. `{version}` corresponds to the version at `https://geometrydashfiles.b-cdn.net/news/news_version.txt`.
 
 ## Entries format
 
 > [!NOTE]
-> All forms of text support newlines, emojis (ex. \:eyes\:), and color tags.
+> All forms of text support newlines, emojis (ex. `:eyes:`), and color tags.
 
 `{entries}` is a list of news entries, sorted newest first, separated by `|`.
 
 Each entry is structured with `key:value` pairing, with each pair being separated with `;`. The list of known keys can be found in the table below:
 
-| Key | Name/Value | Type        | Description                                                                                                                 |
+| Key | Name | Type        | Description                                                                                                                 |
 | --- | ---------- | ----------- | --------------------------------------------------------------------------------------------------------------------------- |
 | 1   | Entry ID   | **Integer** | The news entry ID                                                                                                           |
-| 2   | Date       | **String**  | The date of the news entry in plaintext (ex. "January 1, 1970"), encoded in [URL-safe base64](/topics/encryption/base64.md) |
-| 3   | Title      | **String**  | The title of the news entry, encoded in [URL-safe base64](/topics/encryption/base64.md)                                     |
+| 2   | Date       | **String**  | The date of the news entry in plaintext (ex. "January 1, 1970"), encoded in [base64](/topics/encryption/base64.md) |
+| 3   | Title      | **String**  | The title of the news entry, encoded in [base64](/topics/encryption/base64.md)                                     |
 | 4   | Elements   | **String**  | The elements of the news entry                                                                                              |
 
 ## Elements format
 
-Elements are in the format `{id},{data}`, and are separated by `~`.
+Elements are in the format `{type},{data}`, and are separated by `~`.
 
 There are 3 known types of elements that can be in a news entry. Information about each type can be found below:
 
-| ID | Type   | Description                                    | Data Format                                          |
+| `type` | Name   | Description                                    | `data` format                                          |
 | -- | ------ | ---------------------------------------------- | ---------------------------------------------------- |
 | 0  | Text   | A text element                                 | `{b64 text}`                                         |
-| 1  | Image  | An image element with an optional URL          | `{file name},{width},{height},{isYouTube},{b64 url}` |
+| 1  | Image  | An image element with an optional URL          | `{filename},{width},{height},{isYouTube},{b64 url}` |
 | 2  | Link   | A text element, but clickable                  | `{b64 text},{b64 url}`                               |
 
 ### Image element structure
 
 | Segment     | Description                                                                                    |
 | ----------- | ---------------------------------------------------------------------------------------------- |
-| File name   | The file name of the image, grabbed from `https://geometrydashfiles.b-cdn.net/news/{filename}` |
-| Width       | The width of the image in pixels                                                               |
-| Height      | The height of the image in pixels                                                              |
-| Is YouTube  | `0` for false and `1` for true. If true, a play button will be drawn over the image            |
-| URL         | The optional URL opened when clicking the image. If blank, the image will not be clickable     |
+| `filename` | The file name of the image accessible at `https://geometrydashfiles.b-cdn.net/news/{filename}` |
+| `width` | The width of the image in pixels                                                               |
+| `height` | The height of the image in pixels                                                              |
+| `isYouTube` | `0` for false and `1` for true. If true, a play button will be drawn over the image            |
+| `url` | The optional URL opened when clicking the image, encoded in [base64](/topics/encryption/base64.md). If blank, the image will not be clickable     |
 
 > [!NOTE]
 > RobTop uses the format `news_{entry id}_{0-based element position}_{hash}.{ext}` for the image file names. This is not required.
