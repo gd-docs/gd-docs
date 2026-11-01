@@ -15,7 +15,7 @@ Fetches the current daily/weekly/event/gauntlet, and displays it to the user if 
 | `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
 | `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
 | `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
-| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
 
 <ParamInfoFooter/>
 </ParamGroup>
