@@ -8,7 +8,7 @@ type Requirement = 'always' | 'cond' | 'no';
 type Sending = 'always' | 'platform' | 'cond';
 
 const props = defineProps<{
-  req: Requirement
+  req?: Requirement
   sent?: Sending
 }>();
 
@@ -22,7 +22,7 @@ const markers = computed(() => {
     kind: string
   }[] = [];
 
-  if (props.req !== 'no') {
+  if (props.req !== 'no' && props.req !== undefined) {
     result.push({
       key: 'requirement',
       symbol: props.req === 'always' ? config.symbol.requirementAlways : config.symbol.requirementConditional,
