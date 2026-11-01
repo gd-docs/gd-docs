@@ -43,7 +43,7 @@ aside: true
 - `getGJFriendRequests20` [supports](#) ignored friend requests
 - The legacy messaging system was superseded by threads. [`uploadGJMessage20`](#) was disabled and returns `-1`.
 - `getGJUserList20` supports [new list types](#) for followed and muted accounts. It also now includes user stats in responses.
-- `downloadGJLevel` now [includes](#) death data at the end of the response
+- `downloadGJLevel` now [includes](/endpoints/levels/downloadGJLevel22.md#:~:text=#{extraArtistNames}#{deathData}#{unknown}#) death data at the end of the response
 - `uploadGJLevel` accepts [5 new params](/endpoints/levels/uploadGJLevel21#:~:text=notify,client%20key%20k105) with upload notification settings, song/sfx ID lists, the new [Build Stats String](/resources/client/level-components/build-stats-string) and current timestamp
 - [New CCGameManager keys](#): `newsLastReadID`, `recentEmotes`, `editorSFXGlobalVolume`, `scrollSensitivity`, `specialPermKey`
 - CCGamemanager GLM now [tracks](#) timely levels for both the user and the server
