@@ -49,6 +49,16 @@ export default [
         "collapsed": true
       },
       {
+        "text": "Admin",
+        "items": [
+          {
+            "text": "adminGetUserHistory.php",
+            "link": "/endpoints/admin/adminGetUserHistory"
+          }
+        ],
+        "collapsed": true
+      },
+      {
         "text": "Comments",
         "items": [
           {
@@ -627,6 +637,10 @@ export default [
       {
         "text": "Server",
         "items": [
+          {
+            "text": "Admin User Log Object",
+            "link": "/resources/server/adminuserlog"
+          },
           {
             "text": "Comment Object",
             "link": "/resources/server/comment"
