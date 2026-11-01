@@ -442,6 +442,10 @@ export default [
             "link": "/endpoints/misc/news"
           },
           {
+            "text": "getGJContentStatus.php",
+            "link": "/endpoints/misc/getGJContentStatus"
+          },
+          {
             "text": "reportGJContent.php",
             "link": "/endpoints/misc/reportGJContent"
           },
