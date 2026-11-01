@@ -185,74 +185,6 @@ export default [
         "collapsed": true
       },
       {
-        "text": "Misc",
-        "items": [
-          {
-            "text": "Web Leaderboards",
-            "items": [
-              {
-                "text": "icon-extras.json",
-                "link": "/endpoints/misc/lb/icon-extras"
-              },
-              {
-                "text": "top-creators.json",
-                "link": "/endpoints/misc/lb/top-creators"
-              },
-              {
-                "text": "top-demons.json",
-                "link": "/endpoints/misc/lb/top-demons"
-              },
-              {
-                "text": "top-moons.json",
-                "link": "/endpoints/misc/lb/top-moons"
-              },
-              {
-                "text": "top-stars.json",
-                "link": "/endpoints/misc/lb/top-stars"
-              },
-              {
-                "text": "top-usercoins.json",
-                "link": "/endpoints/misc/lb/top-usercoins"
-              }
-            ],
-            "collapsed": true
-          },
-          {
-            "text": "getAccountURL.php",
-            "link": "/endpoints/misc/getAccountURL"
-          },
-          {
-            "text": "getSaveData.php",
-            "link": "/endpoints/misc/getSaveData"
-          },
-          {
-            "text": "getTop1000.php",
-            "link": "/endpoints/misc/getTop1000"
-          },
-          {
-            "text": "likeGJItem211.php",
-            "link": "/endpoints/misc/likeGJItem211"
-          },
-          {
-            "text": "news.dat",
-            "link": "/endpoints/misc/news"
-          },
-          {
-            "text": "reportGJContent.php",
-            "link": "/endpoints/misc/reportGJContent"
-          },
-          {
-            "text": "requestUserAccess.php",
-            "link": "/endpoints/misc/requestUserAccess"
-          },
-          {
-            "text": "restoreGJItems.php",
-            "link": "/endpoints/misc/restoreGJItems"
-          }
-        ],
-        "collapsed": true
-      },
-      {
         "text": "Multiplayer",
         "items": [
           {
@@ -452,6 +384,74 @@ export default [
           {
             "text": "updateGJUserScore22.php",
             "link": "/endpoints/users/updateGJUserScore22"
+          }
+        ],
+        "collapsed": true
+      },
+      {
+        "text": "Misc",
+        "items": [
+          {
+            "text": "Web Leaderboards",
+            "items": [
+              {
+                "text": "icon-extras.json",
+                "link": "/endpoints/misc/lb/icon-extras"
+              },
+              {
+                "text": "top-creators.json",
+                "link": "/endpoints/misc/lb/top-creators"
+              },
+              {
+                "text": "top-demons.json",
+                "link": "/endpoints/misc/lb/top-demons"
+              },
+              {
+                "text": "top-moons.json",
+                "link": "/endpoints/misc/lb/top-moons"
+              },
+              {
+                "text": "top-stars.json",
+                "link": "/endpoints/misc/lb/top-stars"
+              },
+              {
+                "text": "top-usercoins.json",
+                "link": "/endpoints/misc/lb/top-usercoins"
+              }
+            ],
+            "collapsed": true
+          },
+          {
+            "text": "getAccountURL.php",
+            "link": "/endpoints/misc/getAccountURL"
+          },
+          {
+            "text": "getSaveData.php",
+            "link": "/endpoints/misc/getSaveData"
+          },
+          {
+            "text": "getTop1000.php",
+            "link": "/endpoints/misc/getTop1000"
+          },
+          {
+            "text": "likeGJItem211.php",
+            "link": "/endpoints/misc/likeGJItem211"
+          },
+          {
+            "text": "news.dat",
+            "link": "/endpoints/misc/news"
+          },
+          {
+            "text": "reportGJContent.php",
+            "link": "/endpoints/misc/reportGJContent"
+          },
+          {
+            "text": "requestUserAccess.php",
+            "link": "/endpoints/misc/requestUserAccess"
+          },
+          {
+            "text": "restoreGJItems.php",
+            "link": "/endpoints/misc/restoreGJItems"
           }
         ],
         "collapsed": true
