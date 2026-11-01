@@ -358,6 +358,10 @@ export default [
           {
             "text": "uploadGJMessage20.php",
             "link": "/endpoints/socials/uploadGJMessage20"
+          },
+          {
+            "text": "getGJNotifications.php",
+            "link": "/endpoints/socials/getGJNotifications"
           }
         ],
         "collapsed": true
