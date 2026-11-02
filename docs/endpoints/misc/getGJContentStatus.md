@@ -8,14 +8,15 @@ Fetches the current daily/weekly/event/gauntlet. Used to notify the user of new 
 
 | Parameter | Explanation |
 | --------- | ----------- |
-| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
 | `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
 | `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
-| `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
-| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
 | `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
 | `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
 | `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+| `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `special`<ParamInfo req="no" sent="always"/> | Always `1` |
 
 <ParamInfoFooter/>
 </ParamGroup>
