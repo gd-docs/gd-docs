@@ -31,7 +31,7 @@ aside: true
     - Song usage statistics: [`getGJSongUsage`](/endpoints/songs/getGJSongUsage)
     - Global user search in the submenus of your user profile: `getGJUserSearch`
     - `getGJAudioFilesize` for retrieving the total size of audio assets in the editor
-    - `getGJContentStatus`
+    - Timely/gauntlet tracking: [`getGJContentStatus`](/endpoints/misc/getGJContentStatus)
     - [`openedRegister`](/endpoints/accounts/openedRegister) which returns an `rsession` token used with [`registerGJAccount`](/endpoints/accounts/registerGJAccount)
     - 22 moderation endpoints: [`adminGetUserHistory`](/endpoints/admin/adminGetUserHistory), `adminGetReportedContent`, `adminClearReportedContent`, [`adminGetReportQueue`](/endpoints/admin/adminGetReportQueue), `adminGetAbuseInfo`, `adminGetAccountReview`, `adminThreadAction`, `adminDeleteUserComments`, `adminCommentBan`, `adminUploadBan`, `adminMessageBan`, `adminFreezeAccount`, `adminTrendingBan`, `adminNameLock`, `adminCommentUnban`, `adminUploadUnban`, `adminCloseCase`, `adminMessageUnban`, `adminUnfreezeAccount`, `adminTrendingUnban`, `adminNameUnlock`, `deleteGJComments`
 - `registerGJAccount` now requires the new [`rsession`](#) from `openedRegister`
