@@ -1,6 +1,6 @@
 # getGJContentStatus.php
 
-Fetches the current daily/weekly/event/gauntlet, and displays it to the user if they're out of date.
+Fetches the current daily/weekly/event/gauntlet. Used to notify the user of new content.
 
 ## Parameters
 
