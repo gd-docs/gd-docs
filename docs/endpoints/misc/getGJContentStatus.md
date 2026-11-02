@@ -23,12 +23,12 @@ Fetches the current daily/weekly/event/gauntlet. Used to notify the user of new 
 ## Response
 
 Returns a small list of comma-separated values in this order:
-`{dailyNumber},{weekly dailyNumber},{event dailyNumber},{gauntletVersion},{latestGauntlet}`
+`{dailyNumber},{weeklyNumber},{eventNumber},{gauntletVersion},{latestGauntlet}`
 
 Where:
-* The first dailyNumber is the ID of the current Daily Level.
-* The second dailyNumber is the ID of the current Weekly Demon.
-* The third dailyNumber is the ID of the current Event Level.
+* `dailyNumber` is the ID of the current Daily Level.
+* `weeklyNumber` is the ID of the current Weekly Demon offset by 100000.
+* `eventNumber` is the ID of the current Event Level offset by 200000.
 * `gauntletVersion` increments by 1 every time a new gauntlet is added.
 * `latestGauntlet` is the [Gauntlet ID](/resources/server/gauntlet) of the latest gauntlet added to the game.
 
