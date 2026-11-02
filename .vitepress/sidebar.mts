@@ -54,6 +54,10 @@ export default [
           {
             "text": "adminGetUserHistory.php",
             "link": "/endpoints/admin/adminGetUserHistory"
+          },
+          {
+            "text": "adminGetReportQueue.php",
+            "link": "/endpoints/admin/adminGetReportQueue"
           }
         ],
         "collapsed": true
@@ -688,6 +692,10 @@ export default [
           {
             "text": "Restore Object",
             "link": "/resources/server/restore"
+          },
+          {
+            "text": "Report Queue Entry Object",
+            "link": "/resources/server/reportqueue"
           },
           {
             "text": "Song Object",
