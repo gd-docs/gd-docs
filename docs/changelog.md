@@ -33,7 +33,7 @@ aside: true
     - `getGJAudioFilesize` for retrieving the total size of audio assets in the editor
     - `getGJContentStatus`
     - [`openedRegister`](/endpoints/accounts/openedRegister) which returns an `rsession` token used with [`registerGJAccount`](/endpoints/accounts/registerGJAccount)
-    - 22 moderation endpoints: `adminGetUserHistory`, `adminGetReportedContent`, `adminClearReportedContent`, [`adminGetReportQueue`](/endpoints/admin/adminGetReportQueue), `adminGetAbuseInfo`, `adminGetAccountReview`, `adminThreadAction`, `adminDeleteUserComments`, `adminCommentBan`, `adminUploadBan`, `adminMessageBan`, `adminFreezeAccount`, `adminTrendingBan`, `adminNameLock`, `adminCommentUnban`, `adminUploadUnban`, `adminCloseCase`, `adminMessageUnban`, `adminUnfreezeAccount`, `adminTrendingUnban`, `adminNameUnlock`, `deleteGJComments`
+    - 22 moderation endpoints: [`adminGetUserHistory`](/endpoints/admin/adminGetUserHistory), `adminGetReportedContent`, `adminClearReportedContent`, [`adminGetReportQueue`](/endpoints/admin/adminGetReportQueue), `adminGetAbuseInfo`, `adminGetAccountReview`, `adminThreadAction`, `adminDeleteUserComments`, `adminCommentBan`, `adminUploadBan`, `adminMessageBan`, `adminFreezeAccount`, `adminTrendingBan`, `adminNameLock`, `adminCommentUnban`, `adminUploadUnban`, `adminCloseCase`, `adminMessageUnban`, `adminUnfreezeAccount`, `adminTrendingUnban`, `adminNameUnlock`, `deleteGJComments`
 - `registerGJAccount` now requires the new [`rsession`](#) from `openedRegister`
 - [`updateGJAccSettings20`](#) now allows to disable friend request messages and introduces a new privacy option for threads, along with an unknown `gO` parameter
 - `getGJComments21` [supports](#) sound packs
