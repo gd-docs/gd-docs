@@ -1,6 +1,6 @@
 # rateGJDemon21.php
 
-Rates the demon difficulty of a demon level - only works for Geometry Dash moderators
+Rates the demon difficulty of a demon level
 
 ## Parameters
 
@@ -18,19 +18,17 @@ Rates the demon difficulty of a demon level - only works for Geometry Dash moder
 | `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
 | `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
 | `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+| `mode`<ParamInfo req="no" sent="cond"/> | 1 if the user is an advisor, not sent if it's a normal player |
 
 <ParamInfoFooter/>
 </ParamGroup>
 
 ## Response
 
-For normal Players: Internal Server Error or -1
+If `mode` is not included/not set to 1, and `levelID` is included, and `rating` is included and within 1-5, the response is 1. `accountID`, `gjp2`, `udid`, etc. are not required for a 1 response, but the rating probably won't be added. 
 
-if mode=1
-
-mod: levelID
-
-normal user: -2 (which clears mod status from the save data)
+if mode=1:
+if the user is an advisor, the level id is the response. if the user is not an advisor, the response is -2. the -2 reponse also causes the game to remove the advisor status from save data.
 
 ## Example
 
