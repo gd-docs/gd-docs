@@ -36,11 +36,7 @@ where:
 - `{user}` is the user that uploaded the level, in the format `userID:username:accountID` - only returned when requesting level ID `-1` (daily), `-2` (weekly) or `-3` (event)
 - `{songs}` is the list of [song objects](/resources/server/song) (without key 15 `extraArtistNames`) the level uses, separated by `~:~`
 - `{extraArtistNames}` is a deduplicated dictionary of extra artists' names for all `{songs}` in the format `id,name,id,name,...`
-- `{deathData}` is in the format `{unknown; 0 or 1000?};{unknown; seems to range 0-3};{encodedDeathData}`, where `{encodedDeathData}` is the death data encoded as a [Level String](/topics/levelstring_encoding_decoding#decoding), in the format `{deathMarkers}|{globalProgress}`
-    - `{deathMarkers}` are in the following format, separated by `;`s:
-      - `{x},{y},{deaths},{deathPercentage * 10},{wallPercentage * 10},{unknown; deaths?},{stars},{deathPercentageBorder},{wallPercentageBorder}`
-    - `{globalProgress}` is the global level progress in the format `{n0},{n1},...,{n102}`, where the index is the level percentage, and the value is the number of runs reaching said percentage. The last two values (indices 101 & 102) are the total runs and total completions respectively.
-
+- `{deathData}` is the death data for the level, returned in the same format as [getGJDeathData](/endpoints/levels/getGJDeathData#response)
 
 The segments following `{hash2}` are only returned when `binaryVersion` >= 42.
 
