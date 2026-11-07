@@ -23,7 +23,7 @@ aside: true
 - 52 new endpoints:
     - Editor sound packs: [`getGJEditorSounds`](/endpoints/editorsfx/getGJEditorSounds), [`uploadGJEditorSound`](/endpoints/editorsfx/uploadGJEditorSound), [`downloadGJEditorSound`](/endpoints/editorsfx/downloadGJEditorSound), [`deleteGJEditorSound`](/endpoints/editorsfx/deleteGJEditorSound), `updateGJSoundDesc`. Sound packs reuse the level list structure with a few new keys.
     - Custom platformer controls: `uploadGJLevelControls`, `getGJLevelControls`, `deleteGJLevelControls`
-    - Death markers and death stats: `getGJDeathData`, `uploadGJDeathData`
+    - Death markers and death stats: [`getGJDeathData`](/endpoints/levels/getGJDeathData), `uploadGJDeathData`
     - Thread system (group chats): [`getGJThreads`](/endpoints/threads/getGJThreads), [`getGJThreadMessages`](/endpoints/threads/getGJThreadMessages), [`getGJThreadMembers`](/endpoints/threads/getGJThreadMembers), [`getGJThreadInvites`](/endpoints/threads/getGJThreadInvites), [`sendGJThreadMessage`](/endpoints/threads/sendGJThreadMessage), [`updateGJThread`](/endpoints/threads/updateGJThread), [`searchGJThreadMessages`](/endpoints/threads/searchGJThreadMessages)
     - Notification system: [`getGJNotifications`](/endpoints/socials/getGJNotifications), `claimGJNotificationReward`, [`muteGJUser`](/endpoints/socials/muteGJUser)
     - [`reportGJContent`](/endpoints/misc/reportGJContent), a new content-reporting system covering levels, lists, sound packs, users, threads, comments, messages and friend requests
