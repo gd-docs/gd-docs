@@ -8,10 +8,10 @@ Uploads the user's death data to the server.
 
 | Parameter | Explanation |
 | --------- | ----------- |
+| `secret` <ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
 | `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
 | `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
 | `data` <ParamInfo req="always"/> | The users death data, see [format](#data) |
-| `secret` <ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
 | `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
 | `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
 | `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
@@ -28,8 +28,7 @@ Uploads the user's death data to the server.
 `{levelID},{unknown},{encodedDeathData}`
 - `{levelID}` is the ID of the level to upload death data for
 - `{unkown}` unknown, maybe total deaths?
-- `{encodedDeathData}` is the death data encoded as a [Level String](/topics/levelstring_encoding_decoding#encoding), in the format:
-  - `{deathMarkers};{percentages};{completed}`
+- `{encodedDeathData}` is the death data encoded as a [Level String](/topics/levelstring_encoding_decoding#encoding), in the format `{deathMarkers};{percentages};{completed}`
   - `{deathMarkers}` is a list of death markers in the format `{x},{y},{deaths},{percent},{x},{y},{deaths},{percent},...`
   - `{percentages}` is a list of the user's deaths by percentage in the format `{percentage},{deaths},{percentage},{deaths},...`
   - `{completions}` is the number of times the user has completed the level
