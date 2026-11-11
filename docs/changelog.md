@@ -36,7 +36,7 @@ aside: true
     - 22 moderation endpoints: [`adminGetUserHistory`](/endpoints/admin/adminGetUserHistory), `adminGetReportedContent`, `adminClearReportedContent`, [`adminGetReportQueue`](/endpoints/admin/adminGetReportQueue), `adminGetAbuseInfo`, `adminGetAccountReview`, `adminThreadAction`, `adminDeleteUserComments`, `adminCommentBan`, `adminUploadBan`, `adminMessageBan`, `adminFreezeAccount`, `adminTrendingBan`, `adminNameLock`, `adminCommentUnban`, `adminUploadUnban`, `adminCloseCase`, `adminMessageUnban`, `adminUnfreezeAccount`, `adminTrendingUnban`, `adminNameUnlock`, [`deleteGJComments`](/endpoints/admin/deleteGJComments)
 - `registerGJAccount` now requires the new [`rsession`](#) from `openedRegister`
 - [`updateGJAccSettings20`](#) now allows to disable friend request messages and introduces a new privacy option for threads, along with an unknown `gO` parameter
-- `getGJComments21` [supports](#) sound packs
+- `getGJComments21` [supports](#) sound packs and moderator notes
 - [Four new `type`s](#) in `getGJLevels21`: hyped 🔥 and timely histories without the current one. There's also an unknown [`hypeSecret`](#) param with a hardcoded value.
 - [`reportGJLevel`](#) was deprecated in favor of [`reportGJContent`](#)
 - `deleteGJFriendRequests20`  [doesn't delete friend requests](#) anymore. They become ignored and can still be accepted later.
