@@ -58,6 +58,10 @@ export default [
           {
             "text": "adminGetReportQueue.php",
             "link": "/endpoints/admin/adminGetReportQueue"
+          },
+          {
+            "text": "deleteGJComments.php",
+            "link": "/endpoints/admin/deleteGJComments"
           }
         ],
         "collapsed": true
