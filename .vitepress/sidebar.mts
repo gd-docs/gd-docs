@@ -164,6 +164,10 @@ export default [
             "link": "/endpoints/levels/updateGJDesc20"
           },
           {
+            "text": "uploadGJDeathData.php",
+            "link": "/endpoints/levels/uploadGJDeathData"
+          },
+          {
             "text": "uploadGJLevel21.php",
             "link": "/endpoints/levels/uploadGJLevel21"
           }
