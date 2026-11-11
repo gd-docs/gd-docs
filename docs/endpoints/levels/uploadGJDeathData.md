@@ -11,7 +11,7 @@ Uploads the user's death data to the server.
 | `secret` <ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
 | `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
 | `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
-| `data` <ParamInfo req="always"/> | The users death data, see [format](#data) |
+| `data` <ParamInfo req="always"/> | The player's death data, see [format](#data) |
 | `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
 | `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
 | `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
