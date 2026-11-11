@@ -11,7 +11,7 @@ Gets comments of a level, list or sound pack.
 | `levelID`<ParamInfo req="always"/> | The ID of the level, list or sound pack. Negative if it's a list ID |
 | `page`<ParamInfo req="always"/> | Which page of comments you want to see |
 | `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
-| `cType`<ParamInfo req="no" sent="cond"/> | If set to 6, `levelID` is a sound pack ID. If set to 8, the ID is an account ID of the user to get the moderator notes for. Not sent otherwise <ParamCond sent="cond">`levelID` is not a level or list ID</ParamCond> |
+| `cType`<ParamInfo req="no" sent="cond"/> | If set to 6, `levelID` is a sound pack ID. If set to 8, the ID is the account ID of the user to get the moderator notes for. Not sent otherwise <ParamCond sent="cond">`levelID` is not a level or list ID</ParamCond> |
 | `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
 | `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
 | `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
