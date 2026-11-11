@@ -20,7 +20,7 @@ Bulk-deletes comments with a custom reason and a list of categories.
 | `accountID`<ParamInfo sent="always"/> | <ParamDesc name="accountID"/> |
 | `gjp2`<ParamInfo sent="always"/> | <ParamDesc name="gjp2"/> |
 | `secret`<ParamInfo sent="always"/> | <ParamDesc name="secret" type="common"/> |
-| `cType`<ParamInfo sent="always"/> | Comment type. 0 - Level/list comment, 1 - Account comment (unknown if possible to get in vanilla), 6 - Sound pack comment, 7 - Mod comment (unknown what that is). |
+| `cType`<ParamInfo sent="always"/> | Comment type. 0 - Level/list comment, 1 - Account comment (unknown if possible to get in vanilla), 6 - Sound pack comment, 7 - Advisors' level comments. |
 | `items`<ParamInfo sent="always"/> | List of `commentID,parentID` pairs, separated by `;`, identyfing the comments to remove. The meaning of `parentID` depends on `cType`. |
 | `reason`<ParamInfo sent="cond"/> | [Base64](/topics/encryption/base64)-encoded reason. <ParamCond sent="cond">not empty</ParamCond> |
 | `categories`<ParamInfo sent="cond"/> | Comma-separated list of category IDs. 0 - Inappropriate Content, 1 - Harassment / Hate, 2 - Spam / Trolling, 3 - Scam / Phishing, 7 - Threats / Danger. <ParamCond sent="cond">not empty</ParamCond> |
