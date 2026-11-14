@@ -16,6 +16,8 @@ Endpoint used by moderators to send levels to RobTop
 | `gameVersion`<ParamInfo req="always"/> | <ParamDesc name="gameVersion"/> |
 | `binaryVersion`<ParamInfo req="always"/> | <ParamDesc name="binaryVersion"/> |
 | `feature`<ParamInfo req="always"/> | 0 for star rate, 1 for feature, 2 for epic, 3 for legendary, 4 for mythic |
+| `coin`<ParamInfo req="always"/> | 0 for Unverified Coins, 1 for Verified Coins |
+| `demonDiff`<ParamInfo req="always"/> | Demon Rating, 0 for Easy Demon, 5 for Extreme Demon. 0 if not demon. |
 | `udid` | <ParamDesc name="udid"/> |
 | `uuid` | <ParamDesc name="uuid"/> |
 | `dvs` | <ParamDesc name="dvs"/> |
@@ -25,7 +27,7 @@ Endpoint used by moderators to send levels to RobTop
 
 ## Response
 
--2 if not a moderator (which clears the moderator status from save data), 1 otherwise
+-2 if not a moderator (which clears the Advisor status from save data), 1 otherwise
 
 ## example
 
@@ -36,13 +38,15 @@ Endpoint used by moderators to send levels to RobTop
 import requests
 
 data = {
-        "gameVersion": 21,
-        "binaryVersion":35
+        "gameVersion": 22,
+        "binaryVersion":51
         "accountID": 71, # a moderators accountID
         "gjp2": "********", # This would be the mods password encoded with GJP2 encryption
         "levelID": 128,
         "stars": 3,
         "feature": 0,
+        "coin": 0,
+        "demonDiff": 0,
         "gdw": 0,
         "secret": "Wmfp3879gc3"
 }
