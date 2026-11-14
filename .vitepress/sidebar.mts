@@ -138,6 +138,10 @@ export default [
             "link": "/endpoints/levels/getGJDailyLevel"
           },
           {
+            "text": "getGJDeathData.php",
+            "link": "/endpoints/levels/getGJDeathData"
+          },
+          {
             "text": "getGJGauntlets21.php",
             "link": "/endpoints/levels/getGJGauntlets21"
           },
@@ -176,6 +180,10 @@ export default [
           {
             "text": "updateGJDesc20.php",
             "link": "/endpoints/levels/updateGJDesc20"
+          },
+          {
+            "text": "uploadGJDeathData.php",
+            "link": "/endpoints/levels/uploadGJDeathData"
           },
           {
             "text": "uploadGJLevel21.php",

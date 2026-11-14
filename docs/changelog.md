@@ -23,7 +23,7 @@ aside: true
 - 52 new endpoints:
     - Editor sound packs: [`getGJEditorSounds`](/endpoints/editorsfx/getGJEditorSounds), [`uploadGJEditorSound`](/endpoints/editorsfx/uploadGJEditorSound), [`downloadGJEditorSound`](/endpoints/editorsfx/downloadGJEditorSound), [`deleteGJEditorSound`](/endpoints/editorsfx/deleteGJEditorSound), `updateGJSoundDesc`. Sound packs reuse the level list structure with a few new keys.
     - Custom platformer controls: `uploadGJLevelControls`, `getGJLevelControls`, `deleteGJLevelControls`
-    - Death markers and death stats: `getGJDeathData`, `uploadGJDeathData`
+    - Death markers and death stats: [`getGJDeathData`](/endpoints/levels/getGJDeathData), [`uploadGJDeathData`](/endpoints/levels/uploadGJDeathData)
     - Thread system (group chats): [`getGJThreads`](/endpoints/threads/getGJThreads), [`getGJThreadMessages`](/endpoints/threads/getGJThreadMessages), [`getGJThreadMembers`](/endpoints/threads/getGJThreadMembers), [`getGJThreadInvites`](/endpoints/threads/getGJThreadInvites), [`sendGJThreadMessage`](/endpoints/threads/sendGJThreadMessage), [`updateGJThread`](/endpoints/threads/updateGJThread), [`searchGJThreadMessages`](/endpoints/threads/searchGJThreadMessages)
     - Notification system: [`getGJNotifications`](/endpoints/socials/getGJNotifications), `claimGJNotificationReward`, [`muteGJUser`](/endpoints/socials/muteGJUser)
     - [`reportGJContent`](/endpoints/misc/reportGJContent), a new content-reporting system covering levels, lists, sound packs, users, threads, comments, messages and friend requests
@@ -43,7 +43,7 @@ aside: true
 - `getGJFriendRequests20` [supports](#) ignored friend requests
 - The legacy messaging system was superseded by threads. [`uploadGJMessage20`](#) was disabled and returns `-1`.
 - `getGJUserList20` supports [new list types](#) for followed and muted accounts. It also now includes user stats in responses.
-- `downloadGJLevel` now [includes](#) death data at the end of the response
+- `downloadGJLevel` now [includes](/endpoints/levels/downloadGJLevel22.md#:~:text=#{extraArtistNames}#{deathData}#{unknown}#) death data at the end of the response
 - `uploadGJLevel` accepts [5 new params](/endpoints/levels/uploadGJLevel21#:~:text=notify,client%20key%20k105) with upload notification settings, song/sfx ID lists, the new [Build Stats String](/resources/client/level-components/build-stats-string) and current timestamp
 - [New CCGameManager keys](#): `newsLastReadID`, `recentEmotes`, `editorSFXGlobalVolume`, `scrollSensitivity`, `specialPermKey`
 - CCGamemanager GLM now [tracks](#) timely levels for both the user and the server
