@@ -25,7 +25,7 @@ Rates the demon difficulty of a demon level
 
 ## Response
 
-If `mode` is not included/not set to 1, and `levelID` is included, and `rating` is included and within 1-5, the response is 1. `accountID`, `gjp2`, `udid`, etc. are not required for a 1 response, but the rating probably won't be added. 
+If `mode` is not included/not set to 1, and `levelID` is included, and `rating` is included and within 1-5, the response is 1.
 
 if mode=1:
 if the user is an advisor, the level id is the response. if the user is not an advisor, the response is -2. the -2 reponse also causes the game to remove the advisor status from save data.
