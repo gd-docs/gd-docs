@@ -8,11 +8,11 @@ Rates the demon difficulty of a demon level
 
 | Parameter | Explanation |
 | --------- | ----------- |
-| `gameVersion`<ParamInfo req="always"/> | <ParamDesc name="gameVersion"/> |
-| `binaryVersion`<ParamInfo req="always"/> | <ParamDesc name="binaryVersion"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
 | `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="mod"/> |
-| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
-| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
+| `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
 | `levelID`<ParamInfo req="always"/> | The ID of the demon being rated |
 | `rating`<ParamInfo req="always"/> | 1 for Easy Demon, 2 for Medium Demon, 3 for Hard Demon, 4 for Insane Demon and 5 for Extreme Demon |
 | `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
