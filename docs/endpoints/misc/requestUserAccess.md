@@ -22,7 +22,7 @@ Requests moderator access.
 
 ## Response
 
-1 if granted Moderator, 2 if granted Elder Moderator, 99 if granted Leaderboard Moderator, and -1 if not granted
+1 or 99 if granted Advisor (formerly Moderator), 2 if granted Moderator (formerly Elder Moderator), and -1 if not granted.
 
 ## Example
 
