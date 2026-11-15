@@ -18,7 +18,7 @@ Rates the demon difficulty of a demon level
 | `levelID`<ParamInfo req="always"/> | The ID of the demon being rated |
 | `rating`<ParamInfo req="always"/> | 1 for Easy Demon, 2 for Medium Demon, 3 for Hard Demon, 4 for Insane Demon and 5 for Extreme Demon |
 | `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="mod"/> |
-| `mode`<ParamInfo req="no" sent="cond"/> | 1 if the user is an Advisor or a Moderator <ParamCond sent="cond">non-zero</ParamCond> |
+| `mode`<ParamInfo req="no" sent="cond"/> | 1 if the user is an Advisor, a Moderator or a Leaderboard Moderator <ParamCond sent="cond">non-zero</ParamCond> |
 
 <ParamInfoFooter/>
 </ParamGroup>
@@ -27,7 +27,7 @@ Rates the demon difficulty of a demon level
 
 If the required params are valid, the response is 1.
 
-If `mode` is set to 1 and `accountID` and `gjp2` are provided for an account without the required [moderator access](/endpoints/misc/requestUserAccess), the response is -2. This error reponse also causes the game to remove the status from save data.
+If `mode` is set to 1 and `accountID` and `gjp2` are provided for an account without any [moderator access](/endpoints/misc/requestUserAccess), the response is -2. This error reponse also causes the game to remove the status from save data.
 
 ## Example
 
