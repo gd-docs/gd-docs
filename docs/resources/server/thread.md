@@ -62,9 +62,9 @@ In the getGJThreadMessages.php endpoint, a different set of values is returned. 
 | 5     | unknown   | **Integer** | Seems to always be 1
 | 6     | inviteAge | **String** | How long ago you were invited (e.g. "1 hour")
 | 7     | lastMessage   | **String** | How long ago the last message in the thread was sent (e.g. "13 hours")
-| 8     | message		   | **String** | Only sent if the invite is a message request. Otherwise empty.
+| 8     | message		   | **String** | The request message encoded in [Base64](/topics/encryption/base64). Only sent if the invite is a Message Request. Otherwise empty.
 | 9     | description | **String** | The description of the thread encoded in [Base64](/topics/encryption/base64.md)
-| 10    | messageRequest	   | **Integer** | `0` if the invite is a Group Invite, `1` if the invite is a Moderator Message Request
+| 10    | type	   | **Integer** | `0` if the invite is a Group Invite, `1` if the invite is a Message Request (can be sent by Advisors and Moderators)
 | 11    | muted		   | **Bool** | Whether you have muted the thread or not
 | 12    | unknown		   | **Integer** | Seems to always be 0
 | 13    | ignoredInvite		 | **Bool** | Whether you have ignored this invite
