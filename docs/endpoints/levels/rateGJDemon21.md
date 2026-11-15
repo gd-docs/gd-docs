@@ -14,21 +14,20 @@ Rates the demon difficulty of a demon level
 | `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
 | `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
 | `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
-| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
+| `gjp2`<ParamInfo req="cond" sent="always"/> | <ParamDesc name="gjp2"/> <ParamCond req>`accountID` is not empty</ParamCond> |
 | `levelID`<ParamInfo req="always"/> | The ID of the demon being rated |
 | `rating`<ParamInfo req="always"/> | 1 for Easy Demon, 2 for Medium Demon, 3 for Hard Demon, 4 for Insane Demon and 5 for Extreme Demon |
 | `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="mod"/> |
-| `mode`<ParamInfo req="no" sent="cond"/> | 1 if the user is an advisor <ParamCond sent="cond">non-zero</ParamCond> |
+| `mode`<ParamInfo req="no" sent="cond"/> | 1 if the user is an Advisor or a Moderator <ParamCond sent="cond">non-zero</ParamCond> |
 
 <ParamInfoFooter/>
 </ParamGroup>
 
 ## Response
 
-If `mode` is not included/not set to 1, and `levelID` is included, and `rating` is included and within 1-5, the response is 1.
+If the required params are valid, the response is 1.
 
-if mode=1:
-if the user is an advisor, the level id is the response. if the user is not an advisor, the response is -2. the -2 reponse also causes the game to remove the advisor status from save data.
+If `mode` is set to 1 and `accountID` and `gjp2` are provided for an account without the required [moderator access](/endpoints/misc/requestUserAccess), the response is -2. This error reponse also causes the game to remove the status from save data.
 
 ## Example
 
