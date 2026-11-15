@@ -33,7 +33,7 @@ If `mode` is set to 1 and `accountID` and `gjp2` are provided for an account wit
 
 <!-- tabs:start -->
 
-### **Python - normal Players**
+### **Python**
 
 ```py
 import requests
@@ -53,34 +53,7 @@ print(req.text)
 
 **Response**
 ```py
--1
-```
-
-### **Python - Moderators**
-
-```py
-import requests
-
-headers = {
-}
-
-data = {
-    "gameVersion": 21,
-    "binaryVersion": 35
-    "accountID": 71,
-    "gjp2": *********, #the GJP of the moderator
-    "secret": "Wmfp3897gc3",
-    "levelID": 4284013,
-    "rating": 3
-}
-
-req = requests.post('https://www.boomlings.com/database/rateGJDemon21.php', headers=headers, data=data)
-print(req.text)
-```
-
-**Response**
-```py
-4284013
+1
 ```
 
 <!-- tabs:end -->
