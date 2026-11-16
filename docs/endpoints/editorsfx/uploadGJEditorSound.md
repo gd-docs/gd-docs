@@ -1,27 +1,27 @@
 # uploadGJEditorSound.php
 
-Uploads an editor sound pack to the servers
+Uploads a sound pack to the servers.
 
 ## Parameters
 
 | Parameter       | Explanation | Required |
 | --------------- | ----------- | -------- |
-| `accountID`     | <ParamDesc name="accountID"/>| Yes      | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="common"/>| Yes      | <!--a-->
-| `soundName`     | The name of the pack, in plain text | Yes      | <!--a-->
-| `soundData`     | The sound pack's data | Yes      | <!--a-->
-| `soundDesc`     | The description of the pack, in [URL-safe base64](/topics/encryption/base64.md) |        | <!--a-->
-| `actionCount`   | Sent as the amount of actions with a sound attached to them, but doesn't seem to do anything |        | <!--a-->
-| `soundCount`    | Send as the amount of sounds used, but doesn't seem to do anything |        | <!--a-->
-| `emote`         | The emote to be used as the icon of the pack |        | <!--a-->
-| `soundID`       | The ID of the list if updating to a newer version, otherwise `0` |      | <!--a-->
-| `unlisted`      | Set to `4` if the pack should be unlisted, and to `3` if the pack should be unlisted and only viewable by friends |       | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/>|       | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+| `accountID`     | <ParamDesc name="accountID"/>| Yes      |
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      |
+| `secret`        | <ParamDesc name="secret" type="common"/>| Yes      |
+| `soundName`     | The name of the pack, in plain text | Yes      |
+| `soundData`     | The sound pack's data | Yes      |
+| `soundDesc`     | The description of the pack, in [URL-safe base64](/topics/encryption/base64.md) |        |
+| `actionCount`   | Sent as the amount of actions with a sound attached to them, but doesn't seem to do anything |        |
+| `soundCount`    | Send as the amount of sounds used, but doesn't seem to do anything |        |
+| `emote`         | The emote to be used as the icon of the pack |        |
+| `soundID`       | The ID of the list if updating to a newer version, otherwise `0` |      |
+| `unlisted`      | Set to `4` if the pack should be unlisted, and to `3` if the pack should be unlisted and only viewable by friends |       |
+| `gameVersion`   | <ParamDesc name="gameVersion"/>|       |
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          |
+| `udid`          | <ParamDesc name="udid"/> |          |
+| `uuid`          | <ParamDesc name="uuid"/> |          |
+| `dvs`           | <ParamDesc name="dvs"/> |          |
 
 ## Response
 

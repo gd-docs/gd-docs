@@ -37,7 +37,7 @@ Each `key` is tied to a component within the client and the `value` sets data fo
 
 | Key | Name/Value          | Type        | Description |
 | --- | ------------------- | ----------- | ----------- |
-| 1*  | levelID             | **Integer** | The ID of the level, list or editor sound pack the comment was left on. Negative if the comment is on a list. Only returned by [getGJCommentHistory](/endpoints/comments/getGJCommentHistory) |
+| 1*  | levelID             | **Integer** | The ID of the level, list or sound pack the comment was left on. Negative if the comment is on a list. Only returned by [getGJCommentHistory](/endpoints/comments/getGJCommentHistory) |
 | 2   | comment             | **String**  | The comment message, encoded in [base64](/topics/encryption/base64.md) |
 | 3*  | userID              | **Integer** | The user ID of the comment author |
 | 4   | likes               | **Integer** | The number of likes the comment has |
@@ -49,7 +49,8 @@ Each `key` is tied to a component within the client and the `value` sets data fo
 | 10* | percent             | **Integer** | The percent the author put in their comment |
 | 11* | modBadge            | **Integer** | The mod badge of the author; only present if the author is a moderator. 1 = Normal Mod, 2 = Elder Mod |
 | 12* | moderatorChatColor  | **String**  | Comma separated list of the RGB values of the author's chat color; only present if author is a moderator |
-| 14* | commentType         | **Integer** | Which part of the game the comment was left on. 6 if the comment is left on an editor sound pack, otherwise not included at all |
+| 13* | friend              | **Bool**    | If the comment author is your friend; only present if true |
+| 14* | unk                 | **Integer** | Unknown |
 | 15  | timestamp           | **Integer** | UNIX timestamp of when the comment was uploaded (in seconds) |
 
 Keys indicated with an asterisk `*` are absent in `Account Comments`

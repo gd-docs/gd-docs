@@ -4,50 +4,55 @@ Updates a user's data
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `stars`         | The amount of stars the user has | Yes      | <!--a-->
-| `moons`         | The amount of moons the user has | Yes      | <!--a-->
-| `demons`        | The amount of demons the user has, including official levels | Yes      | <!--a-->
-| `diamonds`      | The amount of diamonds the user has | Yes      | <!--a-->
-| `icon`          | Which icon the iconType has selected, for example if iconType is 0 (cube), then it's the selected cube | Yes      | <!--a-->
-| `iconType`      | Which gamemode the player has last selected when changing their icons, 0 for cube, 1 for ship, 2 for ball, 3 for ufo, 4 for wave, 5 for robot, 6 for spider | Yes      | <!--a-->
-| `coins`         | The amount of secret coins the user has | Yes      | <!--a-->
-| `userCoins`     | The amount of user coins the user has | Yes      | <!--a-->
-| `accIcon`       | The ID of the user's selected icon. | Yes      | <!--a-->
-| `accShip`       | The ID of the user's selected ship. | Yes      | <!--a-->
-| `accBall`       | The ID of the user's selected ball. | Yes      | <!--a-->
-| `accBird`       | The ID of the user's selected UFO. | Yes      | <!--a-->
-| `accDart`       | The ID of the user's selected wave. | Yes      | <!--a-->
-| `accRobot`      | The ID of the user's selected robot. | Yes      | <!--a-->
-| `accGlow`       | Whether the user has glow enabled. | Yes      | <!--a-->
-| `accSpider`     | The ID of the user's selected spider. | Yes      | <!--a-->
-| `accExplosion`  | The ID of the user's selected death effect. | Yes      | <!--a-->
-| `accSwing`      | The ID of the user's selected swing. | Yes      | <!--a-->
-| `accJetpack`    | The ID of the user's selected jetpack. | Yes      | <!--a-->
-| `seed2`         | [See here](/topics/encryption/chk#user-profile) | Yes      | <!--a-->
-| `sinfo`         | List of counts of completed levels of each non-demon difficulty, separately for classic and platformer levels. Includes official levels. Format: `{autoClassic},{easyClassic},{normalClassic},{hardClassic},{harderClassic},{insaneClassic},{autoPlatformer},{easyPlatformer},{normalPlatformer},{hardPlatformer},{harderPlatformer},{insanePlatformer}` | Yes      | <!--a-->
-| `sinfod`        | Amount of completed dailies | Yes      | <!--a-->
-| `sinfog`        | Amount of completed gauntlet non-demon levels | Yes      | <!--a-->
-| `sinfoe`        | Amount of completed event non-demon levels | Yes      | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |  | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |  | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |  | <!--a-->
-| `userName`      | The username of the player |          | <!--a-->
-| `color1`        | Color 1 of the player. Defaults to the default primary color when left out |          | <!--a-->
-| `color2`        | Color 2 of the player. Defaults to the default secondary color when left out |          | <!--a-->
-| `color3`        | Glow color of the player. Defaults to secondary color when left out |          | <!--a-->
-| `special`       | Glow (2 if enabled) |          | <!--a-->
-| `dinfo`         | List of all completed demons (level IDs separated by `,`). Does not include official, weekly, gauntlet and event levels. Not sent if empty |          | <!--o-->
-| `dinfow`        | Amount of completed weeklies. Sent only together with dinfo |          | <!--a-->
-| `dinfog`        | Amount of completed gauntlet demons. Sent only together with dinfo |          | <!--a-->
-| `dinfoe`        | Amount of completed event demons. Sent only together with dinfo |          | <!--a-->
-| `seed`          | A random set of 10 numbers and letters in `A-Za-z0-9` |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
+| `stars`<ParamInfo req="always"/> | The amount of stars the user has |
+| `moons`<ParamInfo req="always"/> | The amount of moons the user has |
+| `demons`<ParamInfo req="always"/> | The amount of demons the user has, including official levels |
+| `diamonds`<ParamInfo req="always"/> | The amount of diamonds the user has |
+| `icon`<ParamInfo req="always"/> | Which icon the iconType has selected, for example if iconType is 0 (cube), then it's the selected cube |
+| `iconType`<ParamInfo req="always"/> | Which gamemode the player has last selected when changing their icons, 0 for cube, 1 for ship, 2 for ball, 3 for ufo, 4 for wave, 5 for robot, 6 for spider |
+| `coins`<ParamInfo req="always"/> | The amount of secret coins the user has |
+| `userCoins`<ParamInfo req="always"/> | The amount of user coins the user has |
+| `accIcon`<ParamInfo req="always"/> | The ID of the user's selected icon. |
+| `accShip`<ParamInfo req="always"/> | The ID of the user's selected ship. |
+| `accBall`<ParamInfo req="always"/> | The ID of the user's selected ball. |
+| `accBird`<ParamInfo req="always"/> | The ID of the user's selected UFO. |
+| `accDart`<ParamInfo req="always"/> | The ID of the user's selected wave. |
+| `accRobot`<ParamInfo req="always"/> | The ID of the user's selected robot. |
+| `accGlow`<ParamInfo req="always"/> | Whether the user has glow enabled. |
+| `accSpider`<ParamInfo req="always"/> | The ID of the user's selected spider. |
+| `accExplosion`<ParamInfo req="always"/> | The ID of the user's selected death effect. |
+| `accSwing`<ParamInfo req="always"/> | The ID of the user's selected swing. |
+| `accJetpack`<ParamInfo req="always"/> | The ID of the user's selected jetpack. |
+| `seed2`<ParamInfo req="always"/> | [See here](/topics/encryption/chk#user-profile) |
+| `sinfo`<ParamInfo req="always"/> | List of counts of completed levels of each non-demon difficulty, separately for classic and platformer levels. Includes official levels. Format: `{autoClassic},{easyClassic},{normalClassic},{hardClassic},{harderClassic},{insaneClassic},{autoPlatformer},{easyPlatformer},{normalPlatformer},{hardPlatformer},{harderPlatformer},{insanePlatformer}` |
+| `sinfod`<ParamInfo req="always"/> | Amount of completed dailies |
+| `sinfog`<ParamInfo req="always"/> | Amount of completed gauntlet non-demon levels |
+| `sinfoe`<ParamInfo req="always"/> | Amount of completed event non-demon levels |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+| `userName`<ParamInfo req="no" sent="always"/> | The username of the player |
+| `color1`<ParamInfo req="no" sent="always"/> | Color 1 of the player. Defaults to the default primary color when left out |
+| `color2`<ParamInfo req="no" sent="always"/> | Color 2 of the player. Defaults to the default secondary color when left out |
+| `color3`<ParamInfo req="no" sent="always"/> | Glow color of the player. Defaults to secondary color when left out |
+| `special`<ParamInfo req="no" sent="always"/> | Glow (2 if enabled) |
+| `dinfo`<ParamInfo req="no" sent="cond"/> | List of all completed demons (level IDs separated by `,`). Does not include official, weekly, gauntlet and event levels. <ParamCond sent="cond">not empty</ParamCond> |
+| `dinfow`<ParamInfo req="no" sent="always"/> | Amount of completed weeklies. Sent only together with dinfo |
+| `dinfog`<ParamInfo req="no" sent="always"/> | Amount of completed gauntlet demons. Sent only together with dinfo |
+| `dinfoe`<ParamInfo req="no" sent="always"/> | Amount of completed event demons. Sent only together with dinfo |
+| `seed`<ParamInfo req="no" sent="always"/> | A random set of 10 numbers and letters in `A-Za-z0-9` |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

@@ -49,6 +49,24 @@ export default [
         "collapsed": true
       },
       {
+        "text": "Admin",
+        "items": [
+          {
+            "text": "adminGetUserHistory.php",
+            "link": "/endpoints/admin/adminGetUserHistory"
+          },
+          {
+            "text": "adminGetReportQueue.php",
+            "link": "/endpoints/admin/adminGetReportQueue"
+          },
+          {
+            "text": "deleteGJComments.php",
+            "link": "/endpoints/admin/deleteGJComments"
+          }
+        ],
+        "collapsed": true
+      },
+      {
         "text": "Comments",
         "items": [
           {
@@ -83,7 +101,7 @@ export default [
         "collapsed": true
       },
       {
-        "text": "Editor SFX",
+        "text": "Sound Packs",
         "items": [
           {
             "text": "deleteGJEditorSound.php",
@@ -180,70 +198,6 @@ export default [
           {
             "text": "uploadGJLevelList.php",
             "link": "/endpoints/lists/uploadGJLevelList"
-          }
-        ],
-        "collapsed": true
-      },
-      {
-        "text": "Misc",
-        "items": [
-          {
-            "text": "Web Leaderboards",
-            "items": [
-              {
-                "text": "icon-extras.json",
-                "link": "/endpoints/misc/lb/icon-extras"
-              },
-              {
-                "text": "top-creators.json",
-                "link": "/endpoints/misc/lb/top-creators"
-              },
-              {
-                "text": "top-demons.json",
-                "link": "/endpoints/misc/lb/top-demons"
-              },
-              {
-                "text": "top-moons.json",
-                "link": "/endpoints/misc/lb/top-moons"
-              },
-              {
-                "text": "top-stars.json",
-                "link": "/endpoints/misc/lb/top-stars"
-              },
-              {
-                "text": "top-usercoins.json",
-                "link": "/endpoints/misc/lb/top-usercoins"
-              }
-            ],
-            "collapsed": true
-          },
-          {
-            "text": "getAccountURL.php",
-            "link": "/endpoints/misc/getAccountURL"
-          },
-          {
-            "text": "getSaveData.php",
-            "link": "/endpoints/misc/getSaveData"
-          },
-          {
-            "text": "getTop1000.php",
-            "link": "/endpoints/misc/getTop1000"
-          },
-          {
-            "text": "likeGJItem211.php",
-            "link": "/endpoints/misc/likeGJItem211"
-          },
-          {
-            "text": "reportGJContent.php",
-            "link": "/endpoints/misc/reportGJContent"
-          },
-          {
-            "text": "requestUserAccess.php",
-            "link": "/endpoints/misc/requestUserAccess"
-          },
-          {
-            "text": "restoreGJItems.php",
-            "link": "/endpoints/misc/restoreGJItems"
           }
         ],
         "collapsed": true
@@ -354,6 +308,10 @@ export default [
           {
             "text": "uploadGJMessage20.php",
             "link": "/endpoints/socials/uploadGJMessage20"
+          },
+          {
+            "text": "getGJNotifications.php",
+            "link": "/endpoints/socials/getGJNotifications"
           }
         ],
         "collapsed": true
@@ -444,6 +402,78 @@ export default [
           {
             "text": "updateGJUserScore22.php",
             "link": "/endpoints/users/updateGJUserScore22"
+          }
+        ],
+        "collapsed": true
+      },
+      {
+        "text": "Misc",
+        "items": [
+          {
+            "text": "Web Leaderboards",
+            "items": [
+              {
+                "text": "icon-extras.json",
+                "link": "/endpoints/misc/lb/icon-extras"
+              },
+              {
+                "text": "top-creators.json",
+                "link": "/endpoints/misc/lb/top-creators"
+              },
+              {
+                "text": "top-demons.json",
+                "link": "/endpoints/misc/lb/top-demons"
+              },
+              {
+                "text": "top-moons.json",
+                "link": "/endpoints/misc/lb/top-moons"
+              },
+              {
+                "text": "top-stars.json",
+                "link": "/endpoints/misc/lb/top-stars"
+              },
+              {
+                "text": "top-usercoins.json",
+                "link": "/endpoints/misc/lb/top-usercoins"
+              }
+            ],
+            "collapsed": true
+          },
+          {
+            "text": "getAccountURL.php",
+            "link": "/endpoints/misc/getAccountURL"
+          },
+          {
+            "text": "getSaveData.php",
+            "link": "/endpoints/misc/getSaveData"
+          },
+          {
+            "text": "getTop1000.php",
+            "link": "/endpoints/misc/getTop1000"
+          },
+          {
+            "text": "likeGJItem211.php",
+            "link": "/endpoints/misc/likeGJItem211"
+          },
+          {
+            "text": "news.dat",
+            "link": "/endpoints/misc/news"
+          },
+          {
+            "text": "getGJContentStatus.php",
+            "link": "/endpoints/misc/getGJContentStatus"
+          },
+          {
+            "text": "reportGJContent.php",
+            "link": "/endpoints/misc/reportGJContent"
+          },
+          {
+            "text": "requestUserAccess.php",
+            "link": "/endpoints/misc/requestUserAccess"
+          },
+          {
+            "text": "restoreGJItems.php",
+            "link": "/endpoints/misc/restoreGJItems"
           }
         ],
         "collapsed": true
@@ -608,6 +638,10 @@ export default [
           {
             "text": "SFX Library Format",
             "link": "/resources/client/sfxlibrary"
+          },
+          {
+            "text": "News Format",
+            "link": "/resources/client/news"
           }
         ],
         "collapsed": true
@@ -616,11 +650,15 @@ export default [
         "text": "Server",
         "items": [
           {
+            "text": "Admin User Log Object",
+            "link": "/resources/server/adminuserlog"
+          },
+          {
             "text": "Comment Object",
             "link": "/resources/server/comment"
           },
           {
-            "text": "Editor SFX Pack Object",
+            "text": "Sound Pack Object",
             "link": "/resources/server/editorsfx"
           },
           {
@@ -662,6 +700,10 @@ export default [
           {
             "text": "Restore Object",
             "link": "/resources/server/restore"
+          },
+          {
+            "text": "Report Queue Entry Object",
+            "link": "/resources/server/reportqueue"
           },
           {
             "text": "Song Object",

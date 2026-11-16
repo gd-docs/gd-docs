@@ -77,8 +77,10 @@ Keys indicated with a dagger (†) were only returned from downloadGJLevel22 whe
 | 53* | sfxIDs | **Comma-Separated List** | The list of all SFX IDs in the level, separated by commas
 | 54  | songSize | **Integer** | The total size of the used songs and SFX, in bytes |
 | 57* | verificationTime | **Integer** | How long the level took to verify (in frames, assume 240 FPS)
-| 62   | exactUploadTime | **Integer** | The Unix timestamp of when the level was uploaded
-| 63   | exactUpdateTime | **Integer** | The Unix timestamp of when the level was last updated
+| 58  | unk | Unknown. Ignored in client code, unknown if ever sent by the server |
+| 62  | exactUploadTime | **Integer** | The Unix timestamp of when the level was uploaded
+| 63  | exactUpdateTime | **Integer** | The Unix timestamp of when the level was last updated
+| 65  | timelyID | **Integer** | The ID of this timely level. Subtract 100,000 if it's a weekly or 200,000 if it's an event. If present, the timely level can be recalled. Returned only by [getGJLevels21](/endpoints/levels/getGJLevels21) with `type`s 32-34 |
 
 ### Trivia
 

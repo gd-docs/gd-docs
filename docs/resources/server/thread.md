@@ -13,11 +13,11 @@ Unlike most other server objects, threads do not have a typical `key:value:key:v
 ```
 <!-- tabs:end -->
 
-A list of all known values can be found in the table below
+A list of all known values can be found in the table below.
 
-Values indicated with an asterisk (*) are only returned for DM threads, and are empty or 0 for group threads
+Values indicated with an asterisk (*) are only returned for DM threads, and are empty or 0 for group threads.
 
-Values indicated with a dagger (†) are only returned for group threads, and are empty or 0 for DM threads
+Values indicated with a dagger (†) are only returned for group threads, and are empty or 0 for DM threads.
 
 ### Thread Structure
 
@@ -59,23 +59,21 @@ In the getGJThreadMessages.php endpoint, a different set of values is returned. 
 | 2     | accountID     | **Integer** | The account ID of the user who invited you
 | 3     | username     | **String** | The username of the user who invited you encoded in [Base64](/topics/encryption/base64.md)
 | 4     | title        | **String** | The title of the group thread encoded in [Base64](/topics/encryption/base64.md)
-| 5     | unknown   | **Integer** | Seems to always be 1
+| 5     | members   | **Integer** | Amount of members in the thread
 | 6     | inviteAge | **String** | How long ago you were invited (e.g. "1 hour")
 | 7     | lastMessage   | **String** | How long ago the last message in the thread was sent (e.g. "13 hours")
 | 8     | message		   | **String** | The request message encoded in [Base64](/topics/encryption/base64). Only sent if the invite is a Message Request. Otherwise empty.
 | 9     | description | **String** | The description of the thread encoded in [Base64](/topics/encryption/base64.md)
 | 10    | type	   | **Integer** | `0` if the invite is a Group Invite, `1` if the invite is a Message Request (can be sent by Advisors and Moderators)
-| 11    | muted		   | **Bool** | Whether you have muted the thread or not
-| 12    | unknown		   | **Integer** | Seems to always be 0
-| 13    | ignoredInvite		 | **Bool** | Whether you have ignored this invite
-| 14  | icon  	 | **Integer** | The icon ID of the user who invited you
-| 15  | color1  	 | **Integer** | The primary color of the user who invited you
-| 16  | color2  	 | **Integer** | The secondary color of the user who invited you
-| 17  | color3  	 | **Integer** | The glow color of the user who invited you
-| 18  | iconType 	 | **Integer** | The icon type of the user who invited you
-| 19  | special 	 | **Integer** | The special value of the user who invited you
-| 20  | emoteIcon 	 | **String** | The emote icon used for this group thread
-| 21  | inviteTimestamp 	 | **Integer** | The UNIX timestamp of when you were invited
+| 11    | ignoredInvite		 | **Bool** | Whether you have ignored this invite
+| 12  | icon  	 | **Integer** | The icon ID of the user who invited you
+| 13  | color1  	 | **Integer** | The primary color of the user who invited you
+| 14  | color2  	 | **Integer** | The secondary color of the user who invited you
+| 15  | color3  	 | **Integer** | The glow color of the user who invited you
+| 16  | iconType 	 | **Integer** | The icon type of the user who invited you
+| 17  | special 	 | **Integer** | The special value of the user who invited you
+| 18  | emoteIcon 	 | **String** | The emote icon used for this group thread
+| 19  | inviteTimestamp 	 | **Integer** | The UNIX timestamp of when you were invited
 
 ### Thread Metadata
 

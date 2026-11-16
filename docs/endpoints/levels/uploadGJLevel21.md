@@ -4,42 +4,52 @@ Uploads a created level to the servers.
 
 ## Parameters
 
-| Parameter        | Explanation | Required |
-| ---------------- | ----------- | -------- |
-| `gameVersion`    | <ParamDesc name="gameVersion"/> | Yes      | <!--a-->
-| `accountID`      | <ParamDesc name="accountID"/> | Yes      | <!--a-->
-| `gjp2`           | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `userName`       | The uploader's username | Yes      | <!--a-->
-| `levelID`        | The ID of the level if updating to a newer version, otherwise `0` | Yes      | <!--a-->
-| `levelName`      | The name of the level | Yes      | <!--a-->
-| `levelDesc`      | The description of the level, in [URL-safe base64](/topics/encryption/base64.md) | Yes      | <!--a-->
-| `levelVersion`   | The version number of the level | Yes      | <!--a-->
-| `levelLength`    | The length of the level as a number, where `0` is Tiny, `4` is XL and `5` is Platformer | Yes      | <!--a-->
-| `audioTrack`     | The [official song number](/reference/songs#table-of-official-songs) used in the level (Stereo Madness = 0). Set to `0` if a newgrounds song is used | Yes      | <!--a-->
-| `auto`           | Whether the player has jumped during verification | Yes      | <!--a-->
-| `password`       | The level's copy password. Set to `0` for no copy or `1` for free copy. Other valid values consist of `1` followed by the password - either 4 or 6 digits. Ignored since `binaryVersion=39` | Yes      | <!--a-->
-| `original`       | The ID of the original level if the level was copied, otherwise `0` | Yes      | <!--a-->
-| `twoPlayer`      | Set to `1` if the level utilizes two player mode | Yes      | <!--a-->
-| `songID`         | The ID of the custom song used in the level. Set to `0` if an official song is used | Yes      | <!--a-->
-| `objects`        | The number of objects in the level | Yes      | <!--a-->
-| `coins`          | The number of user coins in the level | Yes      | <!--a-->
-| `requestedStars` | The requested star rating for the level. The number is not limited to 10 | Yes      | <!--a-->
-| `unlisted`       | Set to `2` if the level should be unlisted and to `1` if the level should be unlisted and only viewable by friends | Yes      | <!--a-->
-| `ldm`            | Whether the level uses high detail objects | Yes      | <!--a-->
-| `levelString`    | The actual level data. Must be gzip compressed and then converted to [URL-safe base64](/topics/encryption/base64.md) | Yes      | <!--a-->
-| `seed2`          | A mandatory [chk value](/topics/encryption/chk.md) generated from the first 50 characters of the **_compressed_** level data | Yes      | <!--a-->
-| `secret`         | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `wt`             | The amount of time spent in the editor of a level (local copy) |          | <!--a-->
-| `wt2`            | The amount of time spent in the editor of a level (previous copies) |          | <!--a-->
-| `seed`           | A random string |          | <!--a-->
-| `extraString`    | https://boomlings.dev/resources/client/level-components/capacity-string#capacity-string |          | <!--o-->
-| `levelInfo`      | pre-2.208 `lrs` |          |
-| `binaryVersion`  | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `ts`             | The amount of 240 TPS steps the verification attempt took |          | <!--a-->
-| `lrs`            | The replay string of the verification attempt, for leaderboard mods. TODO: document format |          | <!--a-->
-| `udid`           | <ParamDesc name="udid"/> |  | <!--a-->
-| `uuid`           | <ParamDesc name="uuid"/> |  | <!--a-->
-| `dvs`            | <ParamDesc name="dvs"/> |  | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `gameVersion`<ParamInfo req="always"/> | <ParamDesc name="gameVersion"/> |
+| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
+| `userName`<ParamInfo req="always"/> | The uploader's username |
+| `levelID`<ParamInfo req="always"/> | The ID of the level if updating to a newer version, otherwise `0` |
+| `levelName`<ParamInfo req="always"/> | The name of the level |
+| `levelDesc`<ParamInfo req="always"/> | The description of the level, in [URL-safe base64](/topics/encryption/base64.md) |
+| `levelVersion`<ParamInfo req="always"/> | The version number of the level |
+| `levelLength`<ParamInfo req="always"/> | The length of the level as a number, where `0` is Tiny, `4` is XL and `5` is Platformer |
+| `audioTrack`<ParamInfo req="always"/> | The [official song number](/reference/songs#table-of-official-songs) used in the level (Stereo Madness = 0). Set to `0` if a newgrounds song is used |
+| `auto`<ParamInfo req="always"/> | Whether the player has jumped during verification |
+| `password`<ParamInfo req="no" sent="always"/> | The level's copy password. Set to `0` for no copy or `1` for free copy. Other valid values consist of `1` followed by the password - either 4 or 6 digits. Ignored since `binaryVersion=39` |
+| `original`<ParamInfo req="always"/> | The ID of the original level if the level was copied, otherwise `0` |
+| `twoPlayer`<ParamInfo req="always"/> | Set to `1` if the level utilizes two player mode |
+| `songID`<ParamInfo req="always"/> | The ID of the custom song used in the level. Set to `0` if an official song is used |
+| `objects`<ParamInfo req="always"/> | The number of objects in the level |
+| `coins`<ParamInfo req="always"/> | The number of user coins in the level |
+| `requestedStars`<ParamInfo req="always"/> | The requested star rating for the level. The number is not limited to 10 |
+| `unlisted`<ParamInfo req="no" sent="always"/> | Set to `2` if the level should be unlisted, `1` if it should be unlisted and only viewable by friends, `0` if it should be listed |
+| `ldm`<ParamInfo req="always"/> | Whether the level uses high detail objects |
+| `levelString`<ParamInfo req="always"/> | The actual level data. Must be gzip compressed and then converted to [URL-safe base64](/topics/encryption/base64.md) |
+| `seed2`<ParamInfo req="always"/> | See the [upload level chk](/topics/encryption/chk#upload-level) |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `wt`<ParamInfo req="no" sent="always"/> | The amount of time spent in the editor of a level (local copy) |
+| `wt2`<ParamInfo req="no" sent="always"/> | The amount of time spent in the editor of a level (previous copies) |
+| `seed`<ParamInfo req="no" sent="always"/> | A random string |
+| `extraString`<ParamInfo req="no" sent="cond"/> | [Capacity String](/resources/client/level-components/capacity-string) <ParamCond sent="cond">value is not empty</ParamCond> |
+| `levelInfo` | pre-2.208 `lrs` |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `ts`<ParamInfo req="no" sent="always"/> | The amount of 240 TPS steps the verification attempt took |
+| `lrs`<ParamInfo req="no" sent="always"/> | The [replay string](/resources/client/level-components/replay-string) of the verification attempt, for leaderboard moderators |
+| `notify`<ParamInfo req="no" sent="always"/> | Which users to notify about the upload: `0` - none, `1` - friends, `2` - followers, `3` - friends and followers |
+| `ct`<ParamInfo req="no" sent="always"/> | The current Unix timestamp in seconds |
+| `bs`<ParamInfo req="no" sent="always"/> | The [Build Stats String](#) |
+| `songIDs`<ParamInfo req="no" sent="cond"/> | The level's song ID list, as stored in client key [`k104`](/resources/client/level#:~:text=k104,by%20%2C) <ParamCond sent="cond">not empty</ParamCond> |
+| `sfxIDs`<ParamInfo req="no" sent="cond"/> | The level's SFX ID list, as stored in client key [`k105`](/resources/client/level#:~:text=k105,by%20%2C) <ParamCond sent="cond">not empty</ParamCond> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 
 ## Response

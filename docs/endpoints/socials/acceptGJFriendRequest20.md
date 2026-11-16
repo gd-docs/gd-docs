@@ -4,18 +4,23 @@ Accepts a received friend request.
 
 ## Parameters
 
-| Parameter         | Explanation | Required |
-| ----------------- | ----------- | -------- |
-| `accountID`       | <ParamDesc name="accountID"/> | Yes      | <!--a-->
-| `targetAccountID` | The account which the player is trying to send a friend request to | Yes      | <!--a-->
-| `gjp2`            | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `secret`          | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `gameVersion`     | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion`   | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `udid`            | <ParamDesc name="udid"/> |          | <!--a-->
-| `uuid`            | <ParamDesc name="uuid"/> |          | <!--a-->
-| `dvs`             | <ParamDesc name="dvs"/> |          | <!--a-->
-| `requestID`       | The ID of the friend request being accepted |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
+| `targetAccountID`<ParamInfo req="always"/> | The account which the player is trying to send a friend request to |
+| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+| `requestID`<ParamInfo req="no" sent="always"/> | The ID of the friend request being accepted |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

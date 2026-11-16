@@ -1,6 +1,6 @@
 # followGJUser.php
 
-Follows a user
+Follows a user.
 
 ## Parameters
 
@@ -18,4 +18,4 @@ Follows a user
 
 ## Response
 
-1 if the account was successfully followed, -1 otherwise
+1 if the account was successfully followed, -1 otherwise.

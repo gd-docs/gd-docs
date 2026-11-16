@@ -4,21 +4,26 @@ Gets the rewards from the chests.
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `udid`          | <ParamDesc name="udid"/> | Yes      | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `chk`           | [Rewards CHK](/topics/encryption/rewards_chk) using the [chest rewards](/topics/encryption/xor.html#keys) key | Yes      | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `gdw`           | <ParamDesc name="gdw"/> |          | <!--a-->
-| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |  | <!--a-->
-| `rewardType`    | 0 for getting info about the chests, 1 to get a new small chest, 2 to get a new large chest. Defaults to 0 if left out | Yes      | <!--a--> <!--TODO: can you leave it out or is it required???-->
-| `r1`            | A random 3-5 digit number |          | <!--a-->
-| `r2`            | A random 3-5 digit number |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `udid`<ParamInfo req="always"/> | <ParamDesc name="udid"/> |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `chk`<ParamInfo req="always"/> | [Rewards CHK](/topics/encryption/rewards_chk) using the [chest rewards](/topics/encryption/xor.html#keys) key |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `gdw`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gdw"/> |
+| `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+| `rewardType`<ParamInfo req="no" sent="always"/> | 0 for getting info about the chests, 1 to get a new small chest, 2 to get a new large chest. Defaults to 0 if left out <!--TODO: can you leave it out or is it required???--> |
+| `r1`<ParamInfo req="no" sent="always"/> | A random 3-5 digit number |
+| `r2`<ParamInfo req="no" sent="always"/> | A random 3-5 digit number |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

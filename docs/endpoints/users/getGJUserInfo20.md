@@ -4,17 +4,22 @@ Gets info about a user
 
 ## Parameters
 
-| Parameter         | Explanation                                        | Required |
-| ----------------- | -------------------------------------------------- | -------- |
-| `targetAccountID` | The account ID of the person you want the info of  | Yes      | <!--a-->
-| `secret`          | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `gameVersion`     | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion`   | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `accountID`       | <ParamDesc name="accountID"/> |          | <!--a-->
-| `gjp2`            | <ParamDesc name="gjp2"/> |          | <!--a-->
-| `udid`            | <ParamDesc name="udid"/> |          | <!--a-->
-| `uuid`            | <ParamDesc name="uuid"/> |          | <!--a-->
-| `dvs`             | <ParamDesc name="dvs"/> |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `targetAccountID`<ParamInfo req="always"/> | The account ID of the person you want the info of |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

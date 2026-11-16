@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue';
 import postParams from './post-params.mts';
 
 const { name, type } = defineProps(['name', 'type']);

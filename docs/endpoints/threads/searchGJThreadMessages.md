@@ -1,6 +1,6 @@
 # searchGJThreadMessages.php
 
-Search messages in a thread for a substring
+Searches messages in a thread for a substring.
 
 ## Parameters
 

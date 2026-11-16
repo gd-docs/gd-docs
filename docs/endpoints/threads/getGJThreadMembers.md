@@ -1,6 +1,6 @@
 # getGJThreadMembers.php
 
-Gets the members of a thread. You can use this for threads you are a member of and threads you have a pending invite for
+Gets the members of a thread. You can use this for threads you are a member of and threads you have a pending invite to.
 
 ## Parameters
 

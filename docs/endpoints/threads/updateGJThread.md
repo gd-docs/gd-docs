@@ -1,6 +1,6 @@
 # updateGJThread.php
 
-Perform a wide variety of actions on threads  
+Performs a wide variety of actions on threads.
 
 ## Parameters
 
@@ -11,7 +11,7 @@ Perform a wide variety of actions on threads
 | `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
 | `threadID`      | The thread to update | Yes (except type 3) | <!--a-->
 | `mode`          | The type of action to perform, [see values](#mode) | Yes | <!--a-->
-| `value`         | Action-specific value. **Always** encoded in Base64 | Depends on mode | <!--a-->
+| `value`         | Action-specific value. **Always** encoded in Base64 | Depends on mode |
 | `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
 | `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
 | `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
@@ -44,4 +44,4 @@ Perform a wide variety of actions on threads
 
 ## Response
 
-1 if successful, -1 otherwise
+1 if successful, -1 otherwise.

@@ -5,19 +5,24 @@ Gets the leaderboard scores.
 ## Parameters
 
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |  | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |  | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |  | <!--a-->
-| `accountID`     | <ParamDesc name="accountID"/> |  | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> |  | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |  | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |  | <!--a-->
-| `type`          | Can be `top`, `relative`, `friends`, or `creators`. If left out it defaults to `top` |  | <!--a-->
-| `count`         | Returns the amount of players specified. Limited to 100 |  | <!--a-->
-| `stat`          | The user statistic to use when ordering `top`, `relative` and `friends` leaderboards. `0` - stars, `1` - moons, `2` - demons, `3` - user coins. Default: `0`. |  | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+| `type`<ParamInfo req="no" sent="always"/> | Can be `top`, `relative`, `friends`, or `creators`. If left out it defaults to `top` |
+| `count`<ParamInfo req="no" sent="always"/> | Returns the amount of players specified. Limited to 100 |
+| `stat`<ParamInfo req="no" sent="always"/> | The user statistic to use when ordering `top`, `relative` and `friends` leaderboards. `0` - stars, `1` - moons, `2` - demons, `3` - user coins. Default: `0`. |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

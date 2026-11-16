@@ -9,10 +9,10 @@ Gets a user's message threads.
 | `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
 | `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
 | `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `page`          | The page of threads you want to fetch, starting from 0. Defaults to the first if left out |       | <!--a-->
-| `filter`        | Which threads to show: 0 for all (default), 1 for DM, 2 for Group |       | <!--a-->
-| `removed`       | Unknown, always sent as 1 |       | <!--a-->
-| `user`          | Filter for threads that have these users. Comma-separated list of account IDs |       | <!--a-->
+| `page`          | The page of threads you want to fetch, starting from 0. Defaults to the first if left out |       |
+| `filter`        | Which threads to show: 0 for all (default), 1 for DM, 2 for Group |       |
+| `removed`       | Unknown, always sent as 1 |       |
+| `user`          | Filter for threads that have these users. Comma-separated list of account IDs |       |
 | `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
 | `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
 | `udid`          | <ParamDesc name="udid"/> |          | <!--a-->

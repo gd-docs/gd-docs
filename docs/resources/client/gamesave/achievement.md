@@ -299,6 +299,7 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.lists04 | Claim 100 List Rewards|
 | geometry.ach.lists05 | Claim 150 List Rewards|
 | geometry.ach.lists06 | Claim 200 List Rewards|
+| geometry.ach.hyped01 | Get a level Hyped     |
 | geometry.ach.shardFire01 | Collect 5 Fire Shards|
 | geometry.ach.shardFire02 | Collect 15 Fire Shards|
 | geometry.ach.shardFire03 | Collect 35 Fire Shards|
@@ -359,6 +360,7 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.shardBonusB03 | Collect 35 of each Tier 2 Shard|
 | geometry.ach.shardBonusB04 | Collect 65 of each Tier 2 Shard|
 | geometry.ach.shardBonusB05 | Collect 100 of each Tier 2 Shard|
+| geometry.ach.follower01    | Get your first follower|
 | geometry.ach.followCreator | Follow 1 Creator|
 | geometry.ach.followCreator02 | Follow 10 Creators|
 | geometry.ach.followCreator03 | Follow 25 Creators|

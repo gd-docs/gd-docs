@@ -4,21 +4,26 @@ Downloads a user level and info so it can be played.
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `levelID`       | The ID of the level to download. Use -1 for the daily level, -2 for the weekly and -3 for the event level. | Yes      | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
-| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
-| `inc`           | Whether the amount of downloads should be incremented on the level (requires proper authentication) |          | <!--o-->
-| `extras`        | Used to return some extra data when set to 1, but was disabled sometime in 2022 |          |
-| `rs`            | [See here](/topics/encryption/id#rs) |          | <!--a-->
-| `chk`           | [See here](/topics/encryption/chk#download-level) |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `levelID`<ParamInfo req="always"/> | The ID of the level to download. Use -1 for the daily level, -2 for the weekly and -3 for the event level. |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+| `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `inc`<ParamInfo req="no" sent="cond"/> | Whether the amount of downloads should be incremented on the level (requires proper authentication) <!--TODO ParamCond--> |
+| `extras` | Used to return some extra data when set to 1, but was disabled sometime in 2022 |
+| `rs`<ParamInfo req="no" sent="always"/> | [See here](/topics/encryption/id#rs) |
+| `chk`<ParamInfo req="no" sent="always"/> | [See here](/topics/encryption/chk#download-level) |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

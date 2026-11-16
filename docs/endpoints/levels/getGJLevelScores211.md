@@ -4,43 +4,48 @@ Fetches the leaderboard for a level and submits your level stats to the server
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `levelID`       | The ID of the level | Yes      | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
-| `time`          | Your time in milliseconds, if you completed the level |          | <!--a-->
-| `points`        | Your points. Always 0 for this endpoint |          | <!--a-->
-| `plat`          | Always 0 for this endpoint |          | <!--a-->
-| `percent`       | The percent the user has on the level. Will not update if left out, but still retrieves data |          | <!--a-->
-| `type`          | 0 for Friends, 1 for Top, 2 for Week. Defaults to 0 if left out |          | <!--a-->
-| `s1`            | User's attempts + 8354 |          | <!--a-->
-| `s2`            | User's clicks + 3991 |          | <!--a-->
-| `s3`            | User's attempt time in seconds + 4085 |          | <!--a-->
-| `s4`            | [levelSeed](#levelseed) |          | <!--a-->
-| `s5`            | Random number -> `(((GJGameLevel->0x1B8 ? 2000.0 : 0) + rand()) * 4.6566e-10) * 1999.0` |          | <!--a-->
-| `s6`            | List of PB differences (For example from 0 to 50, then 69, it would be `50,19`) [XOR'd](/topics/encryption/xor.md) with `41274` and [Base64](/topics/encryption/base64.md) encoded |          | <!--a-->
-| `s7`            | Randomly Generated 10 character string |          | <!--a-->
-| `s8`            | Attempt Count |          | <!--a-->
-| `s9`            | The amount of coins the user got + 5819 |          | <!--a-->
-| `s10`           | Timely ID -> for dailies and weeklies |          | <!--a-->
-| `s11`           | 0 if level has not been completed, otherwise, amount of ticks on the best time attempt + 46533 |          | <!--a-->
-| `s12`           | 0 if level has not been completed, 25645 otherwise |          | <!--a-->
-| `s13`           | Unknown value, starts at 1171520 |          | <!--a-->
-| `s14`           | 0 if level has not been completed, otherwise, amount of clicks on the best time attempt + 7684 |          | <!--a-->
-| `s15`           | 0 if level has not been completed, 3453 otherwise |          | <!--a-->
-| `s16`           | Seems to always be empty |          | <!--a-->
-| `s17`           | Seems to always be empty |          | <!--a-->
-| `s18`           | 0 if level has not been completed, the amount of collected coins on the best time attempt + 6433 otherwise |          | <!--a-->
-| `s19`           | 0 if level has not been completed, 6323 otherwise |          | <!--a-->
-| `s20`           | The level version |          | <!--a-->
-| `chk`           | [See here](/topics/encryption/chk#level-leaderboard) |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
+| `levelID`<ParamInfo req="always"/> | The ID of the level |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+| `time`<ParamInfo req="no" sent="always"/> | Your time in milliseconds, if you completed the level |
+| `points`<ParamInfo req="no" sent="always"/> | Your points. Always 0 for this endpoint |
+| `plat`<ParamInfo req="no" sent="always"/> | Always 0 for this endpoint |
+| `percent`<ParamInfo req="no" sent="always"/> | The percent the user has on the level. Will not update if left out, but still retrieves data |
+| `type`<ParamInfo req="no" sent="always"/> | 0 for Friends, 1 for Top, 2 for Week. Defaults to 0 if left out |
+| `s1`<ParamInfo req="no" sent="always"/> | User's attempts + 8354 |
+| `s2`<ParamInfo req="no" sent="always"/> | User's clicks + 3991 |
+| `s3`<ParamInfo req="no" sent="always"/> | User's attempt time in seconds + 4085 |
+| `s4`<ParamInfo req="no" sent="always"/> | [levelSeed](#levelseed) |
+| `s5`<ParamInfo req="no" sent="always"/> | Random number -> `(((GJGameLevel->0x1B8 ? 2000.0 : 0) + rand()) * 4.6566e-10) * 1999.0` |
+| `s6`<ParamInfo req="no" sent="always"/> | List of PB differences (For example from 0 to 50, then 69, it would be `50,19`) [XOR'd](/topics/encryption/xor.md) with `41274` and [Base64](/topics/encryption/base64.md) encoded |
+| `s7`<ParamInfo req="no" sent="always"/> | Randomly Generated 10 character string |
+| `s8`<ParamInfo req="no" sent="always"/> | Attempt Count |
+| `s9`<ParamInfo req="no" sent="always"/> | The amount of coins the user got + 5819 |
+| `s10`<ParamInfo req="no" sent="always"/> | Timely ID -> for dailies and weeklies |
+| `s11`<ParamInfo req="no" sent="always"/> | 0 if level has not been completed, otherwise, amount of ticks on the best time attempt + 46533 |
+| `s12`<ParamInfo req="no" sent="always"/> | 0 if level has not been completed, 25645 otherwise |
+| `s13`<ParamInfo req="no" sent="always"/> | Unknown value, starts at 1171520 |
+| `s14`<ParamInfo req="no" sent="always"/> | 0 if level has not been completed, otherwise, amount of clicks on the best time attempt + 7684 |
+| `s15`<ParamInfo req="no" sent="always"/> | 0 if level has not been completed, 3453 otherwise |
+| `s16`<ParamInfo req="no" sent="always"/> | Seems to always be empty |
+| `s17`<ParamInfo req="no" sent="always"/> | Seems to always be empty |
+| `s18`<ParamInfo req="no" sent="always"/> | 0 if level has not been completed, the amount of collected coins on the best time attempt + 6433 otherwise |
+| `s19`<ParamInfo req="no" sent="always"/> | 0 if level has not been completed, 6323 otherwise |
+| `s20`<ParamInfo req="no" sent="always"/> | The level version |
+| `chk`<ParamInfo req="no" sent="always"/> | [See here](/topics/encryption/chk#level-leaderboard) |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## levelSeed
 the levelSeed can be generated like this:

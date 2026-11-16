@@ -4,18 +4,23 @@ Gets RobTop's handpicked top artists.
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
-| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
-| `page`          | Which page of the artists you want to see |          | <!--a-->
-| `total`         | Probably the cached total number of artists, default is `0` |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+| `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
+| `page`<ParamInfo req="no" sent="always"/> | Which page of the artists you want to see |
+| `total`<ParamInfo req="no" sent="always"/> | Probably the cached total number of artists, default is `0` |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

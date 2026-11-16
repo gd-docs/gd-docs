@@ -74,7 +74,7 @@ Your CCGameManager.dat File contains a lot of information regarding your account
 | practicePosY | float | The Y position of the practice UI |
 | newsLastReadID | integer | The ID of the news post you last saw |
 | recentEmotes | string | 16 of your most recently used emotes, separated by commas |
-| editorSFXGlobalVolume | float | The volume for editor SFX |
+| editorSFXGlobalVolume | float | The volume for sound packs |
 | scrollSensitivity | float | The Scroll option in the "Other" settings category |
 | specialPermKey | integer | Unknown, presumably something related to the new mod system |
 

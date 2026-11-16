@@ -10,17 +10,22 @@ Saves account data
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> | Yes      | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> | Yes      | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> | Yes      | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> | Yes      | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
-| `saveData`      | The save data for CCGameManager.dat compressed with gzip, then a semicolon `;` and the save data for CCLocalLevels.dat compressed with gzip | Yes      | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="account"/> | Yes      | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
+| `gameVersion`<ParamInfo req="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="always"/> | <ParamDesc name="binaryVersion"/> |
+| `udid`<ParamInfo req="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+| `saveData`<ParamInfo req="always"/> | The save data for CCGameManager.dat compressed with gzip, then a semicolon `;` and the save data for CCLocalLevels.dat compressed with gzip |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="account"/> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 
@@ -29,7 +34,7 @@ Saves account data
 If the response was not successful, there are several different error codes that can be returned:
 
 | Code | Name | Description |
-|------|------|-------------|
+| ---- | ---- | ----------- |
 | `-1`   | Generic error | Displays a generic "Backup failed." message along with the save sizes of `GameManager` and `LocalLevelManager`, if they are over 32mb combined. |
 | `-2`   | Login Failed  | Your login credentials were wrong and you need to log back in, prompts the user to login and verify their account |
 | `-3`   | Generic error | Unlike code -1 (or any other unknown codes), this error code displays -3 alongside the backup failed message |

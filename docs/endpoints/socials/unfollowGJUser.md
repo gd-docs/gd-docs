@@ -1,6 +1,6 @@
 # unfollowGJUser.php
 
-Unfollows a user
+Unfollows a user.
 
 ## Parameters
 
@@ -18,4 +18,4 @@ Unfollows a user
 
 ## Response
 
-Always 1 if the required parameters are provided, even if the account does not exist
+Always 1 if the required parameters are provided, even if the account does not exist.

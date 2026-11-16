@@ -7,13 +7,18 @@ This endpoint is used to register an account. In 2.2, it was replaced with [regi
 
 ## Parameters
 
-| Parameter  | Explanation                                         | Required |
-| ---------- | --------------------------------------------------- | -------- |
-| `userName` | The username of the account to create               | Yes      |
-| `password` | The password of the account to create               | Yes      |
-| `email`    | The email of the account to create                  | Yes      |
-| `secret`   | <ParamDesc name="secret" type="account"/> | Yes      |
-| `rsession`   | The session token for registering an account, obtained from [openedRegister.php](/endpoints/accounts/openedRegister) | Yes      |
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `userName`<ParamInfo req="always"/> | The username of the account to create |
+| `password`<ParamInfo req="always"/> | The password of the account to create |
+| `email`<ParamInfo req="always"/> | The email of the account to create |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="account"/> |
+| `rsession`<ParamInfo req="always"/> | The session token for registering an account, obtained from [openedRegister.php](/endpoints/accounts/openedRegister) |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

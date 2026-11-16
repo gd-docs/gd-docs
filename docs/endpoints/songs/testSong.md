@@ -10,9 +10,14 @@ Gets whitelist/artist info about a song.
 
 ## Parameters
 
-| Parameter | Explanation                      | Required |
-| --------- | -------------------------------- | -------- |
-| `songID`  | The ID of the song on newgrounds | Yes      |
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `songID`<ParamInfo req="always"/> | The ID of the song on newgrounds |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

@@ -4,11 +4,16 @@ Gets the URL for the data server.
 
 ## Parameters
 
-| Parameter   | Explanation | Required |
-| ----------- | ----------- | -------- |
-| `accountID` | <ParamDesc name="accountID"/> | Yes      | <!--a-->
-| `type`      | Used to decide which endpoint is used after the data server is found. `1` = backup data, `2` = sync data | Yes      | <!--a-->
-| `secret`    | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
+| `type`<ParamInfo req="always"/> | Used to decide which endpoint is used after the data server is found. `1` = backup data, `2` = sync data |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

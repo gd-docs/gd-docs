@@ -4,17 +4,22 @@ Gets miscellaneous Geometry Dash-related info about a song
 
 ## Parameters
 
-| Parameter       | Explanation | Required |
-| --------------- | ----------- | -------- |
-| `songID`        | The newgrounds ID of the song you want information about | Yes      | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
-| `accountID`     | <ParamDesc name="accountID"/> |          | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `songID`<ParamInfo req="always"/> | The newgrounds ID of the song you want information about |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `gameVersion` | <ParamDesc name="gameVersion"/> |
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |
+| `udid` | <ParamDesc name="udid"/> |
+| `uuid` | <ParamDesc name="uuid"/> |
+| `dvs` | <ParamDesc name="dvs"/> |
+| `accountID` | <ParamDesc name="accountID"/> |
+| `gjp2` | <ParamDesc name="gjp2"/> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 

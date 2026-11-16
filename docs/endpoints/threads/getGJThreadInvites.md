@@ -1,6 +1,6 @@
 # getGJThreadInvites.php
 
-Gets your current thread invites
+Gets your current thread invites.
 
 ## Parameters
 
@@ -17,7 +17,7 @@ Gets your current thread invites
 
 ## Response
 
-A list of [Thread Invite Objects](/resources/server/thread#thread-invite-object) separated by pipes `|`. or `none` if there are no pending invites
+A list of [Thread Invite Objects](/resources/server/thread#thread-invite-object) separated by pipes `|`, or `none` if there are no pending invites.
 
 ## Example
 

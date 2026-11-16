@@ -14,4 +14,4 @@ They have 3 distinct parts, which are as follows:
 ##P##t={title}:b={description}##P##{error}
 ```
 
-The title and description are encoded in [URL-safe base64](/topics/encryption/base64). The error code is always a negative number, often `-1`
+The title and description are encoded in [URL-safe base64](/topics/encryption/base64). The error code is always a negative number, often `-1`.

@@ -115,6 +115,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k123 | Time Saved                     | **bool**                                                         | Whether level completion was legitimate and time was successfully saved |
 | k124 | Points Saved                   | **bool**                                                         | Whether level completion was legitimate and points were successfully saved |
 | k125 | Click Between Steps override   | **integer**                                                      | The Click Between Steps override for the level (2.2082 only). 0 - none, 1 - enable, 2 - disable |
+| k156 | Editor Build Stats | [Build Stats String](/resources/client/level-components/build-stats-string) | Editor build statistics for the level |
 
 The classic level seed is generated like this (please note you need to add another `1482` when submitting the level score):
 

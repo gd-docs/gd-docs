@@ -1,22 +1,22 @@
 # getGJNotifications.php
 
-Fetches your notifications
+Fetches your notifications.
 
 ## Parameters
 
 | Parameter       | Explanation | Required |
 | --------------- | ----------- | -------- |
-| `accountID`     | <ParamDesc name="accountID"/> | Yes | <!--a-->
-| `gjp2`          | <ParamDesc name="gjp2"/> | Yes | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes | <!--a-->
-| `mask`          | Bit mask for enabled/disabled notification types, see below for details. Defaults to `65535` (all enabled) if left out |  | <!--a-->
-| `page`          | Which page of notifications you want, starting at 0. Defaults to the first if left out |  | <!--a-->
-| `total`         | The amount of notifications to fetch, defaults to 10. Seemingly has no upper boundary |  | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |  | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |  | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |  | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |  | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |  | <!--a-->
+| `accountID`     | <ParamDesc name="accountID"/> | Yes |
+| `gjp2`          | <ParamDesc name="gjp2"/> | Yes |
+| `secret`        | <ParamDesc name="secret" type="common"/> | Yes |
+| `mask`          | Bit mask for enabled/disabled notification types, see below for details. Defaults to `65535` (all enabled) if left out |  |
+| `page`          | Which page of notifications you want, starting at 0. Defaults to the first if left out |  |
+| `total`         | The amount of notifications to fetch, defaults to 10. Seemingly has no upper boundary |  |
+| `gameVersion`   | <ParamDesc name="gameVersion"/> |  |
+| `binaryVersion` | <ParamDesc name="binaryVersion"/> |  |
+| `udid`          | <ParamDesc name="udid"/> |  |
+| `uuid`          | <ParamDesc name="uuid"/> |  |
+| `dvs`           | <ParamDesc name="dvs"/> |  |
 
 ## Bit Mask
 
@@ -34,7 +34,7 @@ The `mask` parameter represents which notification types are enabled/disabled. A
 
 ## Response
 
-The [Notification Objects](/resources/server/notification.md), separated by pipes `|`. After that, a `#` separates the page info, which is in the format `total:offset:amount` where total is the total number of notifications for the query, offset is the offset from which the current page starts and amount is the number of notifications per page
+The [Notification Objects](/resources/server/notification.md), separated by pipes `|`. After that, a `#` separates the page info, which is in the format `total:offset:amount` where total is the total number of notifications for the query, offset is the offset from which the current page starts and amount is the number of notifications per page.
 
 ## Example Response
 

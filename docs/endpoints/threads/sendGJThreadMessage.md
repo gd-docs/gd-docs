@@ -1,6 +1,6 @@
 # sendGJThreadMessage.php
 
-Sends a message in an existing thread or starts a new thread. This endpoint has a cooldown of 20 messages per minute
+Sends a message in an existing thread or starts a new thread. This endpoint has a cooldown of 20 messages per minute.
 
 ## Parameters
 
@@ -9,15 +9,15 @@ Sends a message in an existing thread or starts a new thread. This endpoint has 
 | `accountID`     | <ParamDesc name="accountID"/> | Yes      | <!--a-->
 | `gjp2`          | <ParamDesc name="gjp2"/> | Yes      | <!--a-->
 | `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `threadID`      | The ID of the thread to send a message to. `0` if starting a new thread | | <!--a-->
-| `body`          | The message body, converted to [URL-safe base64](/topics/encryption/base64) | | <!--a-->
-| `isDM`          | `1` if starting a DM thread | | <!--a-->
-| `toAccountID`   | If starting a DM thread, the account ID of the person the DM thread will be shared with, 0 otherwise | | <!--a-->
-| `subject`       | If starting a group thread, the name of the thread encoded in [URL-safe base64](/topics/encryption/base64) | | <!--a-->
-| `description`   | If starting a group thread, the description of the thread encoded in [URL-safe base64](/topics/encryption/base64) | | <!--a-->
-| `emote`         | If starting a group thread, the emote used as the icon encoded in [URL-safe base64](/topics/encryption/base64) | | <!--a-->
-| `targets`       | If starting a group thread, the account IDs of the people you want to invite, separated by commas and encoded in [URL-safe base64](/topics/encryption/base64) | | <!--a-->
-| `token`         | Sent as the current UNIX timestamp (in seconds) left-shifted by 0x14 (20) | | <!--a-->
+| `threadID`      | The ID of the thread to send a message to. `0` if starting a new thread | |
+| `body`          | The message body, converted to [URL-safe base64](/topics/encryption/base64) | |
+| `isDM`          | `1` if starting a DM thread | |
+| `toAccountID`   | If starting a DM thread, the account ID of the person the DM thread will be shared with, 0 otherwise | |
+| `subject`       | If starting a group thread, the name of the thread encoded in [URL-safe base64](/topics/encryption/base64) | |
+| `description`   | If starting a group thread, the description of the thread encoded in [URL-safe base64](/topics/encryption/base64) | |
+| `emote`         | If starting a group thread, the emote used as the icon encoded in [URL-safe base64](/topics/encryption/base64) | |
+| `targets`       | If starting a group thread, the account IDs of the people you want to invite, separated by commas and encoded in [URL-safe base64](/topics/encryption/base64) | |
+| `token`         | Sent as the current UNIX timestamp (in seconds) left-shifted by 0x14 (20) | |
 | `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
 | `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
 | `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
@@ -30,7 +30,7 @@ Returns the thread ID and message ID separated by a colon `:` if the message was
 
 If you are not in the thread, returns a [Custom Error Message](/topics/custom_error) with the title "Group Chat" and body "You are no longer in this group chat."
 
-If the thread does not exist or there's another issue with your request, returns `-1`
+If the thread does not exist or there's another issue with your request, returns `-1`.
 
 ## Example
 

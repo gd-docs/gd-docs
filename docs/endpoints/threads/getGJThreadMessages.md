@@ -1,6 +1,6 @@
 # getGJThreadMessages.php
 
-Gets the messages in a thread
+Gets the messages in a thread.
 
 ## Parameters
 
@@ -12,9 +12,9 @@ Gets the messages in a thread
 | `threadID`      | The ID of the thread to fetch messages from | Yes | <!--a-->
 | `beforeID`      | All fetched messages will be older than this message ID | | <!--a-->
 | `afterID`       | All fetched messages will be newer than this message ID | | <!--a-->
-| `aroundID`      | All fetched messages will be around this message ID. Used when jumping to a message from search | | <!--a-->
+| `aroundID`      | All fetched messages will be around this message ID. Used when jumping to a message from search | |
 | `date`          |
-| `mv`            | Unknown. Only sent when refreshing the thread | | <!--a-->
+| `mv`            | Unknown. Only sent when refreshing the thread | |
 | `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
 | `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
 | `udid`          | <ParamDesc name="udid"/> |          | <!--a-->

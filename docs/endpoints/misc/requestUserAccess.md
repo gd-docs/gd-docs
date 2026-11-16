@@ -4,20 +4,25 @@ Requests moderator access.
 
 ## Parameters
 
-| Parameter       | Explanation| Required |
-| --------------- | ----------- | -------- |
-| `accountID`     | The accountID of the user requesting mod access | Yes      | <!--a-->
-| `gjp2`          | The [GJP2](/topics/gjp.md) of the user requesting mod access | Yes      | <!--a-->
-| `secret`        | <ParamDesc name="secret" type="common"/> | Yes      | <!--a-->
-| `gameVersion`   | <ParamDesc name="gameVersion"/> |          | <!--a-->
-| `binaryVersion` | <ParamDesc name="binaryVersion"/> |          | <!--a-->
-| `udid`          | <ParamDesc name="udid"/> |          | <!--a-->
-| `uuid`          | <ParamDesc name="uuid"/> |          | <!--a-->
-| `dvs`           | <ParamDesc name="dvs"/> |          | <!--a-->
+<ParamGroup>
+
+| Parameter | Explanation |
+| --------- | ----------- |
+| `accountID`<ParamInfo req="always"/> | The accountID of the user requesting mod access |
+| `gjp2`<ParamInfo req="always"/> | The [GJP2](/topics/gjp.md) of the user requesting mod access |
+| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
+| `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
+| `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
+
+<ParamInfoFooter/>
+</ParamGroup>
 
 ## Response
 
-1 if granted Moderator, 2 if granted Elder Moderator, 99 if granted Leaderboard Moderator, and -1 if not granted
+1 if granted Advisor (formerly Moderator), 2 if granted Moderator (formerly Elder Moderator), 99 if granted Leaderboard Moderator, and -1 if not granted.
 
 ## Example
 

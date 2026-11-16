@@ -4,7 +4,7 @@
 
 Notifications are a feature in Geometry Dash where you can receive alerts about events such as your levels reaching a certain amount of downloads, or one of your friends/people you follow getting a rated level.
 
-A typical notification server response is structured with a `key:value:key:value` pairing and is then split with a `|`
+A typical notification server response is structured with a `key:value:key:value` pairing and is then split with a `|`.
 <!-- tabs:start -->
 
 #### **Notification Example Response**
@@ -15,7 +15,7 @@ week:7:0:8:1:9:149867590:10::11:0:12:0:13:0:14:0:15:2171511:16:roadkiller
 <!-- tabs:end -->
 
 Each `key` is tied to a component within the client and the `value` sets data for the specific component.
-A list of all known keys can be found in the table below
+A list of all known keys can be found in the table below.
 
 ### Notification Structure
 
