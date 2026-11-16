@@ -41,9 +41,9 @@ Values indicated with a dagger (†) are only returned for group threads, and ar
 | 16  | icon*  	 | **Integer** | The icon ID of the user on the other end of the thread
 | 17  | color1*  	 | **Integer** | The primary color of the user on the other end of the thread
 | 18  | color2*  	 | **Integer** | The secondary color of the user on the other end of the thread
-| 19  | color3*  	 | **Integer** | The glow color of the user on the other end of the thread
+| 19  | glowColor*  	 | **Integer** | The glow color of the user on the other end of the thread
 | 20  | iconType*  	 | **Integer** | The icon type of the user on the other end of the thread
-| 21  | special*  	 | **Integer** | Whether this person has glow enabled
+| 21  | glowEnabled*  	 | **Integer** | Whether this person has glow enabled. 0 - disabled, 2 - enabled
 | 22  | description†  	 | **String** | The description of this group thread encoded in [Base64](/topics/encryption/base64.md)
 | 23  | emoteIcon†  	 | **String** | The emote icon used for this group thread
 | 24  | lastMessageTimestamp | **Integer** | The UNIX timestamp of the last message
@@ -69,9 +69,9 @@ In the getGJThreadMessages.php endpoint, a different set of values is returned. 
 | 12  | icon  	 | **Integer** | The icon ID of the user who invited you
 | 13  | color1  	 | **Integer** | The primary color of the user who invited you
 | 14  | color2  	 | **Integer** | The secondary color of the user who invited you
-| 15  | color3  	 | **Integer** | The glow color of the user who invited you
+| 15  | glowColor  	 | **Integer** | The glow color of the user who invited you
 | 16  | iconType 	 | **Integer** | The icon type of the user who invited you
-| 17  | special 	 | **Integer** | The special value of the user who invited you
+| 17  | glowEnabled 	 | **Integer** | Whether this person has glow enabled. 0 - disabled, 2 - enabled
 | 18  | emoteIcon 	 | **String** | The emote icon used for this group thread
 | 19  | inviteTimestamp 	 | **Integer** | The UNIX timestamp of when you were invited
 
