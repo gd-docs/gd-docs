@@ -69,6 +69,7 @@ All Geometry Dash endpoints that can be found in the binary or inside another en
 | &ZeroWidthSpace;                                                                                                    |                 |
 | [`https://www.boomlings.com/database/getCustomContentURL.php`](/endpoints/songs/getCustomContentURL.md)             | Songs           |
 | [`https://www.boomlings.com/database/getGJSongInfo.php`](/endpoints/songs/getGJSongInfo.md)                         | Songs           |
+| [`https://www.boomlings.com/database/getGJAudioFilesize.php`](/endpoints/songs/getGJAudioFilesize.md) | Songs |
 | [`https://www.boomlings.com/database/getGJTopArtists.php`](/endpoints/songs/getGJTopArtists.md)                     | Songs           |
 | [`https://geometrydashfiles.b-cdn.net/music/musiclibrary_02.dat`](/endpoints/songs/musiclibrary.md) | Songs           |
 | [`https://geometrydashfiles.b-cdn.net/music/musiclibrary_version_02.txt`](/endpoints/songs/musiclibrary.md) | Songs           |
@@ -142,7 +143,6 @@ All Geometry Dash endpoints that can be found in the binary or inside another en
 | `https://www.boomlings.com/database/uploadGJEditorSound.php` |
 | `https://www.boomlings.com/database/deleteGJEditorSound.php` |
 | `https://www.boomlings.com/database/updateGJSoundDesc.php` |
-| `https://www.boomlings.com/database/getGJAudioFilesize.php` |
 | `https://www.boomlings.com/database/accounts/openedRegister.php` |
 | `https://geometrydashfiles.b-cdn.net/news/news_version.txt` |
 | `https://geometrydashfiles.b-cdn.net/news/news.dat` |

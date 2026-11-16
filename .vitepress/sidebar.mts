@@ -332,6 +332,10 @@ export default [
             "link": "/endpoints/songs/getGJSongUsage"
           },
           {
+            "text": "getGJAudioFilesize.php",
+            "link": "/endpoints/songs/getGJAudioFilesize"
+          },
+          {
             "text": "getGJTopArtists.php",
             "link": "/endpoints/songs/getGJTopArtists"
           },
