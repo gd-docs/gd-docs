@@ -242,6 +242,7 @@ Unlocked Game Variables (ugv) are used to check if ingame events have been compl
 | ugv_35 | Mechanic Unlocked |
 | ugv_36 | Mechanic Dialogue |
 | ugv_37 | Diamond Shopkeeper Dialogue |
+| ugv_39 | Spotlight Chest unlocked |
 
 ### Undiscovered/unknown GV's
 
