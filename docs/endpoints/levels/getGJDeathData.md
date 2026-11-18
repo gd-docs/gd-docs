@@ -31,7 +31,16 @@ Fetches the death data for a level.
 - `{unk2}` unknown, seems to range 0-3
 - `{encodedDeathData}` is the death data encoded as a [Level String](/topics/levelstring_encoding_decoding#decoding), in the format `{deathMarkers}|{globalProgress}`
     - `{deathMarkers}` is a list of death markers in the following format, separated by `;`:
-      - `{x},{y},{deaths},{deathPercentage * 10},{wallPercentage * 10},{unknown; deaths?},{stars},{deathPercentageBorder},{wallPercentageBorder}`
+      - `{x},{y},{deaths},{deathPercentage},{wallPercentage},{unk},{stars},{deathPercentageBorder},{wallPercentageBorder}`
+        - `{x}` the x position of the death marker
+        - `{y}` the y position of the death marker
+        - `{deaths}` the number of deaths at the death marker
+        - `{deathPercentage}` the percentage of deaths at the marker, multiplied by 10 to be an integer 0-1000
+        - `{wallPercentage}` the percentage of deaths at the marker where the player did not get past, multiplied by 10 to be an integer 0-1000
+        - `{unk}` unknown, seems to correlate with deaths
+        - `{stars}` the star rating of the death marker, 0-5 stars
+        - `{deathPercentageBorder}` the border of of the deathPercentage icon
+        - `{wallPercentageBorder}` the border of of the wallPercentage icon
     - `{globalProgress}` is the global level progress in the format `{n0},{n1},...,{n102}`, where the index is the level percentage, and the value is the number of runs reaching said percentage. The last two values (indices 101 & 102) are the total runs and total completions respectively.
 
 
