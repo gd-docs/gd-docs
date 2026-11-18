@@ -22,6 +22,7 @@ All Geometry Dash endpoints that can be found in the binary or inside another en
 | [`https://www.boomlings.com/database/deleteGJLevelUser20.php`](/endpoints/levels/deleteGJLevelUser20.md)            | Levels          |
 | [`https://www.boomlings.com/database/downloadGJLevel22.php`](/endpoints/levels/downloadGJLevel22.md)                | Levels          |
 | [`https://www.boomlings.com/database/getGJDailyLevel.php`](/endpoints/levels/getGJDailyLevel.md)                    | Levels          |
+| [`https://www.boomlings.com/database/getGJDeathData.php]`](/endpoints/levels/getGJDeathData.md)                     | Levels          |
 | [`https://www.boomlings.com/database/getGJGauntlets21.php`](/endpoints/levels/getGJGauntlets21.md)                  | Levels          |
 | [`https://www.boomlings.com/database/getGJLevels21.php`](/endpoints/levels/getGJLevels21.md)                        | Levels          |
 | [`https://www.boomlings.com/database/getGJLevelScores211.php`](/endpoints/levels/getGJLevelScores211.md)            | Levels          |
@@ -32,6 +33,7 @@ All Geometry Dash endpoints that can be found in the binary or inside another en
 | [`https://www.boomlings.com/database/reportGJLevel.php`](/endpoints/levels/reportGJLevel.md)                        | Levels          |
 | [`https://www.boomlings.com/database/suggestGJStars20.php`](/endpoints/levels/suggestGJStars20.md)                  | Levels          |
 | [`https://www.boomlings.com/database/updateGJDesc20.php`](/endpoints/levels/updateGJDesc20.md)                      | Levels          |
+| [`https://www.boomlings.com/database/uploadGJDeathData.php]`](/endpoints/levels/uploadGJDeathData.md)               | Levels          |
 | [`https://www.boomlings.com/database/uploadGJLevel21.php`](/endpoints/levels/uploadGJLevel21.md)                    | Levels          |
 | &ZeroWidthSpace;                                                                                                    |                 |
 | [`https://www.boomlings.com/database/deleteGJLevelList.php`](/endpoints/lists/deleteGJLevelList.md)                 | Lists           |
