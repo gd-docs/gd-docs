@@ -25,9 +25,9 @@ Uploads the user's death data to the server.
 
 
 #### Format
-`{levelID},{unknown},{encodedDeathData}`
+`{levelID},{unk},{encodedDeathData}`
 - `{levelID}` is the ID of the level to upload death data for
-- `{unkown}` unknown, maybe total deaths?
+- `{unk}` unknown, maybe total deaths?
 - `{encodedDeathData}` is the death data encoded as a [Level String](/topics/levelstring_encoding_decoding#encoding), in the format `{deathMarkers};{percentages};{completed}`
   - `{deathMarkers}` is a list of death markers in the format `{x},{y},{deaths},{percent},{x},{y},{deaths},{percent},...`
   - `{percentages}` is a list of the user's deaths by percentage in the format `{percentage},{deaths},{percentage},{deaths},...`

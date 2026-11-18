@@ -27,8 +27,8 @@ Fetches the death data for a level.
 {unknown1};{unknown2};{encodedDeathData}
 ```
 
-- `{unknown1}` unknown, seems to be either 0 or 1000
-- `{unknown2}` unknown, seems to range 0-3
+- `{unk1}` unknown, seems to be either 0 or 1000
+- `{unk2}` unknown, seems to range 0-3
 - `{encodedDeathData}` is the death data encoded as a [Level String](/topics/levelstring_encoding_decoding#decoding), in the format `{deathMarkers}|{globalProgress}`
     - `{deathMarkers}` is a list of death markers in the following format, separated by `;`:
       - `{x},{y},{deaths},{deathPercentage * 10},{wallPercentage * 10},{unknown; deaths?},{stars},{deathPercentageBorder},{wallPercentageBorder}`
