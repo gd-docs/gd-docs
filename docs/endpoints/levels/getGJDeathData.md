@@ -39,8 +39,8 @@ Fetches the death data for a level.
         - `{wallPercentage}` the percentage of deaths at the marker where the player did not get past, multiplied by 10 to be an integer 0-1000
         - `{unk}` unknown, seems to correlate with deaths
         - `{stars}` the star rating of the death marker, 0-5 stars
-        - `{deathPercentageBorder}` the border of of the deathPercentage icon
-        - `{wallPercentageBorder}` the border of of the wallPercentage icon
+        - `{deathPercentageBorder}` the border of of the deathPercentage icon, 0 = No Border, 1 = Featured Border, 2 = Epic Border
+        - `{wallPercentageBorder}` the border of of the wallPercentage icon, same values as deathPercentageBorder
     - `{globalProgress}` is the global level progress in the format `{n0},{n1},...,{n102}`, where the index is the level percentage, and the value is the number of runs reaching said percentage. The last two values (indices 101 & 102) are the total runs and total completions respectively.
 
 
