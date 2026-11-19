@@ -64,7 +64,7 @@ In the getGJThreadMessages.php endpoint, a different set of values is returned. 
 | 7     | lastMessage   | **String** | How long ago the last message in the thread was sent (e.g. "13 hours")
 | 8     | message		   | **String** | The request message encoded in [Base64](/topics/encryption/base64). Only sent if the invite is a Message Request. Otherwise empty.
 | 9     | description | **String** | The description of the thread encoded in [Base64](/topics/encryption/base64.md)
-| 10    | type	   | **Integer** | `0` if the invite is a Group Invite, `1` if the invite is a Message Request (can be sent by Advisors and Moderators)
+| 10    | type	   | **Integer** | `0` if the invite is a Group Invite, `1` if the invite is a Message Request (can be sent to Advisors and Moderators)
 | 11    | ignoredInvite		 | **Bool** | Whether you have ignored this invite
 | 12  | icon  	 | **Integer** | The icon ID of the user who invited you
 | 13  | color1  	 | **Integer** | The primary color of the user who invited you
