@@ -9,8 +9,8 @@ Likes a level, comment, etc.
 | Parameter | Explanation |
 | --------- | ----------- |
 | `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
-| `itemID`<ParamInfo req="always"/> | The ID of the level, comment, or account comment |
-| `type`<ParamInfo req="always"/> | 1 for level, 2 for level comment, 3 for account comment, 4 for list |
+| `itemID`<ParamInfo req="always"/> | The ID of the level, comment, account comment or sound pack |
+| `type`<ParamInfo req="always"/> | 1 for level, 2 for level comment, 3 for account comment, 4 for list, 5 for sound pack |
 | `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
 | `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
 | `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
