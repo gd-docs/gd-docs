@@ -11,11 +11,11 @@ Gets the punishment history of an account (Moderator Only).
 
 | Parameter | Explanation |
 | --------- | ----------- |
-| `accountID`<ParamInfo req="always"/> | <ParamDesc name="accountID"/> |
-| `gjp2`<ParamInfo req="always"/> | <ParamDesc name="gjp2"/> |
-| `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
-| `targetAccountID`<ParamInfo req="always"/> | accountID of the user you want to see the history of |
-| `page`<ParamInfo req="always"/> | The page of actions you want to see |
+| `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
+| `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
+| `secret`<ParamInfo req="no" sent="always"/> | <ParamDesc name="secret" type="common"/> |
+| `targetAccountID`<ParamInfo req="no" sent="always"/> | accountID of the user you want to see the history of |
+| `page`<ParamInfo req="no" sent="always"/> | The page of actions you want to see |
 | `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
 | `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
 | `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
