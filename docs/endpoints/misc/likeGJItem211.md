@@ -19,7 +19,7 @@ Likes a level, comment, etc.
 | `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
 | `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
 | `like`<ParamInfo req="no" sent="always"/> | 0 is dislike, 1 is like. Not sure what it defaults to if left out, but it can be left out. |
-| `special`<ParamInfo req="no" sent="always"/> | 0 if liking level/list, the level/list ID for comment (list ID should be negative), the account ID for profile post |
+| `special`<ParamInfo req="no" sent="always"/> | 0 if liking level/list/sound pack, the level/list ID for comment (list ID should be negative), the account ID for profile post |
 | `rs`<ParamInfo req="no" sent="always"/> | 10 randomly generated characters |
 | `chk`<ParamInfo req="no" sent="always"/> | [See here](/topics/encryption/chk.md#like) |
 
