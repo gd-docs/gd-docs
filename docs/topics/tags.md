@@ -49,6 +49,7 @@ Colour Tags are used to style areas of text with colour. They contain both a sta
 | `<cc>`    | `0xFFFF96`  | <gdfmt><cc>Sample</cc></gdfmt> |
 | `<cf>`    | `0x96FFFF`  | <gdfmt><cf>Sample</cf></gdfmt> |
 | `<cs>`    | `0xFFDC41`  | <gdfmt><cs>Sample</cs></gdfmt> |
+| `<ct>`    | `0x96FFC8`  | <gdfmt><ct>Sample</ct></gdfmt> |
 | *invalid* | `0xFF0000`  | <gdfmt><c>Sample</c></gdfmt>   |
 
 All unknown color tags default to red, including `<c>`.
@@ -170,6 +171,10 @@ gdfmt {
 
 	cs {
 		color: #FFDC41;
+	}
+
+	ct {
+		color: #96FFC8;
 	}
 
 	c {
