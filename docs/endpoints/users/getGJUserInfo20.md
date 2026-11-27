@@ -13,6 +13,7 @@ Gets info about a user
 | `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
 | `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
 | `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
+| `notifMask`<ParamInfo req="no" sent="always"/> | Bitmask for filtering new notification counts (only relevant for your own profile). Values: `1 = Friend Uploads`, `2 = Followed Uploads`, `4 = Downloads`, `16 = Followers`, `32 = Friend Accepts`, `64 = Friend Rates`. Disabled types subtract their number from `65565`, which is default. |
 | `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
 | `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
 | `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
