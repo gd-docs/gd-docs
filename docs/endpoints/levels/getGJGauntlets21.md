@@ -16,7 +16,7 @@ Gets the gauntlet levels.
 | `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
 | `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
 | `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
-| `special`<ParamInfo req="no" sent="always"/> | 1 (fetches the 2.2 gauntlets) |
+| `special`<ParamInfo req="no" sent="always"/> | 1 (fetches the 2.2 gauntlets). Useless if your `binaryVersion` is above 49. |
 | `vkey`<ParamInfo req="no" sent="always"/> | equal to `binaryVersion` (starting with `46`, which is 2.2080) |
 
 <ParamInfoFooter/>
