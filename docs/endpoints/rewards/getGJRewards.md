@@ -18,7 +18,7 @@ Gets the rewards from the chests.
 | `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
 | `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
 | `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
-| `rewardType`<ParamInfo req="no" sent="always"/> | 0 for getting info about the chests, 1 to get a new small chest, 2 to get a new large chest. Defaults to 0 if left out <!--TODO: can you leave it out or is it required???--> |
+| `rewardType`<ParamInfo req="no" sent="always"/> | Tells the client which chest to claim. 0 is used for getting chest info, 1 is for claiming the small chest, and 2 is for claiming the large chest. If the parameter is left out, the response defaults to 0. |
 | `r1`<ParamInfo req="no" sent="always"/> | A random 3-5 digit number |
 | `r2`<ParamInfo req="no" sent="always"/> | A random 3-5 digit number |
 
@@ -32,7 +32,7 @@ A list of attributes of the Rewards, separated by colons `:` as follows:
 - User's player ID
 - The number used for the `chk`
 - `udid`
-- User's account ID
+- User's account ID (0 if unregistered)
 - Small chest time remaining
 - Small chest's rewards in a comma separated list
 	- Number of orbs
