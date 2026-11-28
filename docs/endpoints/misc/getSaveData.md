@@ -16,7 +16,9 @@ Unknown
 
 ## Response
 
-Used to return seemingly random [urlsafe base64](/topics/encryption/base64.md) encoded text, but as of 2.2 returns an empty body, currently along with HTTP 500. The original base64 text can be found below.
+Before 2.2, levelIDs for rated levels absent from `LoadData.plist` were returned. Response included `levelID,stars` pairs, with URL-safe Base64 encoding and zlib compression, with 20 extra characters at the start.
+
+In 2.2, the endpoint started returning HTTP 500 and an empty body.
 
 ## Example
 
