@@ -7,7 +7,7 @@ Reports a level, list, comment, profile post, user, friend request, message, thr
 | Parameter   | Explanation | Required |
 | ----------- | ----------- | -------- |
 | `secret`    | <ParamDesc name="secret" type="common"/> | Yes      |
-| `targetID`  | The ID of the level being reported | Yes     |
+| `targetID`  | The ID of the content being reported | Yes     |
 | `type`      | The type of object being reported. 0 - user, 1 - level, 2 - list, 3 - comment (level or list), 4 - profile post, 5 - legacy message, 6 - friend request, 7 - comment on sound pack, 8 - thread, 9 - sound pack | Yes     |
 | `reasons`   | Comma-separated list of report reasons, [see values](#reasons) | Yes    |
 | `messageID` | The message ID being reported (type 8 only, when reporting a specific message and not the entire thread) |    |
