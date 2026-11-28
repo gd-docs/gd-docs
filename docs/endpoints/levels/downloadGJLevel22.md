@@ -17,7 +17,7 @@ Downloads a user level and info so it can be played.
 | `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
 | `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
 | `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
-| `inc`<ParamInfo req="no" sent="cond"/> | Whether the amount of downloads should be incremented on the level (requires proper authentication) <!--TODO ParamCond--> |
+| `inc`<ParamInfo req="no" sent="cond"/> | Sent as 1 if it is your first time downloading the level. Value of 1 increases the level download count. <!--TODO ParamCond--> |
 | `extras` | Used to return some extra data when set to 1, but was disabled sometime in 2022 |
 | `rs`<ParamInfo req="no" sent="always"/> | [See here](/topics/encryption/id#rs) |
 | `chk`<ParamInfo req="no" sent="always"/> | [See here](/topics/encryption/chk#download-level) |
