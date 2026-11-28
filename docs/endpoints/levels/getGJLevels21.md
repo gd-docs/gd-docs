@@ -11,6 +11,9 @@ This endpoint is used to search levels by name and or filter
 | `secret`<ParamInfo req="always"/> | <ParamDesc name="secret" type="common"/> |
 | `gameVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gameVersion"/> |
 | `binaryVersion`<ParamInfo req="no" sent="always"/> | <ParamDesc name="binaryVersion"/> |
+| `udid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="udid"/> |
+| `uuid`<ParamInfo req="no" sent="always"/> | <ParamDesc name="uuid"/> |
+| `dvs`<ParamInfo req="no" sent="always"/> | <ParamDesc name="dvs"/> |
 | `accountID`<ParamInfo req="no" sent="always"/> | <ParamDesc name="accountID"/> |
 | `gjp2`<ParamInfo req="no" sent="always"/> | <ParamDesc name="gjp2"/> |
 | `type`<ParamInfo req="no" sent="always"/> | Search type, [see values](#type). Defaults to most liked |
@@ -29,6 +32,7 @@ This endpoint is used to search levels by name and or filter
 | `legendary`<ParamInfo req="no" sent="cond"/> | Mythic filter (__swapped with `mythic`__) <ParamCond sent="cond">value is 1</ParamCond> |
 | `mythic`<ParamInfo req="no" sent="cond"/> | Legendary filter (__swapped with `legendary`__) <ParamCond sent="cond">value is 1</ParamCond> |
 | `local`<ParamInfo req="no" sent="cond"/> | Whether to fetch "My Online Levels" <ParamCond sent="cond">value is 1 and [`type`](#type) is 5 and `str` is the sender's user ID</ParamCond> |
+| `inc`<ParamInfo req="no" sent="cond"/> | Increases the download count of a list. <ParamCond sent="cond">`type=25` and it is your first time downloading the list</ParamCond> |
 | `song`<ParamInfo req="no" sent="cond"/> | Official (or custom) song ID (Stereo Madness = 1) <ParamCond sent="cond">non-zero or `customSong` is 1</ParamCond> |
 | `customSong`<ParamInfo req="no" sent="cond"/> | Whether the `song` is a Newgrounds song. Levels with Newgrounds songs will not be removed, even if this parameter is 0/not present. <ParamCond sent="cond">value is 1</ParamCond> |
 | `star`<ParamInfo req="no" sent="cond"/> | Rated filter <ParamCond sent="cond">value is 1; mutually exclusive with `noStar`</ParamCond> |
